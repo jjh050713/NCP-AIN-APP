@@ -187,6 +187,31 @@ html, body {
 
 .q-badge.multi { background: #fff3e0; color: #e65100; }
 
+.flashcard {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.qa-line {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.qa-question {
+  font-weight: 500;
+}
+
+.qa-answer {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--green-dark);
+  font-weight: 500;
+}
+
 .question-box {
   background: var(--card);
   border-radius: 12px;
@@ -335,4 +360,5 @@ html, body {
   }
   .choice { background: #2c2c2e; }
   .chip { background: #38383a; color: var(--text); }
+  .qa-answer { color: var(--green); }
 }

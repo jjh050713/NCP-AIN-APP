@@ -68,7 +68,21 @@ async function loadQuestions() {
   }
 }
 
-function getFiltered() {
+function getCorrectIndices(q) {
+  if (Array.isArray(q.correctIndices) && q.correctIndices.length) return q.correctIndices;
+  if (typeof q.correctIndex === 'number') return [q.correctIndex];
+  return [0];
+}
+
+function getCorrectChoiceTexts(q) {
+  const labels = ['A', 'B', 'C', 'D', 'E', 'F'];
+  return getCorrectIndices(q)
+    .filter((i) => q.choices && q.choices[i] !== undefined)
+    .map((i, seq) => ({
+      label: labels[seq] || String(seq + 1),
+      text: q.choices[i],
+    }));
+}
   let items = [...allQuestions];
   const bookmarks = getBookmarks();
   if (filters.bookmarkOnly) items = items.filter((q) => bookmarks.has(q.id));
@@ -115,7 +129,7 @@ function renderHome() {
     <div class="card">
       <div class="subtitle">✓ NVIDIA Certified Professional</div>
       <h2 style="margin-top:4px">AI Networking (NCP-AIN)</h2>
-      <p class="subtitle">덤프 암기 모드 — 문제와 정답 보기만 표시합니다. (오답 보기는 숨김)</p>
+      <p class="subtitle">덤프 암기 모드 — Q: 문제만 보고, 정답 보기로 A: 정답을 확인하세요.</p>
     </div>
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center">
@@ -172,18 +186,13 @@ function renderStudy() {
   const revealed = getRevealed();
   const bookmarks = getBookmarks();
   const isRevealed = revealed.has(q.id);
-  const labels = ['A','B','C','D','E','F'];
+  const answers = getCorrectChoiceTexts(q);
 
-  let choicesHTML = q.correctIndices.map((i) => {
-    const text = q.choices[i];
-    if (text === undefined) return '';
-    const correct = isRevealed;
-    return `<div class="choice${correct ? ' correct' : ''}">
-      <span class="choice-label">${labels[i] || i + 1}</span>
-      <span>${escapeHtml(text)}</span>
-      ${correct ? ' ✓' : ''}
-    </div>`;
-  }).join('');
+  const answerHTML = isRevealed
+    ? answers.map(({ label, text }) =>
+        `<p class="qa-line qa-answer"><strong>${label} :</strong> ${escapeHtml(text)}</p>`
+      ).join('')
+    : '';
 
   const multiBadge = q.isMultiSelect ? '<span class="q-badge multi">복수 정답</span>' : '';
   const cat = CATEGORIES[q.category] || { icon: '📋' };
@@ -201,10 +210,13 @@ function renderStudy() {
         <div class="q-badge">${q.source}</div>
       </div>
     </div>
-    <div class="question-box">${multiBadge}<div style="margin-top:8px">${escapeHtml(q.question)}</div></div>
-    ${choicesHTML}
+    <div class="flashcard">
+      ${multiBadge ? `<div style="margin-bottom:8px">${multiBadge}</div>` : ''}
+      <p class="qa-line qa-question"><strong>Q:</strong> ${escapeHtml(q.question)}</p>
+      ${answerHTML}
+    </div>
     ${isRevealed
-      ? `<div class="answer-box">✓ 정답: ${q.answerKey || q.correctIndices.map(i => labels[i]).join(', ')}</div>`
+      ? ''
       : `<button class="btn-primary" id="reveal-btn">👁 정답 보기</button>`}
     <div class="nav-bar">
       <button class="nav-btn" id="prev-btn">‹ 이전</button>
