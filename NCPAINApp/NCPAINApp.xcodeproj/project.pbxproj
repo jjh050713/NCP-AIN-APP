@@ -17,6 +17,7 @@
 		A10000010000000000000008 /* ImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000008 /* ImportView.swift */; };
 		A10000010000000000000009 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000009 /* questions.json */; };
 		A10000010000000000000010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000010 /* Assets.xcassets */; };
+		A10000010000000000000011 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000012 /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		A10000020000000000000009 /* questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		A10000020000000000000010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10000020000000000000011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10000020000000000000012 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		A10000030000000000000001 /* NCPAINApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NCPAINApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				A10000050000000000000004 /* Models */,
 				A10000050000000000000005 /* Services */,
 				A10000050000000000000006 /* Views */,
+				A10000050000000000000008 /* Utilities */,
 				A10000050000000000000007 /* Resources */,
 				A10000020000000000000011 /* Info.plist */,
 			);
@@ -100,6 +103,14 @@
 				A10000020000000000000008 /* ImportView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A10000050000000000000008 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A10000020000000000000012 /* HapticManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		A10000050000000000000007 /* Resources */ = {
@@ -190,6 +201,7 @@
 				A10000010000000000000006 /* StudyView.swift in Sources */,
 				A10000010000000000000007 /* QuestionCardView.swift in Sources */,
 				A10000010000000000000008 /* ImportView.swift in Sources */,
+				A10000010000000000000011 /* HapticManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,23 +261,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = NCPAINApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "NCP-AIN 암기";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ncpain.memorization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -275,23 +290,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = NCPAINApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "NCP-AIN 암기";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ncpain.memorization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

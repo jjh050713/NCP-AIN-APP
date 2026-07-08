@@ -28,22 +28,13 @@ final class QuestionStore: ObservableObject {
         isLoading = true
         loadError = nil
 
-        var loaded: [Question] = []
+        let loaded = await Task.detached(priority: .userInitiated) {
+            QuestionStore.loadAllQuestionsFromDisk()
+        }.value
 
-        if let bundled = loadBundledQuestions() {
-            loaded.append(contentsOf: bundled)
-        }
-
-        if let imported = loadImportedQuestions() {
-            loaded.append(contentsOf: imported)
-        }
-
-        questions = deduplicated(loaded)
+        questions = loaded.questions
+        loadError = loaded.error
         isLoading = false
-
-        if questions.isEmpty {
-            loadError = "문제를 불러올 수 없습니다."
-        }
     }
 
     func questions(in category: QuestionCategory?) -> [Question] {
@@ -93,9 +84,9 @@ final class QuestionStore: ObservableObject {
     func importDump(from url: URL) throws -> Int {
         let data = try Data(contentsOf: url)
         let bank = try JSONDecoder().decode(QuestionBank.self, from: data)
-        let validated = bank.questions.filter { validate($0) }
+        let validated = bank.questions.filter { Self.validate($0) }
 
-        var existing = loadImportedQuestions() ?? []
+        var existing = Self.loadImportedQuestionsFromDisk() ?? []
         existing.append(contentsOf: validated.map { question in
             Question(
                 id: question.id,
@@ -109,15 +100,15 @@ final class QuestionStore: ObservableObject {
             )
         })
 
-        let encoded = try JSONEncoder().encode(deduplicated(existing))
-        try encoded.write(to: importedQuestionsURL(), options: .atomic)
+        let encoded = try JSONEncoder().encode(Self.deduplicated(existing))
+        try encoded.write(to: Self.importedQuestionsURL(), options: .atomic)
 
         Task { await loadQuestions() }
         return validated.count
     }
 
     func removeImportedQuestions() throws {
-        let url = importedQuestionsURL()
+        let url = Self.importedQuestionsURL()
         if FileManager.default.fileExists(atPath: url.path) {
             try FileManager.default.removeItem(at: url)
         }
@@ -135,7 +126,28 @@ final class QuestionStore: ObservableObject {
 
     // MARK: - Private
 
-    private func loadBundledQuestions() -> [Question]? {
+    private struct LoadResult {
+        let questions: [Question]
+        let error: String?
+    }
+
+    private nonisolated static func loadAllQuestionsFromDisk() -> LoadResult {
+        var loaded: [Question] = []
+
+        if let bundled = loadBundledQuestions() {
+            loaded.append(contentsOf: bundled)
+        }
+
+        if let imported = loadImportedQuestionsFromDisk() {
+            loaded.append(contentsOf: imported)
+        }
+
+        let questions = deduplicated(loaded)
+        let error = questions.isEmpty ? "문제를 불러올 수 없습니다." : nil
+        return LoadResult(questions: questions, error: error)
+    }
+
+    private nonisolated static func loadBundledQuestions() -> [Question]? {
         guard let url = Bundle.main.url(forResource: "questions", withExtension: "json"),
               let data = try? Data(contentsOf: url),
               let bank = try? JSONDecoder().decode(QuestionBank.self, from: data) else {
@@ -144,7 +156,7 @@ final class QuestionStore: ObservableObject {
         return bank.questions
     }
 
-    private func loadImportedQuestions() -> [Question]? {
+    private nonisolated static func loadImportedQuestionsFromDisk() -> [Question]? {
         let url = importedQuestionsURL()
         guard FileManager.default.fileExists(atPath: url.path),
               let data = try? Data(contentsOf: url),
@@ -154,17 +166,17 @@ final class QuestionStore: ObservableObject {
         return questions
     }
 
-    private func importedQuestionsURL() -> URL {
+    private nonisolated static func importedQuestionsURL() -> URL {
         let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         return docs.appendingPathComponent("imported_questions.json")
     }
 
-    private func deduplicated(_ items: [Question]) -> [Question] {
+    private nonisolated static func deduplicated(_ items: [Question]) -> [Question] {
         var seen = Set<String>()
         return items.filter { seen.insert($0.id).inserted }
     }
 
-    private func validate(_ question: Question) -> Bool {
+    private nonisolated static func validate(_ question: Question) -> Bool {
         !question.id.isEmpty &&
         !question.question.isEmpty &&
         question.choices.count >= 2 &&

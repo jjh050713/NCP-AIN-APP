@@ -8,6 +8,7 @@ struct NCPAINAppApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(store)
+                .tint(.green)
         }
     }
 }

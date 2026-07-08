@@ -19,6 +19,12 @@ struct HomeView: View {
             .overlay {
                 if store.isLoading {
                     ProgressView("문제 로딩 중…")
+                } else if let error = store.loadError {
+                    ContentUnavailableView {
+                        Label("로딩 실패", systemImage: "exclamationmark.triangle")
+                    } description: {
+                        Text(error)
+                    }
                 }
             }
         }

@@ -110,7 +110,10 @@ struct StudyView: View {
                     total: sessionQuestions.count,
                     isRevealed: store.isRevealed(sessionQuestions[currentIndex]),
                     isBookmarked: store.isBookmarked(sessionQuestions[currentIndex]),
-                    onReveal: { store.reveal(sessionQuestions[currentIndex]) },
+                    onReveal: {
+                        store.reveal(sessionQuestions[currentIndex])
+                        HapticManager.success()
+                    },
                     onToggleBookmark: { store.toggleBookmark(sessionQuestions[currentIndex]) }
                 )
                 .padding(.horizontal)
@@ -133,6 +136,7 @@ struct StudyView: View {
         }
         .frame(maxHeight: .infinity)
         .animation(.easeInOut(duration: 0.25), value: currentIndex)
+        .sensoryFeedback(.selection, trigger: currentIndex)
     }
 
     private var navigationBar: some View {
@@ -157,6 +161,7 @@ struct StudyView: View {
         }
         .padding()
         .background(.bar)
+        .safeAreaPadding(.bottom, 4)
     }
 
     private var emptyState: some View {
@@ -171,10 +176,12 @@ struct StudyView: View {
     private func goToNext() {
         guard !sessionQuestions.isEmpty else { return }
 
+        HapticManager.lightTap()
         withAnimation(.easeInOut(duration: 0.25)) {
             if currentIndex >= sessionQuestions.count - 1 {
                 currentIndex = 0
                 showRoundCompleteMessage()
+                HapticManager.success()
             } else {
                 currentIndex += 1
             }
@@ -184,6 +191,7 @@ struct StudyView: View {
     private func goToPrevious() {
         guard !sessionQuestions.isEmpty else { return }
 
+        HapticManager.lightTap()
         withAnimation(.easeInOut(duration: 0.25)) {
             if currentIndex <= 0 {
                 currentIndex = sessionQuestions.count - 1

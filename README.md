@@ -44,14 +44,18 @@ python3 convert_exam_dump.py ../dumps/ncp_ain_exam_120.json -o /tmp/dump_hwp120.
 python3 merge_question_banks.py /tmp/dump_korea.json /tmp/dump_hwp120.json ../dumps/supplementary_practice.json ../dumps/nvidia_official_tech.json -o ../NCPAINApp/NCPAINApp/Resources/questions.json
 ```
 
-## 빌드 방법 (macOS + Xcode)
+## iPhone 설치
 
-1. Mac에서 저장소를 클론합니다.
-2. `NCPAINApp/NCPAINApp.xcodeproj` 를 Xcode로 엽니다.
-3. **Signing & Capabilities** 에서 본인 Apple Developer Team을 선택합니다.
-4. iPhone 시뮬레이터 또는 실제 기기에서 Run (⌘R).
+**실기기 설치 방법은 [INSTALL.md](INSTALL.md)를 참고하세요.**
 
-**요구사항**: Xcode 15+, iOS 17+
+Mac + Xcode 15+ 로 iPhone에 직접 설치하는 것이 가장 쉽습니다. (무료 Apple ID 가능)
+
+```bash
+open NCPAINApp/NCPAINApp.xcodeproj
+# Signing Team 설정 → iPhone 연결 → Run (⌘R)
+```
+
+IPA 빌드: `./scripts/build-ios.sh` (Mac + Developer Team 필요)
 
 ## 덤프 추가 방법
 

@@ -62,6 +62,7 @@ struct QuestionCardView: View {
             Text(question.question)
                 .font(.body.weight(.medium))
                 .fixedSize(horizontal: false, vertical: true)
+                .textSelection(.enabled)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
@@ -104,6 +105,9 @@ struct QuestionCardView: View {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(isCorrect ? Color.green : Color.clear, lineWidth: 2)
         )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("보기 \(label), \(text)")
+        .accessibilityAddTraits(isCorrect ? .isSelected : [])
     }
 
     private var revealSection: some View {
