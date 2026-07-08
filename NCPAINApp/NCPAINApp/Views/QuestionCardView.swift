@@ -71,15 +71,17 @@ struct QuestionCardView: View {
 
     private var choicesList: some View {
         VStack(spacing: 10) {
-            ForEach(Array(question.choices.enumerated()), id: \.offset) { offset, choice in
-                choiceRow(index: offset, text: choice)
+            ForEach(question.correctIndices, id: \.self) { index in
+                if question.choices.indices.contains(index) {
+                    choiceRow(index: index, text: question.choices[index])
+                }
             }
         }
     }
 
     private func choiceRow(index: Int, text: String) -> some View {
         let label = index < choiceLabels.count ? choiceLabels[index] : "\(index + 1)"
-        let isCorrect = isRevealed && question.correctIndices.contains(index)
+        let isCorrect = isRevealed
 
         return HStack(alignment: .top, spacing: 12) {
             Text(label)

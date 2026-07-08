@@ -39,7 +39,7 @@ struct HomeView: View {
             Text("AI Networking (NCP-AIN)")
                 .font(.title2.bold())
 
-            Text("덤프 암기 모드 — 문제와 보기만 표시하고 정답을 확인하세요.")
+            Text("덤프 암기 모드 — 문제와 정답 보기만 표시합니다. (오답 보기는 숨김)")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
         }
