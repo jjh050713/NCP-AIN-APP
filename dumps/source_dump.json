@@ -1,0 +1,1399 @@
+[
+  {
+    "file_type": "docx",
+    "file_name": "Korea_Dump_v12.95.docx",
+    "content": {
+      "title": "NVIDIA AI Networking Certification Exam Dump",
+      "questions": [
+        {
+          "number": 1,
+          "question_text": "You are optimizing an InfiniBand network for AI workloads that require low-latency and high throughput data transfers. Which feature of InfiniBand networks minimizes CPU overhead during data transfers?",
+          "options": {
+            "A": "TCP/IP Offloading",
+            "B": "SHARP",
+            "C": "Direct Memory Access (DMA)",
+            "D": "PKey"
+          },
+          "answer": "C",
+          "explanation": "Direct Memory Access (DMA) in InfiniBand networks allows data to be transferred directly between the memory of two devices without involving the CPU. This capability significantly reduces CPU overhead, lowers latency, and increases throughput, making it ideal for AI workloads that demand efficient data transfers."
+        },
+        {
+          "number": 2,
+          "question_text": "How does NVIDIA's AI networking solution contribute to the success of deep learning models?",
+          "options": {
+            "A": "By providing data encryption and privacy for model training",
+            "B": "By providing the necessary high-bandwidth, low-latency infrastructure for fast data transfer",
+            "C": "By managing GPU utilization",
+            "D": "By generating synthetic training data"
+          },
+          "answer": "B",
+          "explanation": "NVIDIA's AI networking solutions ensure that deep learning models are trained quickly and efficiently by providing high-bandwidth, low-latency networking for the large data sets required in training."
+        },
+        {
+          "number": 3,
+          "question_text": "Which technology does NVIDIA use to provide high-speed communication between GPUs in AI workloads?",
+          "options": {
+            "A": "CUDA-X AI",
+            "B": "NVLink",
+            "C": "Ethernet",
+            "D": "HyperTransport"
+          },
+          "answer": "B",
+          "explanation": "NVLink is a high-bandwidth, energy-efficient interconnect technology used by NVIDIA to allow highspeed communication between GPUs, which is essential for scaling AI workloads across multiple GPUs."
+        },
+        {
+          "number": 4,
+          "question_text": "Which of the following NCCL environment variables enable SHARP aggregation with NCCL when using the NCCL-SHARP plugin? Pick the 2 correct responses below",
+          "options": {
+            "A": "NCCL_COLLNET_ENABLE=1",
+            "B": "NCCL_ALGO=CollNet",
+            "C": "NCCLSPECTRUM_ENABLE=1",
+            "D": "NCCL_SHARP_AUTOINIT"
+          },
+          "answer": "AD",
+          "explanation": "To enable SHARP (Scalable Hierarchical Aggregation and Reduction Protocol) aggregation using the NCCL-SHARP plugin, the following two environment variables are required: NCCL_COLLNET_ENABLE=1 Enables NCCL's support for CollNet (Collective Network) operations, including SHARP. NCCL_SHARP_AUTOINIT=1 Automatically initializes the SHARP plugin when available, activating SHARP-based collectives."
+        },
+        {
+          "number": 5,
+          "question_text": "You are tasked with troubleshooting a link flapping issue in an InfiniBand AI fabric. You would like to start troubleshooting from the physical layer. What is the right NVIDIA tool to be used for this task?",
+          "options": {
+            "A": "nvidia-smi utility",
+            "B": "mlxlink utility",
+            "C": "tcpdump tool"
+          },
+          "answer": "B",
+          "explanation": "The mlxlink tool is used to check and debug link status and issues related to them. The tool can be used on different links and cables (passive, active, transceiver, and backplane). It is intended for advanced users with appropriate technical background."
+        },
+        {
+          "number": 6,
+          "question_text": "In Cumulus Linux, which technology enables the ability to provide active-active redundancy to servers, without the need for direct inter-switch links?",
+          "options": {
+            "A": "MLAG",
+            "B": "VSS",
+            "C": "EVPN Multi-homing"
+          },
+          "answer": "C",
+          "explanation": "EVPN Multi-homing enables active-active redundancy without inter-switch links by using overlay routing over VXLAN and distributed control plane using BGP EVPN."
+        },
+        {
+          "number": 7,
+          "question_text": "What is the total throughput of the SN5600 Spectrum-X switch?",
+          "options": {
+            "A": "12.8 petabits per second",
+            "B": "25.6 terabits per second",
+            "C": "102.4 gigabits per second",
+            "D": "51.2 terabits per second"
+          },
+          "answer": "D",
+          "explanation": "The SN5600 smart-leaf/spine/super-spine switch offers 64 ports of 800GbE in a dense 2U form factor. The SN5600 offers diverse connectivity in combinations of 1 to 800GbE and boasts an industryleading total throughput of 51.2Tb/s."
+        },
+        {
+          "number": 8,
+          "question_text": "What is the benefit of using NVIDIA's GPU-accelerated networking in AI inference?",
+          "options": {
+            "A": "Reducing the amount of data storage required",
+            "B": "Speeding up the response time and improving throughput in real-time AI applications",
+            "C": "Reducing the cost of AI hardware",
+            "D": "Encrypting AI data for better security"
+          },
+          "answer": "B",
+          "explanation": "GPU-accelerated networking reduces latency and increases throughput, making it ideal for AI inference tasks that require real-time, low-latency data processing."
+        },
+        {
+          "number": 9,
+          "question_text": "You are troubleshooting a Spectrum-X network and need to validate the fabric configuration. Which feature of Spectrum-X allows for automated fabric validation?",
+          "options": {
+            "A": "NVIDIA NetQ",
+            "B": "RoCE Adaptive Routing",
+            "C": "NVIDIA DOCA",
+            "D": "RoCE Performance Isolation"
+          },
+          "answer": "A",
+          "explanation": "NVIDIA NetQ is a network operations tool that provides real-time visibility and automated validation of the network fabric. It helps in identifying misconfigurations, monitoring network health, and ensuring that the fabric meets the required specifications for AI workloads."
+        },
+        {
+          "number": 10,
+          "question_text": "In which mode of the BlueField DPU does the ARM system on the DPU control the NIC data path, but allow access to the DPU OS from the host?",
+          "options": {
+            "A": "Separated Host mode",
+            "B": "NIC mode",
+            "C": "DPU mode",
+            "D": "Restricted mode"
+          },
+          "answer": "C",
+          "explanation": "In DPU Mode, the ARM cores on Blue Fieldown the NIC data path, while still allowing the host system to access the DPU OS (via OOB or virtio)."
+        },
+        {
+          "number": 11,
+          "question_text": "What is the purpose of WJH (What Just Happened)?",
+          "options": {
+            "A": "Provide contextual information regarding dropped packets in order to aid debugging.",
+            "B": "Send notifications of failed login attempts to a pre-defined Slack channel.",
+            "C": "Identify potential cyberattacks or unusual traffic patterns across the cluster.",
+            "D": "Collate operating system logs and diagnose system crashes."
+          },
+          "answer": "A",
+          "explanation": "NVIDIA's What Just Happened (WJH) is a feature that provides real-time visibility into network problems by analyzing all packets passing through the switch and alerting on performance issues caused by packet drops, congestion, high latency, or misconfigurations. WJH retains the last packets that were dropped from the switch with complete packet headers and the actual drop reason. This enhances the ability to debug network problems, identify affected flows, and decrease time-torepair."
+        },
+        {
+          "number": 12,
+          "question_text": "When utilizing the ib_write_bw tool for performance testing, what does the -S flag define?",
+          "options": {
+            "A": "The burst size",
+            "B": "The number of QP's",
+            "C": "The maximum rate of sent packages",
+            "D": "Which service level to use"
+          },
+          "answer": "D",
+          "explanation": "From NVIDIA Performance Tuning Guide (ib_write_bw Tool Usage): \"-S <SL>: Specifies the Service Level (SL) to use for the InfiniBand traffic. SL is used for setting priority and mapping to virtual lanes (VLs) on the IB fabric.\" This flag is useful when testing QoS-aware setups or validating SL/VL mappings."
+        },
+        {
+          "number": 13,
+          "question_text": "You are troubleshooting InfiniBand connectivity issues in a cluster managed by the NVIDIA Network Operator. You need to verify the status of the InfiniBand interfaces. Which command should you use to check the state and link layer of InfiniBand interfaces on a node?",
+          "options": {
+            "A": "rdma show devices",
+            "B": "ibstat -d mlx5_X",
+            "C": "ifconfig ib0",
+            "D": "ip link show dev ib0"
+          },
+          "answer": "B",
+          "explanation": "To check the status and link layer of InfiniBand interfaces, the ibstat command is used. For example: ibstat -d mlx5_0 This command provides detailed information about the InfiniBand device, including its state (e.g., Active), physical state (e.g., LinkUp), and link layer (e.g., InfiniBand)."
+        },
+        {
+          "number": 14,
+          "question_text": "When designing a multi-tenancy East/West (E/W) fabric using Unified Fabric Manager (UFM), which method should be used?",
+          "options": {
+            "A": "Partition / PKey",
+            "B": "VLAN",
+            "C": "ROMA",
+            "D": "VXLAN"
+          },
+          "answer": "A",
+          "explanation": "In InfiniBand networks, Partitioning using Partition Keys (PKeys)is the standard method for implementing multi-tenancy and traffic isolation. PKeys allow administrators to define logical partitions within the fabric, ensuring that traffic is confined to designated groups of nodes. This mechanism is essential for creating secure and isolated environments in multi-tenant architectures. The Unified Fabric Manager (UFM) leverages PKeys to manage these partitions effectively, enabling administrators to assign and control access rights across different tenants. This approach ensures that each tenant's traffic remains isolated, maintaining both security and performance integrity within the shared fabric."
+        },
+        {
+          "number": 15,
+          "question_text": "How does Spectrum-X achieve network isolation for multiple tenants?",
+          "options": {
+            "A": "By assigning unique IP address ranges to each tenant.",
+            "B": "By implementing a Layer 3 Virtual Network Identifier (L3VNI) per VRR",
+            "C": "By implementing physical network segmentation.",
+            "D": "Using manual configuration of access control lists (ACLs)."
+          },
+          "answer": "B",
+          "explanation": "Spectrum-X achieves network isolation in multi-tenant environments by implementing Layer 3 Virtual Network Identifiers (L3VNIs) per Virtual Routing and Forwarding (VRF) instance. This approach allows each tenant to have a separate routing table and network segment, ensuring that traffic is isolated and secure between tenants."
+        },
+        {
+          "number": 16,
+          "question_text": "What are the prerequisites for performing Flow Analysis with NetQ?",
+          "options": {
+            "A": "Cumulus 4.x and later / Spectrum-2 and later / LCM enabled",
+            "B": "Cumulus 5.x and later / Spectrum-3 and later / On-premises deployment",
+            "C": "Cumulus 5.x and later / Spectrum-2 and later / On-premises deployment",
+            "D": "Cumulus 5.x and later / Spectrum-2 and later / LCM enabled"
+          },
+          "answer": "D",
+          "explanation": "To perform Flow Analysis with NetQ, the following prerequisites must be met: Cumulus Linux Version: NetQ Flow Analysis requires Cumulus Linux 5.x or later. Switch Hardware: The feature is supported on Spectrum-2 and later switch models. Lifecycle Management (LCM): LCM must be enabled to utilize Flow Analysis capabilities. These requirements ensure compatibility and proper functioning of the Flow Analysis feature within NetQ."
+        },
+        {
+          "number": 17,
+          "question_text": "How is congestion evaluated in an NVIDIA Spectrum-X system?",
+          "options": {
+            "A": "By assessing the physical distance between network devices.",
+            "B": "By monitoring the CPU and power usage of network devices.",
+            "C": "By measuring the number of connected devices in the network.",
+            "D": "By analyzing the egress queue loads ensuring all ports are well-balanced."
+          },
+          "answer": "D",
+          "explanation": "In NVIDIA Spectrum-X, congestion is evaluated based on egress queue loads. Spectrum-4 switches assess the load on each egress queue and select the port with the minimal load for packet transmission. This approach ensures that all ports are well-balanced, optimizing network performance and minimizing congestion."
+        },
+        {
+          "number": 18,
+          "question_text": "When upgrading Cumulus Linux to a new version, which configuration files should be migrated from the old installation? Pick the 2 correct responses below.",
+          "options": {
+            "A": "All files in /etc/cumulus/acl",
+            "B": "All files in /etc/network",
+            "C": "All files in /etc",
+            "D": "All files in /etc/mix"
+          },
+          "answer": "AB",
+          "explanation": "Before upgrading Cumulus Linux, it's essential to back up configuration files to a different server. Specifically, the following files and directories should be backed up: /etc/frr/, /etc/hostname, /etc/network/ interfaces, /etc/cumulus/acl. According to NVIDIA's official Cumulus Linux documentation, the key directories containing configuration files that should be migrated during an upgrade are /etc/cumulus/acl and /etc/network."
+        },
+        {
+          "number": 19,
+          "question_text": "You suspect there might be connectivity issues in your InfiniBand fabric and need to perform a comprehensive check. Which tool should you use to run a full fabric diagnostic and generate a report?",
+          "options": {
+            "A": "ibnetdiscover",
+            "B": "perfquery",
+            "C": "ibdiagnet",
+            "D": "taping"
+          },
+          "answer": "C",
+          "explanation": "The ibdiagnet utility is a fundamental tool for InfiniBand fabric discovery, error detection, and diagnostics. It provides comprehensive reports on the fabric's health, including error reporting, switch and Host Channel Adapter (HCA) configuration dumps, various counters reported by the switches and HCAs, and parameters of devices. Additionally, ibdiagnet performs validation for Unicast Routing, Adaptive Routing, and Multicast Routing to ensure correctness."
+        },
+        {
+          "number": 20,
+          "question_text": "When upgrading DOCA on a BlueField DPU, what command should first be run on the host?",
+          "options": {
+            "A": "sudo apt-get autoremove",
+            "B": "/usr/sbin/ofed_uninstall.sh -force",
+            "C": "sudo apt-get upgrade doca",
+            "D": "sudo apt-get install doca"
+          },
+          "answer": "B",
+          "explanation": "Before upgrading the DOCA SDK on a BlueField DPU, it is mandatory to uninstall the existing OFED drivers to prevent compatibility conflicts."
+        },
+        {
+          "number": 21,
+          "question_text": "In a multi-tenant InfiniBand environment managed by UFM, you need to configure access controls to prevent unauthorized users from altering the fabric configuration. Which method is used within UFM to manage user access and ensure authorized modifications only?",
+          "options": {
+            "A": "Digital Certification Management (DCM)",
+            "B": "Network Access Control (NAC)",
+            "C": "Virtual Network Segmentation (VNS)",
+            "D": "Role-Based Access Control (RBAC)"
+          },
+          "answer": "D",
+          "explanation": "Role-Based Access Control (RBAC)is implemented within NVIDIA's Unified Fabric Manager (UFM) to manage user permissions effectively. RBAC allows administrators to assign roles to users, each with specific permissions, ensuring that only authorized individuals can make changes to the fabric configuration. This structured approach to access control enhances security by limiting the potential for unauthorized modifications."
+        },
+        {
+          "number": 22,
+          "question_text": "A user has requested confirmation that the InfiniBand network is performing optimally and is not limiting the speed of a training run. To verify this, you would like to measure the RDMA throughput rate between two endpoints. Which tool should be used?",
+          "options": {
+            "A": "ibdiagnet",
+            "B": "ib_write_bw",
+            "C": "ping",
+            "D": "iperf"
+          },
+          "answer": "B",
+          "explanation": "The ib_write_bw tool is part of the Perftest package and is specifically designed to measure the bandwidth of RDMA write operations between two InfiniBand endpoints. It provides accurate assessments of RDMA throughput, which is crucial for verifying the performance of InfiniBand networks in high-performance computing and AI training environments."
+        },
+        {
+          "number": 23,
+          "question_text": "You are planning to deploy a large-scale Spectrum-X network for AI workloads. Before physical implementation, you want to validate the network design and configuration using a digital twin approach. Which NVIDIA tool would be most appropriate for creating and simulating a digital twin of your Spectrum-X network?",
+          "options": {
+            "A": "NVIDIA Base Command Manager",
+            "B": "NVIDIA Omniverse",
+            "C": "NVIDIA NetQ",
+            "D": "NVIDIA Air"
+          },
+          "answer": "D",
+          "explanation": "NVIDIA Air is a cloud-based network simulation tool designed to create digital twins of data center infrastructure, including Spectrum-X networks. It allows users to model switches, SuperNICs, and storage components, enabling the simulation, validation, and automation of network configuration before physical deployment."
+        },
+        {
+          "number": 24,
+          "question_text": "You are investigating a performance issue in a Spectrum-X network and suspect there might be congestion problems. Which component executes the congestion control algorithm in a Spectrum-X environment?",
+          "options": {
+            "A": "BlueField-3 Super NICs",
+            "B": "NVIDIA DOCA software",
+            "C": "NVIDIA NetQ",
+            "D": "Spectrum-4 switches"
+          },
+          "answer": "A",
+          "explanation": "In the Spectrum-X architecture, BlueField-3 SuperNICs are responsible for executing the congestion control algorithm. They handle millions of congestion control events per second with microsecond reaction latency, applying fine-grained rate decisions to manage data flow effectively. This ensures optimal network performance by preventing congestion and packet loss."
+        },
+        {
+          "number": 25,
+          "question_text": "You're troubleshooting a Spectrum-X network and notice that the System Status LED on a switch is blinking for more than 5 minutes. What is the most likely cause of this issue?",
+          "options": {
+            "A": "The power supply unit is failing",
+            "B": "The switch is overheating",
+            "C": "The Onyx software did not boot properly"
+          },
+          "answer": "C",
+          "explanation": "According to the NVIDIA Spectrum-X Switch Operating System (SX_OS) Troubleshooting Guide, the System Status LED behavioris a critical indicator of the switch's internal operational state. Continuous blinking for more than 5 minutes typically indicates that the OS has failed to load properly."
+        },
+        {
+          "number": 26,
+          "question_text": "Which of the following options correctly describes the difference between UFM Telemetry, UFM Enterprise, and UFM Cyber AI?",
+          "options": {
+            "A": "UFM Telemetry provides real-time monitoring and analysis of network performance, UFM Enterprise focuses on network management and optimization, and UFM Cyber AI detects and mitigates network security threats.",
+            "B": "UFM Telemetry provides real-time monitoring and analysis of network performance. UFM Enterprise detects and mitigates network security threats, and UFM Cyber AI focuses on network management and optimization.",
+            "C": "UFM Telemetry detects and mitigates network security threats. UFM Enterprise provides real-time monitoring and analysis of network performance, and UFM Cyber AI focuses on network management and optimization.",
+            "D": "UFM Telemetry focuses on network management and optimization, UFM Enterprise detects and mitigates network security threats, and UFM Cyber AI provides real-time monitoring and analysis of network performance."
+          },
+          "answer": "A",
+          "explanation": "UFM Telemetry: Provides real-time monitoring and analysis of network performance. UFM Enterprise: Focuses on comprehensive network management and optimization. UFM Cyber AI: Detects and mitigates network security threats by analyzing telemetry data to identify anomalies."
+        },
+        {
+          "number": 27,
+          "question_text": "You have implemented adaptive routing in your Spectrum-X network to optimize AI workload performance. You need to verify the effectiveness of this configuration and monitor its impact on network congestion. Which tool would be most appropriate for monitoring and analyzing the adaptive routing performance in your Spectrum-X environment?",
+          "options": {
+            "A": "NetQ",
+            "B": "Ansible",
+            "C": "CloudAI Benchmark",
+            "D": "MLNXOS"
+          },
+          "answer": "A",
+          "explanation": "NVIDIA NetQ is a comprehensive network operations tool designed to provide real-time visibility into the health and performance of NVIDIA networking environments, including Spectrum-X. It offers detailed telemetry and analytics, allowing administrators to monitor adaptive routing behaviors, detect congestion, and analyze traffic patterns."
+        },
+        {
+          "number": 28,
+          "question_text": "You are tasked with configuring multi-tenancy using partition key (PKey) for a high performance storage fabric running on InfiniBand. Each tenant's GPU server is allowed to access the shared storage system but cannot communicate with another tenant's GPU server. Which of the following partition key membership configurations would you implement to set up multi- tenancy in this environment?",
+          "options": {
+            "A": "Assign full membership to both GPU servers and storage system.",
+            "B": "Assign limited membership to both GPU servers and storage system.",
+            "C": "Assign limited membership PKey to the shared storage system and full membership PKey to each tenant's GPU servers.",
+            "D": "Assign full membership PKey to the shared storage system and limited membership PKey to each tenant's GPU servers."
+          },
+          "answer": "D",
+          "explanation": "To enforce strict multi-tenancy where Tenant A's GPU cannot talk to Tenant B's GPU but both can access shared storage, the correct solution is to assign Full PKey membership to the storage system and Limited PKey membership to each tenant's GPU."
+        },
+        {
+          "number": 29,
+          "question_text": "How does the NVIDIA Spectrum Ethernet switch support AI networking?",
+          "options": {
+            "A": "By providing a fast interconnect for training data across multiple GPUs",
+            "B": "By managing deep learning model deployment",
+            "C": "By ensuring end-to-end encryption of AI data",
+            "D": "By hosting machine learning frameworks"
+          },
+          "answer": "A",
+          "explanation": "The NVIDIA Spectrum Ethernet switch is designed to provide high-performance networking, supporting AI workloads by ensuring fast communication between nodes, particularly GPUs, in distributed training setups."
+        },
+        {
+          "number": 30,
+          "question_text": "Which of the following is a key feature of NVIDIA's AI networking solution?",
+          "options": {
+            "A": "Blockchain encryption",
+            "B": "AI-powered traffic routing",
+            "C": "GPU-accelerated networking",
+            "D": "On-demand server provisioning"
+          },
+          "answer": "C",
+          "explanation": "GPU-accelerated networking helps to improve the speed and efficiency of data transfers, which is essential for AI workloads requiring high bandwidth, such as training deep neural networks."
+        },
+        {
+          "number": 31,
+          "question_text": "A major cloud provider is designing a new data center to support large-scale AI workloads, particularly for training large language models. They want to optimize their network architecture for maximum performance and efficiency. Why is a rail-optimized topology considered a best practice for AI network architecture in this scenario?",
+          "options": {
+            "A": "It prioritizes north-south traffic over east-west traffic for better internet connectivity.",
+            "B": "It simplifies network management by using a single large switch for all connections.",
+            "C": "It provides optimal GPU-to-GPU communication and reduces network interference between flows.",
+            "D": "It maximizes the number of network hops to increase data redundancy."
+          },
+          "answer": "C",
+          "explanation": "A rail-optimized topology is designed to enhance GPU-to-GPU communication by connecting each GPU's Network Interface Card (NIC) to a dedicated rail switch. This configuration ensures predictable traffic patterns and minimizes network interference between data flows."
+        },
+        {
+          "number": 32,
+          "question_text": "When creating a simulation in NVIDIA AIR, what syntax would you use to define a link between port 1 on spine-01 and port 41 on gpu-leaf-01?",
+          "options": {
+            "A": "\"spine-01\":\"swp01\" -- \"gpu-leaf-01\":\"swp41\"",
+            "B": "\"spine-01\":\"swp1\" to \"gpu-leaf-01\":\"swp41\"",
+            "C": "\"spine-01\":\"eth1\" to \"gpu-leaf-01\":\"eth41\"",
+            "D": "\"spine-01\":\"eth1\" - \"gpu-leaf-01\":\"eth41\""
+          },
+          "answer": "A",
+          "explanation": "When creating a custom topology in NVIDIA AIR, users define network links using a DOT file format. The syntax for defining a link in a DOT file uses a double dash (--) to indicate a connection, with each port specified in the format \"<node>\":\"<port>\". Ports are labeled as swpX in Cumulus Linux environments."
+        },
+        {
+          "number": 33,
+          "question_text": "Which of the following is the main benefit of GPU-accelerated networking in AI workloads?",
+          "options": {
+            "A": "Reduced data center cooling requirements",
+            "B": "Faster data movement and reduced latency",
+            "C": "Lower power consumption",
+            "D": "Increased storage capacity"
+          },
+          "answer": "B",
+          "explanation": "GPU-accelerated networking enhances the speed at which data is transmitted, ensuring lower latency and faster throughput, which is crucial for real-time AI applications and deep learning."
+        },
+        {
+          "number": 34,
+          "question_text": "As the network administrator for a large-scale AI research cluster, you are responsible for ensuring seamless data flow across an InfiniBand east-west fabric that interconnects hundreds of compute nodes. Which tool would you use to trace and discover the network paths between nodes on this InfiniBand east-west fabric?",
+          "options": {
+            "A": "NetQ",
+            "B": "ibpathverify",
+            "C": "ibnetdiscover",
+            "D": "tracert"
+          },
+          "answer": "C",
+          "explanation": "The ibnetdiscover utility is used to perform InfiniBand subnet discovery and outputs a human-readable topology file. It scans the fabric, queries the subnet manager, and generates a topology map that details connections between switches, HCAs, and other devices."
+        },
+        {
+          "number": 35,
+          "question_text": "What is a key advantage of using NVIDIA's Mellanox InfiniBand in AI networking environments?",
+          "options": {
+            "A": "Lower power consumption",
+            "B": "Faster inter-node communication with low-latency and high-throughput",
+            "C": "Higher GPU utilization",
+            "D": "Reduced data storage requirements"
+          },
+          "answer": "B",
+          "explanation": "Mellanox InfiniBand provides ultra-fast, low-latency communication between nodes, enabling faster data movement and optimal performance for distributed AI/ML workloads."
+        },
+        {
+          "number": 36,
+          "question_text": "What is the basic functionality of an IB Router?",
+          "options": {
+            "A": "Connecting Ethernet switches to an InfiniBand fabric",
+            "B": "Connecting SAN to an InfiniBand fabric",
+            "C": "Connecting NVLink domains to an InfiniBand fabric",
+            "D": "Connecting two (or more) InfiniBand fabrics"
+          },
+          "answer": "D",
+          "explanation": "An InfiniBand (IB) Router connects two or more InfiniBand subnets, making it possible for nodes in different subnets to communicate through route-managed communication."
+        },
+        {
+          "number": 37,
+          "question_text": "Which of the following statements are true about AI workloads and adaptive routing? Pick the 2 correct responses below.",
+          "options": {
+            "A": "AI workloads are made of a small number of volumetric flows called elephant flows.",
+            "B": "AI workloads have very high entropy that helps spread traffic evenly without congestion.",
+            "C": "Flow-based load balancing mechanisms increase congestion risk.",
+            "D": "ECMP-based load balancing works best for AI workloads."
+          },
+          "answer": "AC",
+          "explanation": "AI workloads are characterized by long-lived \"elephant flows.\" Flow-based load balancing mechanisms like ECMP can lead to uneven traffic distribution in low entropy workloads, increasing congestion risk. Adaptive routing dynamically adjusts paths to solve this."
+        },
+        {
+          "number": 38,
+          "question_text": "What is the purpose of configuring NVUE to ignore Linux files?",
+          "options": {
+            "A": "Enable pushing of configuration through Ansible template files.",
+            "B": "Enable the persistent manipulation of specific settings using both NVUE and flat-file approaches.",
+            "C": "Reduce NVUE memory utilization to optimize performance.",
+            "D": "Improve Cumulus security by reducing the attack surface."
+          },
+          "answer": "B",
+          "explanation": "Configuring NVUE to ignore certain underlying Linux files allows administrators to manage specific settings manually or through automation tools like Ansible without NVUE overwriting these configurations dynamically."
+        },
+        {
+          "number": 39,
+          "question_text": "You are implementing a multi-tenant environment on your Spectrum-X switches for different departments in your organization. You need to ensure that each department's network traffic is isolated and secure. Which Spectrum-X security feature would be most effective in creating isolated network environments for each department?",
+          "options": {
+            "A": "Set UP Port Mirroring",
+            "B": "Configure Virtual Routing and Forwarding (VRF)",
+            "C": "Implement Access Control Lists (ACLs)",
+            "D": "Enable Link Layer Discovery Protocol (LLDP)"
+          },
+          "answer": "B",
+          "explanation": "Virtual Routing and Forwarding (VRF) is the most effective method to achieve network segmentation and isolation in a multi-tenant environment by creating coexisting independent routing tables."
+        },
+        {
+          "number": 40,
+          "question_text": "What are the two general user account types in MLNX-OS? Pick the 2 correct responses below:",
+          "options": {
+            "A": "viewer",
+            "B": "monitor",
+            "C": "admin",
+            "D": "enable"
+          },
+          "answer": "BC",
+          "explanation": "MLNX-OS defines two primary user account types: admin (full administrative configuration privileges) and monitor (read-only configuration and state viewing)."
+        },
+        {
+          "number": 41,
+          "question_text": "You are concerned about potential security threats and unexpected downtime in your InfiniBand data center. Which UFM platform uses analytics to detect security threats, operational issues, and predict network failures in InfiniBand data centers?",
+          "options": {
+            "A": "Host Agent",
+            "B": "Enterprise Platform",
+            "C": "Cyber-AI Platform",
+            "D": "Telemetry Platform"
+          },
+          "answer": "C",
+          "explanation": "The NVIDIA UFM Cyber-AI Platform uses AI-powered analytics and machine learning to establish operational baselines, detect deviations, identify threats, and predict link or component failures proactively."
+        },
+        {
+          "number": 42,
+          "question_text": "Which of the following is an advantage of using NVIDIA's BlueField DPU in data center AI networking?",
+          "options": {
+            "A": "It accelerates AI model training",
+            "B": "It manages network traffic routing across different devices",
+            "C": "It offloads security and networking tasks from the CPU",
+            "D": "It processes AI inference requests"
+          },
+          "answer": "C",
+          "explanation": "The BlueField DPU offloads critical data plane infrastructure tasks (like security and networking) from the host x86 CPU, freeing up raw compute resources for AI workload execution."
+        },
+        {
+          "number": 43,
+          "question_text": "Your organization is planning to utilize Ethernet for an upcoming AI project. Spectrum-X is the selected platform for this deployment, and Adaptive Routing is a key feature. What are the requirements included in the Spectrum-X RA for adaptive routing?",
+          "options": {
+            "A": "SN4700, BlueField-3 SuperNIC, DDR, RoCE traffic",
+            "B": "SN5600, BlueField-3 SuperNIC, DDR, RoCE traffic",
+            "C": "SN5600, BlueField-3 SuperNIC, DDR, TCP traffic"
+          },
+          "answer": "B",
+          "explanation": "The NVIDIA Spectrum-X Reference Architecture (RA) specifies the usage of SN5600 Spectrum-4 switches combined with BlueField-3 SuperNICs to support hardware adaptive routing over lossless RoCE traffic."
+        },
+        {
+          "number": 44,
+          "question_text": "What does NVIDIA's GPU-accelerated networking primarily enable in AI/ML environments?",
+          "options": {
+            "A": "Faster model creation",
+            "B": "Enhanced data security for AI applications",
+            "C": "Efficient data movement and communication between GPUs for faster AI model training and inference",
+            "D": "Reduced computational power for AI models"
+          },
+          "answer": "C",
+          "explanation": "GPU-accelerated networking bypasses standard host bottlenecks to optimize data movement directly between GPUs, minimizing latency and maximizing throughput during computationally intensive tasks."
+        },
+        {
+          "number": 45,
+          "question_text": "You are troubleshooting connectivity issues in your InfiniBand network and need to test basic connectivity between nodes. Which command should you use to test basic connectivity between InfiniBand nodes?",
+          "options": {
+            "A": "ibping",
+            "B": "traceroute",
+            "C": "ibnetdiscover",
+            "D": "ping"
+          },
+          "answer": "A",
+          "explanation": "The tool specifically designed for testing InfiniBand LIDs connectivity is ibping, which operates closely to traditional ICMP ping but is fully native to the InfiniBand fabric layout."
+        },
+        {
+          "number": 46,
+          "question_text": "You are using NVIDIA Air to simulate a Spectrum-X network for AI workloads. You want to ensure that your network configurations are optimal before deployment. Which NVIDIA tool can be integrated with Air to validate network configurations in the digital twin environment?",
+          "options": {
+            "A": "Spectrum-X Manager",
+            "B": "NetQ",
+            "C": "DOCA",
+            "D": "GPU Cloud"
+          },
+          "answer": "B",
+          "explanation": "NVIDIA NetQ can be seamlessly utilized as a functional telemetry and validation tool within the cloud-based NVIDIA Air simulation space, creating an effective NetDevOps CI/CD pre-deployment pipeline."
+        },
+        {
+          "number": 47,
+          "question_text": "What does NetQ leverage (in addition to NVIDIA \"What Just Happened\" switch telemetry data and NVIDIA DOCA telemetry) to help network operators proactively identify server and application root cause issues?",
+          "options": {
+            "A": "Flow telemetry",
+            "B": "Behavioral telemetry",
+            "C": "Application telemetry",
+            "D": "Packet capture telemetry"
+          },
+          "answer": "B",
+          "explanation": "NetQ integrates deep switch telemetry like WJH and DOCA tracking with Behavioral Telemetry to correlate cross-layer anomalies and proactively identify server or root application faults."
+        },
+        {
+          "number": 48,
+          "question_text": "You need to configure a bond in Cumulus Linux. Which command should you use?",
+          "options": {
+            "A": "nv set interface bond1 bond member swp1-4",
+            "B": "nv set interface bond1 bond mlag enable",
+            "C": "nv set bondbond1 interface member swp1-4",
+            "D": "nv set interface bond1 bond mode lacp"
+          },
+          "answer": "D",
+          "explanation": "In Cumulus Linux, initializing a dynamic Link Aggregation interface (bond) using standard configurations involves specifying the target state via 'nv set interface bond1 bond mode lacp'."
+        },
+        {
+          "number": 49,
+          "question_text": "You're designing a multi-GPU system for AI training using NVIDIA GPUs with NVLink connections. You need to maximize inter-GPU communication bandwidth. Which feature included in NCCL allows for improved communication between GPUs and NICs?",
+          "options": {
+            "A": "Adaptive Routing",
+            "B": "PXN",
+            "C": "Graph Search Optimization",
+            "D": "SHARP v2"
+          },
+          "answer": "B",
+          "explanation": "PXN (Peer eXchange Network) within NCCL treats intra-node GPUs as logical routing steps, routing communication over NVLink and picking the closest physical network interface cards to eliminate unnecessary PCIe complex hops."
+        },
+        {
+          "number": 50,
+          "question_text": "Which service on Cumulus switches can monitor layer 1, layer 2, layer 3, tunnel, buffer, and ACL related issues?",
+          "options": {
+            "A": "WJH",
+            "B": "ONIE",
+            "C": "NCLU",
+            "D": "BGP"
+          },
+          "answer": "A",
+          "explanation": "The What Just Happened (WJH) embedded service monitors across distinct fabric layer groupings (Layers 1-3, ACL, buffers), streaming contextual packet drop reasons to avoid debugging blindspots."
+        },
+        {
+          "number": 51,
+          "question_text": "Which of the following NVIDIA products is best suited for high-performance computing and AI workloads that require fast inter-node communication?",
+          "options": {
+            "A": "Tesla P100",
+            "B": "GeForce RTX 3080",
+            "C": "Mellanox InfiniBand",
+            "D": "Quadro GV100"
+          },
+          "answer": "C",
+          "explanation": "Mellanox InfiniBand provides native ultra-high bandwidth alongside extreme low levels of latency, establishing a dedicated fabric highly optimized for distributed cluster inter-node interactions."
+        },
+        {
+          "number": 52,
+          "question_text": "You are deploying a Kubernetes cluster for AI workloads using NVIDIA Spectrum-X switches. You need to automate the deployment and management of networking components in this environment. Which NVIDIA tool is specifically designed to automate the deployment and management of networking components in a Kubernetes cluster with Spectrum-X switches?",
+          "options": {
+            "A": "Mellanox OFED",
+            "B": "Container Runtime",
+            "C": "Network Operator",
+            "D": "GPU Operator"
+          },
+          "answer": "C",
+          "explanation": "The NVIDIA Network Operator abstracts Kubernetes infrastructure management by automating secondary plugins, managing drivers (MOFED), and enforcing consistent network states via Custom Resource Definitions."
+        },
+        {
+          "number": 53,
+          "question_text": "You are troubleshooting a Spectrum-X network and need to ensure that the network remains operational in case of a link failure. Which feature of Spectrum-X ensures that the fabric continues to deliver high performance even if there is a link failure?",
+          "options": {
+            "A": "RoCE Congestion Control",
+            "B": "RoCE Adaptive Routing",
+            "C": "NVIDIA NetQ",
+            "D": "RoCE Performance Isolation"
+          },
+          "answer": "B",
+          "explanation": "RoCE Adaptive Routing continuously monitors operational egress queue balances across downstream paths. If a sudden physical line degradation or link drop transpires, packets are dynamic rerouted on-the-fly to adjacent running paths."
+        },
+        {
+          "number": 54,
+          "question_text": "Which of the following scenarios would the Network Traffic Map in UFM be least useful for troubleshooting?",
+          "options": {
+            "A": "When investigating reports of network congestion or latency problems.",
+            "B": "After making changes to network configuration.",
+            "C": "When troubleshooting a single node's hardware failure.",
+            "D": "When optimizing job placement and workload distribution across the cluster."
+          },
+          "answer": "C",
+          "explanation": "UFM Network Traffic Map focuses directly on full matrix topology data, congestion spikes, and paths. An individual server's internal components failure must be assessed natively, bypassing general traffic visuals."
+        },
+        {
+          "number": 55,
+          "question_text": "You have recently implemented NVIDIA Spectrum-X in your data center to optimize AI workloads. You need to verify the performance improvements and create a baseline for future comparisons. Which tool would be most appropriate for creating performance baseline results in this Spectrum- X environment?",
+          "options": {
+            "A": "NetQ",
+            "B": "CloudAI Benchmark",
+            "C": "MLNX-OS",
+            "D": "Ansible"
+          },
+          "answer": "B",
+          "explanation": "NVIDIA's CloudAI Benchmark delivers real-world scale-out traffic emulation (NCCL workloads, vLLM patterns) to establish an authentic performance baseline relative to infrastructure configurations."
+        },
+        {
+          "number": 56,
+          "question_text": "You are automating the deployment of a Spectrum-X network using Ansible. You need to ensure that the playbooks can handle different switch models and configurations efficiently. Which feature of the NVIDIA NVUE Collection helps simplify the automation by providing pre-built roles for common network configurations?",
+          "options": {
+            "A": "Collection libraries",
+            "B": "Collection modules",
+            "C": "Collection roles",
+            "D": "Collection plugins"
+          },
+          "answer": "C",
+          "explanation": "The NVUE Ansible Collection encapsulates pre-configured 'Ansible Roles' to provide pre-built, reusable modular components matching various standard multi-switch automation tasks."
+        },
+        {
+          "number": 57,
+          "question_text": "Which NVIDIA technology is specifically designed to provide high-performance networking for AI workloads?",
+          "options": {
+            "A": "CUDA",
+            "B": "Mellanox ConnectX",
+            "C": "CUDA-X AI",
+            "D": "TensorFlow"
+          },
+          "answer": "B",
+          "explanation": "Mellanox ConnectX represents the dedicated high-performance network interface adapters providing structural hardware capability for massive throughput demands inside advanced AI infrastructures."
+        },
+        {
+          "number": 58,
+          "question_text": "What is the main purpose of NVIDIA's AI-powered traffic routing?",
+          "options": {
+            "A": "To ensure secure data transmission",
+            "B": "To optimize the flow of data across networks for AI applications",
+            "C": "To manage the cloud infrastructure",
+            "D": "To distribute power efficiently"
+          },
+          "answer": "B",
+          "explanation": "AI-optimized intelligence within routing mechanisms adjusts system pathways fluidly, keeping large-scale workflows fully populated across optimal nodes to maximize global fabric density."
+        },
+        {
+          "number": 59,
+          "question_text": "What is the role of NVIDIA's AI-driven network monitoring in data centers?",
+          "options": {
+            "A": "To optimize traffic routing for deep learning models",
+            "B": "To ensure secure data transmission",
+            "C": "To monitor GPU performance and utilization",
+            "D": "To dynamically adjust network parameters based on workload demands"
+          },
+          "answer": "D",
+          "explanation": "AI-driven monitoring systems persistently compute real-time performance profiles, reshaping live configuration metrics dynamically to circumvent compute stalls or backplane congestion."
+        },
+        {
+          "number": 60,
+          "question_text": "A fabric administrator added new servers to a 40-port edge switch. The administrator now needs to gather and map the newly added ports' LIDs and LINK SPEED. Which of the following commands can be used for that purpose?",
+          "options": {
+            "A": "ib_check_routes",
+            "B": "ibnetdiscover",
+            "C": "ibhosts",
+            "D": "ibswitches"
+          },
+          "answer": "B",
+          "explanation": "ibnetdiscover fully queries the subnet manager topology tables, outputting explicit network links layout complete with LIDs, GUIDs, and real active operating speeds per physical port map step."
+        },
+        {
+          "number": 61,
+          "question_text": "Which NVIDIA technology enables efficient scaling of AI workloads across multiple nodes in a data center?",
+          "options": {
+            "A": "NVLink",
+            "B": "NVIDIA A100 Tensor Core GPUs",
+            "C": "InfiniBand",
+            "D": "CUDA"
+          },
+          "answer": "C",
+          "explanation": "InfiniBand represents the core cluster-level high-bandwidth fabric enabling efficient synchronous inter-node scaling patterns across immense, discrete distributed compute nodes."
+        },
+        {
+          "number": 62,
+          "question_text": "What does RDMA (Remote Direct Memory Access) technology in NVIDIA's network products help achieve?",
+          "options": {
+            "A": "Increases storage capacity",
+            "B": "Reduces CPU load and improves data transfer speed",
+            "C": "Encrypts data in transit",
+            "D": "Improves graphical performance"
+          },
+          "answer": "B",
+          "explanation": "RDMA allows network interface controllers to write directly into remote hardware memory spaces over the wire, effectively eliminating OS memory kernel copies and bypassing host CPU pipelines completely."
+        },
+        {
+          "number": 63,
+          "question_text": "A high-performance InfiniBand fabric requires a routing engine that maximizes throughput and network utilization while reducing congestion. Which option below is the best routing engine for InfiniBand?",
+          "options": {
+            "A": "Adaptive Routing",
+            "B": "Random Routing",
+            "C": "Shortest Path Routing",
+            "D": "Round Robin Routing"
+          },
+          "answer": "A",
+          "explanation": "Adaptive Routing computes fine-grained live tracking metrics over output pathways. This dynamic load management avoids static hash conflicts, establishing superior performance across complex topologies."
+        },
+        {
+          "number": 64,
+          "question_text": "NVIDIA's AI networking solutions are most commonly used in which of the following environments?",
+          "options": {
+            "A": "Consumer gaming PCs",
+            "B": "Large-scale data centers",
+            "C": "Home routers",
+            "D": "Mobile devices"
+          },
+          "answer": "B",
+          "explanation": "NVIDIA AI networking solutions are intentionally engineered for highly-scaled cloud ecosystems and modern hyper-dense data centers orchestrating intense deep learning operations."
+        },
+        {
+          "number": 65,
+          "question_text": "What command sequence is used to identify the exact name of the server that runs as the master SM in a multi-node fabric?",
+          "options": {
+            "A": "sminfo \n smpquery ND <LID>",
+            "B": "sminfo \n smpquery Nl <LID>",
+            "C": "ibstat \n sminfo <LID>",
+            "D": "ibis \n ibsim <LID>"
+          },
+          "answer": "A",
+          "explanation": "Running 'sminfo' pulls basic data including active Subnet Manager LIDs. Supplying this token to 'smpquery ND <LID>' resolves the structural text node metadata, identifying the exact active management host."
+        },
+        {
+          "number": 66,
+          "question_text": "A financial services company is planning to implement an AI infrastructure to support realtime fraud detection and risk assessment. They need a solution that can handle both training and inference workloads while maintaining data privacy and security. Which NVIDIA reference architecture component would be most appropriate to address the data privacy and security concerns in this AI networking setup?",
+          "options": {
+            "A": "NVIDIA CUDA-X AI libraries",
+            "B": "NVIDIA Magnum IO",
+            "C": "NVIDIA BlueField DPUs",
+            "D": "NVIDIA Spectrum switches"
+          },
+          "answer": "C",
+          "explanation": "NVIDIA BlueField DPUs maintain complete hardware-isolated operating stacks running custom kernels, allowing security architectures to handle encryption tasks directly inside the interface card layer."
+        },
+        {
+          "number": 67,
+          "question_text": "A leading AI research center is upgrading its infrastructure to support large language model projects. The team is debating whether to implement a dedicated storage fabric for their AI workloads. Which of the following best explains why a dedicated storage fabric is crucial for this AI network architecture? Pick the 2 correct responses below",
+          "options": {
+            "A": "To enable parallel data access and improve storage performance for distributed AI workloads.",
+            "B": "To ensure data security and isolation from other network traffic.",
+            "C": "To provide high-bandwidth, low-latency data access that prevents I/O bottlenecks during AI model training.",
+            "D": "To reduce the overall cost of the storage infrastructure."
+          },
+          "answer": "AC",
+          "explanation": "Large-scale distributed workflows command high-velocity parallel access patterns to massive datasets. Separating heavy storage I/O paths into dedicated sub-fabrics isolates compute bounds from data staging bottlenecks entirely."
+        },
+        {
+          "number": 68,
+          "question_text": "You are optimizing a multi-node AI training cluster using InfiniBand networking and NVIDIA GPUs. You need to implement efficient collective communication operations across the nodes. Which feature of NVIDIA Collective Communications Library (NCCL) allows for optimized performance in multi-subnet InfiniBand environments?",
+          "options": {
+            "A": "Lazy connection establishment",
+            "B": "GPU Direct RDMA",
+            "C": "Static plugin linking",
+            "D": "Support for IB Router"
+          },
+          "answer": "D",
+          "explanation": "Enabling 'NCCL_IB_USE_IB_ROUTER=1' allows NCCL to parse subnet manager maps and deploy optimized cross-subnet communications using the native routing engines of integrated InfiniBand Routers."
+        },
+        {
+          "number": 69,
+          "question_text": "You are setting up PKey memberships for different tenants in an InfiniBand network. You want to ensure that some tenants have limited communication capabilities. Which PKey membership type allows members to communicate with full members but not with other members of the same type?",
+          "options": {
+            "A": "Restricted membership",
+            "B": "Isolated membership",
+            "C": "Full membership",
+            "D": "Limited/partial membership"
+          },
+          "answer": "D",
+          "explanation": "InfiniBand partition controls partition interfaces using full or limited memberships. Limited membership hosts are structurally prohibited from passing traffic to matching limited nodes, allowing strict tenancy controls."
+        },
+        {
+          "number": 70,
+          "question_text": "Which of the following is a feature of NVIDIA's Spectrum-3 Ethernet Switch for AI networking?",
+          "options": {
+            "A": "Supports GPU-to-GPU communication",
+            "B": "Accelerates data encryption",
+            "C": "Provides 400Gb/s networking for AI workloads",
+            "D": "Acts as a cloud hosting platform"
+          },
+          "answer": "C",
+          "explanation": "NVIDIA Spectrum-3 architecture steps up processing capabilities to deliver high-density native 400Gb/s fabrics per switch layout, targeting performance boundaries within distributed topologies."
+        },
+        {
+          "number": 71,
+          "question_text": "What is the primary purpose of NVIDIA's AI networking solutions?",
+          "options": {
+            "A": "To provide cloud storage solutions",
+            "B": "To accelerate networking and data processing for AI/ML workloads",
+            "C": "To improve internet connectivity speed",
+            "D": "To provide graphics rendering for video games"
+          },
+          "answer": "B",
+          "explanation": "NVIDIA AI networking infrastructure targets precise data center acceleration, optimizing line speeds and reducing multi-node communication bounds to handle distributed model demands."
+        },
+        {
+          "number": 72,
+          "question_text": "In an AI cluster using NVIDIA GPUs, which configuration parameter in the NicClusterPolicy custom resource is crucial for enabling high-speed GPU-to-GPU communication across nodes?",
+          "options": {
+            "A": "RDMA Shared Device Plugin",
+            "B": "Secondary Network",
+            "C": "OFED Driver",
+            "D": "NV IPAM"
+          },
+          "answer": "A",
+          "explanation": "The RDMA Shared Device Plugin configuration inside the NicClusterPolicy CR advertises explicit hardware endpoints directly to the cluster scheduler, enabling fast cross-node GPU communications."
+        },
+        {
+          "number": 73,
+          "question_text": "In order to configure RoCE on a Cumulus switch, which command should be used?",
+          "options": {
+            "A": "nv set qos roce enable on",
+            "B": "nv set roce qos enable on",
+            "C": "nv roce qos enable on",
+            "D": "nv qos roce enable on"
+          },
+          "answer": "A",
+          "explanation": "The explicit NVUE configuration context for provisioning lossless settings across integrated switch architectures relies on committing the explicit command 'nv set qos roce enable on'."
+        },
+        {
+          "number": 74,
+          "question_text": "Which tool would you use to gather telemetry data in a SpectrumX network?",
+          "options": {
+            "A": "NVIEW",
+            "B": "UFM",
+            "C": "NetQ",
+            "D": "BCM"
+          },
+          "answer": "C",
+          "explanation": "NVIDIA NetQ monitors continuous status changes across hosts and switch architectures inside Ethernet layouts, collecting packet states, congestion indexes, and system errors."
+        },
+        {
+          "number": 75,
+          "question_text": "Which of the following tools in Cumulus Linux is specifically useful for detecting and differentiating microbursts from regular network congestion? Pick the 2 correct responses below",
+          "options": {
+            "A": "Monthly network utilization reports",
+            "B": "ASIC monitoring with millisecond-level granularity",
+            "C": "SNMP polling at 5-minute intervals",
+            "D": "What Just Happened (WJH) feature for packet drop analysis"
+          },
+          "answer": "BD",
+          "explanation": "Microburst events vanish inside macroscopic aggregation intervals. Tracking them requires sub-second ASIC monitoring combined with proactive, packet-level drop analytics supplied via WJH."
+        },
+        {
+          "number": 76,
+          "question_text": "What is the role of the NVIDIA CUDA-X AI platform in AI networking?",
+          "options": {
+            "A": "To improve graphical rendering speed",
+            "B": "To provide AI-optimized libraries and tools for networking and compute tasks",
+            "C": "To encrypt AI data",
+            "D": "To monitor network traffic"
+          },
+          "answer": "B",
+          "explanation": "CUDA-X AI brings a fully verified software matrix comprising optimized mathematically parallelized libraries, speeding up cross-layer pipeline orchestration across compute and fabric nodes."
+        },
+        {
+          "number": 77,
+          "question_text": "Which component of the Spectrum-X platform is responsible for reordering out-of-order packets?",
+          "options": {
+            "A": "SuperNIC",
+            "B": "Spectrum-4 switch",
+            "C": "DOCA software",
+            "D": "NetQ"
+          },
+          "answer": "A",
+          "explanation": "When deployment scenarios utilize dynamic adaptive routing paths, individual packet segments may land disjointed. The BlueField-3 SuperNIC processes and normalizes these entries transparently at the hardware transport line."
+        },
+        {
+          "number": 78,
+          "question_text": "You are concerned about potential security threats and unexpected downtime in your InfiniBand data center. Which UFM platform uses analytics to detect security threats, operational issues, and predict network failures in InfiniBand data centers?",
+          "options": {
+            "A": "Host Agent",
+            "B": "Enterprise Platform",
+            "C": "Cyber-AI Platform",
+            "D": "Telemetry Platform"
+          },
+          "answer": "C",
+          "explanation": "The NVIDIA UFM Cyber-AI Platform parses real-time parameters using advanced analytical profiling to isolate malicious signatures, map unusual utilization levels, and warn operators of impending hardware line faults."
+        },
+        {
+          "number": 79,
+          "question_text": "How does NVIDIA's BlueField DPU (Data Processing Unit) support AI networking?",
+          "options": {
+            "A": "By accelerating CPU performance",
+            "B": "By offloading networking and security tasks from the CPU to the DPU",
+            "C": "By managing machine learning model training",
+            "D": "By providing dedicated AI compute power"
+          },
+          "answer": "B",
+          "explanation": "The BlueField DPU features integrated programmable ARM processing pipelines, absorbing tedious platform virtualization and framing layers to allow maximum host resource alignment to compute models."
+        },
+        {
+          "number": 80,
+          "question_text": "Why is the InfiniBand LRH called a local header?",
+          "options": {
+            "A": "It is used for routing traffic between nodes in the local subnet.",
+            "B": "It provides the LIDs from the local subnet manager.",
+            "C": "It allows traffic on a local link only.",
+            "D": "It provides the parameters for each local HCA."
+          },
+          "answer": "A",
+          "explanation": "The Local Route Header (LRH) maps LIDs (Local Identifiers) assigned to hosts inside a single shared environment, defining routing parameters restricted to that explicit localized subnet."
+        },
+        {
+          "number": 81,
+          "question_text": "You are troubleshooting an InfiniBand network issue and need to check the status of the InfiniBand interfaces. Which command should you use to display the state, physical state, and link layer of InfiniBand interfaces?",
+          "options": {
+            "A": "ibv_devices -c mlx5_0",
+            "B": "cat /proc/net/ib/device",
+            "C": "sudo ibnodes -C mlx5_0",
+            "D": "ibstat -d mlx5_X"
+          },
+          "answer": "D",
+          "explanation": "'ibstat' targets low-level host HCA states, outputting key parameter flags such as active physical connections (LinkUp, LinkDown) and the underlying operating link layers directly."
+        },
+        {
+          "number": 82,
+          "question_text": "You are configuring an InfiniBand network for an AI cluster and need to install the appropriate software stack. Which NVIDIA software package provides the necessary drivers and tools for InfiniBand configuration in Linux environments?",
+          "options": {
+            "A": "NVIDIA GPU Cloud",
+            "B": "NVIDIA Container Runtime",
+            "C": "CUDA Toolkit",
+            "D": "MLNX_OFED"
+          },
+          "answer": "D",
+          "explanation": "MLNX_OFED provides the core tested distribution package bundle containing kernel bypass APIs, core physical hardware verbs drivers, and diagnostic utilities matching modern Linux environments."
+        },
+        {
+          "number": 83,
+          "question_text": "A cloud service provider is deploying the NVIDIA Spectrum-X Ethernet platform in a multitenant environment. To ensure the security and isolation of each tenant's AI workload, the provider wants to implement a feature that prevents unauthorized access to the network. Which of the following features of the Spectrum-X platform should the provider implement?",
+          "options": {
+            "A": "Streaming Telemetry",
+            "B": "Adaptive Routing",
+            "C": "Congestion Control",
+            "D": "Traffic Isolation"
+          },
+          "answer": "D",
+          "explanation": "Spectrum-X features structural Traffic Isolation hooks, creating independent logical processing slices across identical physical nodes to enforce absolute workload multi-tenant boundaries."
+        },
+        {
+          "number": 84,
+          "question_text": "Which of the following commands would you use to assign the IP address 20.11.12.13 to the management interface in SONiC?",
+          "options": {
+            "A": "nv set interface mgmt ip 20.11.12.13 20.11.12.254",
+            "B": "interface mgmt0 vrf mgmt ip address 20.11.12.13 20.11.12.254",
+            "C": "sudo config interface ip add eth0 20.11.12.13/24 20.11.12.254",
+            "D": "config ip add etho 20.11.12.13/24 20.11.12.254"
+          },
+          "answer": "C",
+          "explanation": "SONiC CLI architecture processes static out-of-band networking assignments via the config utility layout. Setting administrative definitions requires invoking: 'sudo config interface ip add eth0 <IP/MASK> <GATEWAY>'."
+        },
+        {
+          "number": 85,
+          "question_text": "Which of the following routing protocols is not capable of avoiding credit loops?",
+          "options": {
+            "A": "UPDOWN",
+            "B": "All routing protocols are capable of avoiding credit loops",
+            "C": "MINHOP",
+            "D": "FAT TREE"
+          },
+          "answer": "C",
+          "explanation": "While MINHOP calculates hyper-efficient shortest path entries, it lacks loop-suppression topology restrictions, creating serious potential deadlock vulnerabilities compared to UPDOWN or Fat-Tree frameworks."
+        },
+        {
+          "number": 86,
+          "question_text": "You are configuring the Unified Fabric Manager (UFM) for an InfiniBand fabric in a multitenant environment. You need to implement a solution that can detect potential security threats. Which UFM feature uses analytics to detect security threats and predict network failures in InfiniBand data centers?",
+          "options": {
+            "A": "Host Agent",
+            "B": "Telemetry platform",
+            "C": "Cyber-AI platform",
+            "D": "Enterprise platform"
+          },
+          "answer": "C",
+          "explanation": "The UFM Cyber-AI engine monitors granular telemetry matrices over time, applying statistical heuristics to predict hardware failure arcs and prevent structural cluster vulnerabilities."
+        },
+        {
+          "number": 87,
+          "question_text": "What are two methods for accessing the operating system on a BlueField DPU? Pick the 2 correct responses below",
+          "options": {
+            "A": "Via the networking interfaces (data ports) in NIC mode",
+            "B": "Via the rshim interface over the PCIe bus",
+            "C": "Via the Redfish API",
+            "D": "Via rshim over a USB connection on the host"
+          },
+          "answer": "BD",
+          "explanation": "The rshim management layer exposes low-level drivers over the raw hardware backplane. This maps reliable path configurations to the host system via internal PCIe vectors or external USB ports directly."
+        },
+        {
+          "number": 88,
+          "question_text": "What are the necessary steps to upgrade the MLNX-OS on InfiniBand Switches?",
+          "options": {
+            "A": "Connect to the switches using SSH, fetch the MLNX-OS software image, and use the 'install' command to perform the upgrade.",
+            "B": "Power off the switches, insert the installation media, and power on the switches to start the upgrade process.",
+            "C": "Restart the switches, connect to the switches using Telnet, and use the 'update' command to perform the upgrade.",
+            "D": "Remove the switches from the switch fabric, fetch the MLNX-OS software image, and use the 'upgrade' command to perform the upgrade."
+          },
+          "answer": "A",
+          "explanation": "Upgrading MLNX-OS relies on setting secure remote sessions via SSH, copying down the verified bin file image to flash memory, and calling the target 'install' utility command sequence."
+        },
+        {
+          "number": 89,
+          "question_text": "You are optimizing an AI workload that involves multiple GPUs across different nodes in a data center. The application requires both high-bandwidth GPU-to-GPU communication within nodes and efficient communication between nodes. Which combination of NVIDIA technologies would best support this multi-node, multi-GPU AI workload?",
+          "options": {
+            "A": "NVLink for both intra-node and inter-node GPU communication.",
+            "B": "InfiniBand for both intra-node and inter-node GPU communication.",
+            "C": "NVLink for intra-node GPU communication and InfiniBand for inter-node communication.",
+            "D": "PCIe for intra-node GPU communication and RoCE for inter-node communication."
+          },
+          "answer": "C",
+          "explanation": "High-efficiency AI clusters maximize performance boundaries by isolating configurations: allocating intra-node traffic onto ultra-dense NVLink traces, while deploying scalable InfiniBand structures across distributed nodes."
+        },
+        {
+          "number": 90,
+          "question_text": "You are designing a new AI data center for a research institution that requires high performance computing for large-scale deep learning models. The institution wants to leverage NVIDIA's reference architectures for optimal performance. Which NVIDIA reference architecture would be most suitable for this high-performance AI research environment?",
+          "options": {
+            "A": "NVIDIA Base Command Platform",
+            "B": "NVIDIA DGX Cloud",
+            "C": "NVIDIA LaunchPad",
+            "D": "NVIDIA DGX SuperPOD"
+          },
+          "answer": "D",
+          "explanation": "NVIDIA DGX SuperPOD represents a complete turnkey architecture, binding dense DGX compute systems with dedicated scalable switching fabrics to accommodate world-class deep learning training tasks."
+        }
+      ]
+    }
+  },
+  {
+    "file_type": "docx",
+    "file_name": "NCP-AIN 시험 준비.docx",
+    "content": {
+      "title": "NCP-AIN Core Concept Technical Briefings",
+      "topics": [
+        {
+          "name": "ib_write_bw",
+          "description": "RDMA(Remote Direct Memory Access) 네트워크의 성능을 측정할 때 가장 표준적으로 사용되는 벤치마크 툴 중 하나[cite: 1088]. Perftest 패키지에 포함되어 있으며 두 노드 간의 Write 대역폭(Bandwidth)을 측정하는 데 특화[cite: 1089].",
+          "core_mechanisms": "RDMA Write 연산을 사용하여 송신측이 수신측의 CPU를 거치지 않고 상대방의 메모리에 데이터를 직접 쓰는 방식으로 CPU 오버헤드가 극히 적음[cite: 1092, 1093].",
+          "parameters": {
+            "-d": "사용할 RDMA 장치 지정 (예: mlx5_0) [cite: 1101]",
+            "-s": "메시지 크기(Message Size) 지정 (바이트 단위) [cite: 1103, 1137]",
+            "-q": "Queue Pair 개수 지정 [cite: 1104]",
+            "-x": "RoCEv2 테스트 시 필수적인 GID 인덱스 옵션 [cite: 1106]",
+            "-S": "IP 주소 체계(Address Family 강제) 또는 서비스 품질 레벨(Service Level, 0~15) 정의 [cite: 1125, 1134]"
+          }
+        },
+        {
+          "name": "PXN (PCIe Crossover Networking)",
+          "description": "동일 서버 내에서 서로 다른 PCIe 스위치 트리에 연결된 GPU들이 통신할 때 발생하는 효율성 저하를 해결하는 기술[cite: 1146]. CPU 시스템 루트 복합체를 거치지 않고, 동일 트리 내의 NIC(네트워크 카드)를 중계기/브리지로 활용하여 루프백(Loopback) 통신을 수행함[cite: 1151, 1154, 1157]."
+        },
+        {
+          "name": "GPUDirect RDMA",
+          "description": "GPU와 NIC가 서로의 메모리에 직접 접근할 수 있도록 함으로써 데이터 전송 과정에서 CPU와 시스템 메모리를 완전히 거치지 않게 만드는 기술[cite: 1171]. 지연 시간을 마이크로초 단위로 단축시키고, CPU 부하를 제거하여 초고속 대역폭을 온전히 활용하도록 도움[cite: 1181, 1182, 1183]."
+        },
+        {
+          "name": "NVIDIA UFM Cyber-AI",
+          "description": "대규모 인피니밴드 클러스터 패브릭 관리를 위한 최상위 등급(Advanced Tier) 플랫폼[cite: 1546, 1547]. 정상 가동 상태의 트래픽 패턴을 스스로 학습하여 디지털 지문(Digital Fingerprint)을 생성한 뒤 [cite: 1551, 1552], 미세한 성능 저하 및 케이블 노후화를 분석하여 장애를 예측하고 비정상적 암호화폐 채굴 등 보안 위협을 차단함[cite: 1554, 1555, 1558]."
+        },
+        {
+          "name": "ECN과 PFC의 상관관계",
+          "description": "RoCEv2 무손실(Lossless) 네트워크에서 정체를 관리하는 보완적인 메커니즘[cite: 1752]. 스위치 버퍼 임계값 설정을 기반으로 계단식 방어 체계를 구축함[cite: 1756, 1757].",
+          "stages": {
+            "ECN_Stage": "스위치 버퍼가 일정 수준 차오르면 패킷 헤더에 ECN 비트를 마킹하여 송신측에 알리고, 송신측이 데이터를 보내는 속도를 스스로 줄이도록 제어하는 예방적 조치[cite: 1755, 1759, 1760].",
+            "PFC_Stage": "ECN만으로 정체가 해소되지 않아 버퍼가 더 높은 임계값에 도달할 경우 최후의 수단으로 상위 장비에 Pause 프레임을 보내 라인 전송을 완전히 멈추는 무손실 보장 장치[cite: 1755, 1761, 1762]."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "file_type": "pdf_parsed_html",
+    "file_name": "NVIDIA Spectrum-X 구성 레퍼런스(김석호 수석님 레퍼런스).pdf",
+    "content": {
+      "title": "NVIDIA Spectrum-X Reference Configuration (2026.06)",
+      "summary": "생성형 AI 데이터센터를 위한 종단간(end-to-end) 이더넷 패브릭 문서[cite: 1783]. Spectrum-4 스위치와 BlueField SuperNIC를 하드웨어 수준에서 결합하여 East-West 트래픽 최적화[cite: 1783].",
+      "architecture_topology": {
+        "spine_layer": "Spectrum-4 Spine SN5600 / SN5680 (51.2 Tbps) [cite: 1790, 1791]",
+        "leaf_layer": "Spectrum-4 Leaf SN5600 / SN5400 [cite: 1794, 1795]",
+        "endpoints": "GPU Server (BlueField-3 SuperNIC / ConnectX-8 SuperNIC) & Storage Fabric [cite: 1797, 1801, 1803]",
+        "routing_policy": "Spine-Leaf: Adaptive Routing (per-packet), Leaf-Endpoint: RoCEv2 Lossless (PFC/ECN) [cite: 1805]"
+      },
+      "deployment_commands": {
+        "switch_configuration": [
+          "nv set router adaptive-routing state enabled",
+          "nv set interface swp1-64 router adaptive-routing state enabled",
+          "nv set qos roce enable on",
+          "nv set qos roce mode lossless",
+          "nv set qos traffic-pool default-lossy memory-percent 40",
+          "nv set qos traffic-pool roce-lossless memory-percent 60",
+          "nv config apply"
+        ],
+        "host_supernic_configuration": [
+          "mst start",
+          "mlxconfig -d /dev/mst/mt41692_pciconf0 query",
+          "ibstat",
+          "ibdev2netdev",
+          "show_gids",
+          "mlnx_qos -i ens1f0 --trust dscp",
+          "mlnx_qos -i ens1f0 -pfc 0,0,0,1,0,0,0,0",
+          "cma_roce_mode -d mlx5_0 -p 1m 2"
+        ],
+        "fabric_validation_netq": [
+          "netq show agents",
+          "netq show interfaces",
+          "netq show roce-config",
+          "netq check mtu",
+          "netq trace <src_ip> from <dst_ip>"
+        ]
+      }
+    }
+  },
+  {
+    "file_type": "docx",
+    "file_name": "잡다한 Dump 1.docx",
+    "content": {
+      "title": "NVIDIA AI Networking Supplementary Quiz Database",
+      "questions": [
+        {
+          "number": 1,
+          "question_text": "What are the prerequisites for performing Flow Analysis with NetQ?",
+          "options": {
+            "A": "Cumulus 4.x and later / Spectrum-2 and later / LCM enabled",
+            "B": "Cumulus 5.x and later / Spectrum-3 and later / On-premises deployment",
+            "C": "Cumulus 5.x and later / Spectrum-2 and later / On-premises deployment",
+            "D": "Cumulus 5.x and later / Spectrum-2 and later / LCM enabled"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 2,
+          "question_text": "What is the role of the NVIDIA CUDA-X AI platform in AI networking?",
+          "options": {
+            "A": "To improve graphical rendering speed",
+            "B": "To provide AI-optimized libraries and tools for networking and compute tasks",
+            "C": "To encrypt AI data",
+            "D": "To monitor network traffic"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 3,
+          "question_text": "When designing a multi-tenancy East/West (E/W) fabric using Unified Fabric Manager (UFM), which method should be used?",
+          "options": {
+            "A": "Partition / PKey",
+            "B": "VLAN",
+            "C": "ROMA",
+            "D": "VXLAN"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 4,
+          "question_text": "Which component of the Spectrum-X platform is responsible for reordering out-of-order packets?",
+          "options": {
+            "A": "SuperNIC",
+            "B": "Spectrum-4 switch",
+            "C": "DOCA software",
+            "D": "NetQ"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 5,
+          "question_text": "Which of the following is a feature of NVIDIA's Spectrum-3 Ethernet Switch for AI networking?",
+          "options": {
+            "A": "Supports GPU-to-GPU communication",
+            "B": "Accelerates data encryption",
+            "C": "Provides 400Gb/s networking for AI workloads",
+            "D": "Acts as a cloud hosting platform"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 6,
+          "question_text": "What does RDMA (Remote Direct Memory Access) technology in NVIDIA's network products help achieve?",
+          "options": {
+            "A": "Increases storage capacity",
+            "B": "Reduces CPU load and improves data transfer speed",
+            "C": "Encrypts data in transit",
+            "D": "Improves graphical performance"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 7,
+          "question_text": "You are planning to deploy a large-scale Spectrum-X network for AI workloads. Before physical implementation, you want to validate the network design and configuration using a digital twin approach. Which NVIDIA tool would be most appropriate for creating and simulating a digital twin of your Spectrum-X network?",
+          "options": {
+            "A": "NVIDIA Base Command Manager",
+            "B": "NVIDIA Omniverse",
+            "C": "NVIDIA NetQ",
+            "D": "NVIDIA Air"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 8,
+          "question_text": "You are concerned about potential security threats and unexpected downtime in your InfiniBand data center. Which UFM platform uses analytics to detect security threats, operational issues, and predict network failures in InfiniBand data centers?",
+          "options": {
+            "A": "Host Agent",
+            "B": "Enterprise Platform",
+            "C": "Cyber-AI Platform",
+            "D": "Telemetry Platform"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 9,
+          "question_text": "You are optimizing an InfiniBand network for AI workloads that require low-latency and high- throughput data transfers. Which feature of InfiniBand networks minimizes CPU overhead during data transfers?",
+          "options": {
+            "A": "TCP/IP Offloading",
+            "B": "SHARP",
+            "C": "Direct Memory Access (DMA)",
+            "D": "Pkey"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 10,
+          "question_text": "You are setting up PKey memberships for different tenants in an InfiniBand network. You want to ensure that some tenants have limited communication capabilities. Which PKey membership type allows members to communicate with full members but not with other members of the same type?",
+          "options": {
+            "A": "Restricted membership",
+            "B": "Isolated membership",
+            "C": "Full membership",
+            "D": "Limited/partial membership"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 11,
+          "question_text": "You are troubleshooting a Spectrum-X network and need to validate the fabric configuration. Which feature of Spectrum-X allows for automated fabric validation?",
+          "options": {
+            "A": "NVIDIA NetQ",
+            "B": "RoCE Adaptive Routing",
+            "C": "NVIDIA DOCA",
+            "D": "RoCE Performance Isolation"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 12,
+          "question_text": "When utilizing the ib_write_bw tool for performance testing, what does the -S flag define?",
+          "options": {
+            "A": "The burst size",
+            "B": "The number of QP's",
+            "C": "The maximum rate of sent packages",
+            "D": "Which service level to use"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 13,
+          "question_text": "What is the total throughput of the SN5600 Spectrum-X switch?",
+          "options": {
+            "A": "12.8 petabits per second",
+            "B": "25.6 terabits per second",
+            "C": "102.4 gigabits per second",
+            "D": "51.2 terabits per second"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 14,
+          "question_text": "You are optimizing a multi-node AI training cluster using InfiniBand networking and NVIDIA GPUs. You need to implement efficient collective communication operations across the nodes. Which feature of NVIDIA Collective Communications Library (NCCL) allows for optimized performance in multi-subnet InfiniBand environments?",
+          "options": {
+            "A": "Lazy connection establishment",
+            "B": "GPU Direct RDMA",
+            "C": "Static plugin linking",
+            "D": "Support for IB Router"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 15,
+          "question_text": "You're designing a multi-GPU system for AI training using NVIDIA GPUs with NVLink connections. You need to maximize inter-GPU communication bandwidth. Which feature included in NCCL allows for improved communication between GPUs and NICs?",
+          "options": {
+            "A": "Adaptive Routing",
+            "B": "PXN",
+            "C": "Graph Search Optimization",
+            "D": "SHARP v2"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 16,
+          "question_text": "What is the basic functionality of an IB Router?",
+          "options": {
+            "A": "Connecting Ethernet switches to an InfiniBand fabric",
+            "B": "Connecting SAN to an InfiniBand fabric",
+            "C": "Connecting NVLink domains to an InfiniBand fabric",
+            "D": "Connecting two (or more) InfiniBand fabrics"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 17,
+          "question_text": "How does NVIDIA's BlueField DPU (Data Processing Unit) support AI networking?",
+          "options": {
+            "A": "By accelerating CPU performance",
+            "B": "By offloading networking and security tasks from the CPU to the DPU",
+            "C": "By managing machine learning model training",
+            "D": "By providing dedicated AI compute power"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 18,
+          "question_text": "What does NVIDIA's GPU-accelerated networking primarily enable in AI/ML environments?",
+          "options": {
+            "A": "Faster model creation",
+            "B": "Enhanced data security for AI applications",
+            "C": "Efficient data movement and communication between GPUs for faster AI model training and inference",
+            "D": "Reduced computational power for AI models"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 19,
+          "question_text": "You are optimizing an AI workload that involves multiple GPUs across different nodes in a data center. The application requires both high-bandwidth GPU-to-GPU communication within nodes and efficient communication between nodes. Which combination of NVIDIA technologies would best support this multi-node, multi-GPU AI workload?",
+          "options": {
+            "A": "NVLink for both intra-node and inter-node GPU communication.",
+            "B": "InfiniBand for both intra-node and inter-node GPU communication.",
+            "C": "NVLink for intra-node GPU communication and InfiniBand for inter-node communication.",
+            "D": "PCIe for intra-node GPU communication and RoCE for inter-node communication."
+          },
+          "answer": "C"
+        },
+        {
+          "number": 20,
+          "question_text": "You have recently implemented NVIDIA Spectrum-X in your data center to optimize AI workloads. You need to verify the performance improvements and create a baseline for future comparisons. Which tool would be most appropriate for creating performance baseline results in this Spectrum- X environment?",
+          "options": {
+            "A": "NetQ",
+            "B": "CloudAI Benchmark (NCCL, NeMo/Megatron-LM/vLLM, SGLang, Chakra Replay)",
+            "C": "MLNX-OS",
+            "D": "Ansible"
+          },
+          "answer": "B"
+        }
+      ]
+    }
+  }
+]

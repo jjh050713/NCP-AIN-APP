@@ -12,18 +12,30 @@ NVIDIA **NCP-AIN** (AI Networking) 자격증 덤프 암기용 **네이티브 iOS
 - **덤프 가져오기**: JSON 파일로 덤프 문제 추가
 - **진행률 추적**: 정답을 확인한 문제 비율 표시
 
-## 시험 범위 (내장 문제)
+## 내장 문제 (Korea Dump v12.95)
 
-| 영역 | 비중 | 내장 문제 수 |
-|------|------|-------------|
-| AI Data Center Design | 5% | 6 |
-| Spectrum Networking | 30% | 17 |
-| InfiniBand Networking | 30% | 17 |
-| Kubernetes Integration | 5% | 6 |
-| Troubleshooting Tools | 20% | 9 |
-| Automation & Configuration | 10% | 6 |
+| 항목 | 내용 |
+|------|------|
+| 출처 | `Korea_Dump_v12.95.docx` + `잡다한 Dump 1.docx` |
+| 고유 문항 | **90문항** (중복 20문항 자동 제거) |
+| 복수 정답 | **7문항** (AD, AB, AC, BC, BD 등) |
 
-총 **61문항** (공식 토픽 + 연습 문제). 덤프를 가져오면 추가됩니다.
+| 영역 | 문항 수 |
+|------|--------|
+| Spectrum Networking | 44 |
+| InfiniBand Networking | 21 |
+| Troubleshooting Tools | 11 |
+| AI Data Center Design | 7 |
+| Kubernetes Integration | 4 |
+| Automation & Configuration | 3 |
+
+## 덤프 추가/재변환
+
+원본 덤프 JSON을 `dumps/source_dump.json`에 넣고:
+
+```bash
+python3 scripts/convert_user_dump.py dumps/source_dump.json
+```
 
 ## 빌드 방법 (macOS + Xcode)
 
@@ -68,7 +80,7 @@ NVIDIA **NCP-AIN** (AI Networking) 자격증 덤프 암기용 **네이티브 iOS
 - `Troubleshooting Tools`
 - `Automation & Configuration`
 
-**correctIndex**: 0 = A, 1 = B, 2 = C, 3 = D
+**correctIndices**: 0 = A, 1 = B, 2 = C, 3 = D (복수 정답은 배열로: `[0, 3]` = AD)
 
 ### 3) 텍스트 덤프 변환 스크립트
 

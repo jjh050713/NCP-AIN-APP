@@ -94,9 +94,11 @@ struct ImportView: View {
               "id": "dump-001",
               "category": "Spectrum Networking",
               "question": "문제 내용",
-              "choices": ["보기1", "보기2", "보기3", "보기4"],
-              "correctIndex": 0,
-              "source": "Dump"
+      "choices": ["보기1", "보기2", "보기3", "보기4"],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
             }
           ]
         }

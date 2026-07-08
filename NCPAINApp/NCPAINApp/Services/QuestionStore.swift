@@ -98,7 +98,9 @@ final class QuestionStore: ObservableObject {
                 category: question.category,
                 question: question.question,
                 choices: question.choices,
-                correctIndex: question.correctIndex,
+                correctIndices: question.correctIndices,
+                answerKey: question.answerKey,
+                isMultiSelect: question.isMultiSelect,
                 source: .dump
             )
         })
@@ -162,6 +164,7 @@ final class QuestionStore: ObservableObject {
         !question.id.isEmpty &&
         !question.question.isEmpty &&
         question.choices.count >= 2 &&
-        question.choices.indices.contains(question.correctIndex)
+        !question.correctIndices.isEmpty &&
+        question.correctIndices.allSatisfy { question.choices.indices.contains($0) }
     }
 }

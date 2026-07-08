@@ -52,12 +52,20 @@ struct QuestionCardView: View {
     }
 
     private var questionText: some View {
-        Text(question.question)
-            .font(.body.weight(.medium))
-            .fixedSize(horizontal: false, vertical: true)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding()
-            .background(.background, in: RoundedRectangle(cornerRadius: 12))
+        VStack(alignment: .leading, spacing: 8) {
+            if question.isMultiSelect {
+                Label("복수 정답", systemImage: "checklist")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.orange)
+            }
+
+            Text(question.question)
+                .font(.body.weight(.medium))
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+        .background(.background, in: RoundedRectangle(cornerRadius: 12))
     }
 
     private var choicesList: some View {
@@ -70,7 +78,7 @@ struct QuestionCardView: View {
 
     private func choiceRow(index: Int, text: String) -> some View {
         let label = index < choiceLabels.count ? choiceLabels[index] : "\(index + 1)"
-        let isCorrect = isRevealed && index == question.correctIndex
+        let isCorrect = isRevealed && question.correctIndices.contains(index)
 
         return HStack(alignment: .top, spacing: 12) {
             Text(label)
@@ -104,8 +112,13 @@ struct QuestionCardView: View {
                 HStack {
                     Image(systemName: "checkmark.seal.fill")
                         .foregroundStyle(.green)
-                    Text("정답: \(choiceLabel(for: question.correctIndex)). \(question.correctAnswer)")
+                    Text("정답: \(question.correctAnswerLabel)")
                         .font(.subheadline.weight(.semibold))
+                    if question.isMultiSelect {
+                        Text(question.correctAnswer)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
@@ -149,7 +162,8 @@ struct QuestionCardView: View {
                 "BGP 라우팅",
                 "스패닝 트리 차단"
             ],
-            correctIndex: 0,
+            correctIndices: [0],
+            answerKey: "A",
             source: .practice
         ),
         index: 1,
