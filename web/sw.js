@@ -1,5 +1,5 @@
-const CACHE = 'ncp-ain-v5';
-const ASSETS = ['./', './index.html', './css/style.css', './js/app.js', './manifest.json', './data/questions.json'];
+const CACHE = 'ncp-ain-v6';
+const ASSETS = ['./', './index.html', './css/style.css', './js/app.js?v=5', './manifest.json', './data/questions.json'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)));
