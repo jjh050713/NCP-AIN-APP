@@ -1,4 +1,4 @@
-const CACHE = 'ncp-ain-v4';
+const CACHE = 'ncp-ain-v5';
 const ASSETS = ['./', './index.html', './css/style.css', './js/app.js', './manifest.json', './data/questions.json'];
 
 self.addEventListener('install', (e) => {

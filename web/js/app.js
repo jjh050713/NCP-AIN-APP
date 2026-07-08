@@ -83,6 +83,8 @@ function getCorrectChoiceTexts(q) {
       text: q.choices[i],
     }));
 }
+
+function getFiltered() {
   let items = [...allQuestions];
   const bookmarks = getBookmarks();
   if (filters.bookmarkOnly) items = items.filter((q) => bookmarks.has(q.id));
