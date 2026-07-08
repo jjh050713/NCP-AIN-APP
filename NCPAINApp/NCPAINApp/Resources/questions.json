@@ -3065,6 +3065,601 @@
       "source": "Dump"
     },
     {
+      "id": "nv-official-001",
+      "category": "AI Data Center Design",
+      "question": "According to NVIDIA official specifications, what is the NVLink bandwidth per GPU on the Hopper (4th generation NVLink) architecture?",
+      "choices": [
+        "900 GB/s",
+        "1,800 GB/s",
+        "3,600 GB/s",
+        "400 GB/s"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-002",
+      "category": "AI Data Center Design",
+      "question": "What NVLink bandwidth per GPU does NVIDIA specify for the Blackwell architecture (5th generation NVLink)?",
+      "choices": [
+        "900 GB/s",
+        "1,800 GB/s",
+        "3,600 GB/s",
+        "51.2 TB/s"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-003",
+      "category": "AI Data Center Design",
+      "question": "NVIDIA NVLink 6th generation on the Rubin platform provides what bandwidth per GPU?",
+      "choices": [
+        "900 GB/s",
+        "1,800 GB/s",
+        "3,600 GB/s",
+        "260 TB/s"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-004",
+      "category": "AI Data Center Design",
+      "question": "How many GPUs can be connected in a single NVLink domain in the NVIDIA GB200 NVL72 rack-scale design?",
+      "choices": [
+        "8",
+        "36",
+        "72",
+        "144"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-005",
+      "category": "AI Data Center Design",
+      "question": "What is the primary purpose of NVIDIA NVLink compared to PCIe for GPU communication?",
+      "choices": [
+        "Higher GPU-to-GPU bandwidth and lower latency than PCIe",
+        "Lower cost per port than PCIe",
+        "Built-in encryption for GPU memory",
+        "Replacement for InfiniBand inter-node fabric"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-006",
+      "category": "Troubleshooting Tools",
+      "question": "Which command verifies NVLink interface status and per-link bandwidth on NVIDIA compute nodes?",
+      "choices": [
+        "nvidia-smi nvlink --status",
+        "ibstat -d mlx5_0",
+        "netq show agents",
+        "nv config show"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-007",
+      "category": "AI Data Center Design",
+      "question": "In NVIDIA Multi-Node NVLink (MNNVL) systems, what does NVIDIA Fabric Manager (FM) configure?",
+      "choices": [
+        "NVSwitch memory fabric and NVLink port mapping/routing",
+        "Kubernetes Pod scheduling policies",
+        "BGP EVPN route reflectors",
+        "InfiniBand Subnet Manager election only"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-008",
+      "category": "AI Data Center Design",
+      "question": "NVLink Subnet Manager (NVLSM) in MNNVL systems is based on which technology?",
+      "choices": [
+        "InfiniBand Subnet Manager",
+        "Ethernet STP",
+        "DNS zone transfers",
+        "LDAP directory services"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-009",
+      "category": "AI Data Center Design",
+      "question": "Which NVIDIA communication libraries officially support multiple interconnect technologies including NVLink, InfiniBand, and RoCE?",
+      "choices": [
+        "NCCL, NVSHMEM, and UCX",
+        "TensorFlow and PyTorch only",
+        "SNMP and NetFlow agents",
+        "Docker and containerd"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-010",
+      "category": "Spectrum Networking",
+      "question": "According to NVIDIA, the Spectrum-X Ethernet platform is designed to improve AI networking performance by approximately how much compared to traditional Ethernet?",
+      "choices": [
+        "1.6x",
+        "3x",
+        "10x",
+        "0.5x"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-011",
+      "category": "Spectrum Networking",
+      "question": "NVIDIA SuperNIC is built on which networking platform?",
+      "choices": [
+        "BlueField-3 networking platform",
+        "ConnectX-5 only",
+        "Spectrum-2 ASIC only",
+        "Tesla GPU architecture"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-012",
+      "category": "Spectrum Networking",
+      "question": "Which three features does NVIDIA document as key SuperNIC capabilities when integrated with Spectrum-4 switches?",
+      "choices": [
+        "Adaptive routing, out-of-order packet handling, and optimized congestion control",
+        "STP, VRRP, and RIP",
+        "IPsec, MACsec, and TLS termination",
+        "DHCP relay, NAT, and DNS caching"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-013",
+      "category": "Kubernetes Integration",
+      "question": "What is the PCIe device ID for BlueField-3 SuperNIC in NVIDIA Spectrum-X Kubernetes NIC configuration?",
+      "choices": [
+        "a2dc",
+        "1023",
+        "mlx5_0",
+        "0x1e36"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-014",
+      "category": "Kubernetes Integration",
+      "question": "What is the PCIe device ID for ConnectX-8 SuperNIC in NVIDIA official Spectrum-X documentation?",
+      "choices": [
+        "1023",
+        "a2dc",
+        "15b3",
+        "connectx7"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-015",
+      "category": "Kubernetes Integration",
+      "question": "When enabling spectrumXOptimized in the NIC Configuration Operator, which setting must NOT be enabled simultaneously?",
+      "choices": [
+        "roceOptimized (RoCE settings are included in Spectrum-X config)",
+        "linkType Ethernet",
+        "numVfs = 1",
+        "nodeSelector for SR-IOV"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-016",
+      "category": "Kubernetes Integration",
+      "question": "Which Spectrum-X multiplane mode (hwplb) is supported only on ConnectX-8 and NOT on BlueField-3 SuperNIC?",
+      "choices": [
+        "Hardware Packet Load Balancing (hwplb)",
+        "Single plane (none)",
+        "Software Packet Load Balancing (swplb)",
+        "Uniplane mode"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-017",
+      "category": "InfiniBand Networking",
+      "question": "What does NVIDIA SHARP (Scalable Hierarchical Aggregation and Reduction Protocol) offload to InfiniBand switches?",
+      "choices": [
+        "Collective operations such as AllReduce",
+        "GPU CUDA kernel execution",
+        "DNS and DHCP services",
+        "Disk RAID reconstruction"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-018",
+      "category": "InfiniBand Networking",
+      "question": "According to NVIDIA UFM documentation, enabling SHARP Aggregation Manager (SHARP AM) in UFM requires setting which parameter to true in gv.cfg?",
+      "choices": [
+        "sharp_enabled",
+        "pkey_enabled",
+        "bgp_enabled",
+        "roce_enabled"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-019",
+      "category": "InfiniBand Networking",
+      "question": "NVIDIA SHARP on InfiniBand switches uses a dedicated logical port for SHARP packet transmission. Which port number is documented?",
+      "choices": [
+        "Port #37",
+        "Port #1",
+        "Port #80",
+        "Port #443"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-020",
+      "category": "AI Data Center Design",
+      "question": "In GB200 NVL72, the Grace Blackwell Superchip connects two Blackwell GPUs to a Grace CPU using which interconnect?",
+      "choices": [
+        "NVLink-C2C at 900 GB/s",
+        "PCIe Gen3 x1",
+        "10 GbE",
+        "USB 3.0"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-practice-001",
+      "category": "AI Data Center Design",
+      "question": "Before GB200 NVL72, what was the maximum number of GPUs in a single NVLink domain on an HGX H200 baseboard?",
+      "choices": [
+        "8 GPUs at 900 GB/s per GPU",
+        "72 GPUs at 1,800 GB/s per GPU",
+        "2 GPUs at 3,600 GB/s per GPU",
+        "16 GPUs at 400 Gb/s per GPU"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-002",
+      "category": "Spectrum Networking",
+      "question": "NVIDIA documents that Spectrum-X combines which components for AI-optimized Ethernet?",
+      "choices": [
+        "Spectrum switches, SuperNICs/NICs, cables, and networking software",
+        "GPU drivers and CUDA toolkit only",
+        "InfiniBand HCAs and UFM only",
+        "Windows Server and Active Directory"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-003",
+      "category": "Spectrum Networking",
+      "question": "BlueField-3 SuperNIC achieves GPU server connectivity speeds up to what rate using RoCE, per NVIDIA?",
+      "choices": [
+        "400 Gb/s (up to 1.6 Tb/s in multi-port configurations)",
+        "10 Gb/s",
+        "1 Gb/s",
+        "100 Mb/s"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-004",
+      "category": "AI Data Center Design",
+      "question": "What is the total aggregate NVLink bandwidth documented for the Rubin NVL72 rack (NVLink 6 Switch)?",
+      "choices": [
+        "260 TB/s",
+        "51.2 TB/s",
+        "7.2 TB/s",
+        "900 GB/s"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-005",
+      "category": "InfiniBand Networking",
+      "question": "When UFM runs SHARP Aggregation Manager, what happens when UFM is stopped?",
+      "choices": [
+        "SHARP AM stops along with UFM",
+        "SHARP AM continues independently",
+        "All InfiniBand links go down",
+        "Subnet Manager is automatically deleted"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-006",
+      "category": "Kubernetes Integration",
+      "question": "Which Kubernetes operator provides Spectrum-X NIC discovery, rail configuration, and schedulable RDMA resources?",
+      "choices": [
+        "NVIDIA Network Operator",
+        "GPU Operator only",
+        "Metrics Server",
+        "Ingress NGINX Controller"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-007",
+      "category": "Spectrum Networking",
+      "question": "For Spectrum-X Reference Architecture 2.1 single-plane deployment on HGX H100/H200/B200, which NIC is typically used?",
+      "choices": [
+        "BlueField-3 SuperNIC",
+        "ConnectX-3 only",
+        "Intel E810 only",
+        "Onboard 1 GbE"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-008",
+      "category": "AI Data Center Design",
+      "question": "An MNNVL rack-scale system includes compute trays. How many Blackwell GPUs are in each compute tray per NVIDIA MNNVL documentation?",
+      "choices": [
+        "4 Blackwell GPUs",
+        "1 Blackwell GPU",
+        "72 Blackwell GPUs",
+        "8 Blackwell GPUs"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-009",
+      "category": "InfiniBand Networking",
+      "question": "To enable SHARP in OpenSM configuration per UFM documentation, which command or setting is used?",
+      "choices": [
+        "ib sm sharp enable or sharp_enabled = 2 in opensm.conf",
+        "nv set qos roce enable on",
+        "kubectl apply -f network-operator.yaml",
+        "systemctl restart docker"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-010",
+      "category": "Spectrum Networking",
+      "question": "NVIDIA positions RoCE on Spectrum Ethernet for which primary use case?",
+      "choices": [
+        "High-throughput, low-latency RDMA for scale-out distributed AI applications",
+        "Legacy mainframe terminal emulation",
+        "Consumer Wi-Fi roaming",
+        "Optical WAN/MPLS only"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-011",
+      "category": "AI Data Center Design",
+      "question": "NVLink Switch chips in rack-scale designs primarily enable which topology benefit?",
+      "choices": [
+        "All-to-all GPU communication at full NVLink speed across the rack",
+        "Single-root STP for Ethernet VLANs",
+        "One-to-one GPU-to-CPU pinning only",
+        "Isolated point-to-point links without switching"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-012",
+      "category": "Troubleshooting Tools",
+      "question": "If nvidia-smi nvlink --status shows inactive or down links in an MNNVL system, which is a documented possible cause?",
+      "choices": [
+        "NVLink switch tray offline or high BER on the physical link",
+        "Incorrect DNS suffix on the host",
+        "Missing Python pip packages",
+        "Expired TLS certificate on a web UI"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-013",
+      "category": "Spectrum Networking",
+      "question": "Dual-plane and quad-plane Spectrum-X deployments documented for ConnectX-8 SuperNIC target which GPU platforms?",
+      "choices": [
+        "B300 and GB300 class platforms",
+        "GTX 1080 workstations",
+        "Jetson Nano only",
+        "CPU-only servers without GPUs"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-014",
+      "category": "AI Data Center Design",
+      "question": "Magnum IO and GPUDirect technologies primarily optimize which aspect of AI infrastructure?",
+      "choices": [
+        "Data movement and I/O across GPUs, storage, and network",
+        "GPU fan curve management",
+        "Monitor display refresh rates",
+        "Keyboard and mouse latency"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-015",
+      "category": "InfiniBand Networking",
+      "question": "SHARP reduces distributed training bottlenecks primarily by doing what?",
+      "choices": [
+        "Performing in-network aggregation to reduce data movement during collectives",
+        "Compressing model weights with INT4 only",
+        "Replacing GPUs with switch ASICs",
+        "Disabling AllReduce operations"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
       "id": "official-001",
       "category": "Spectrum Networking",
       "question": "Cumulus Linux에서 RoCE를 활성화하는 NVUE 명령은?",

@@ -16,12 +16,19 @@ NVIDIA **NCP-AIN** (AI Networking) 자격증 덤프 암기용 **네이티브 iOS
 
 | 출처 | 문항 수 | 설명 |
 |------|--------|------|
-| **Dump** | 180 | Korea_Dump_v12.95 (90) + NCP-AIN-EXAM 120문제 HWP (151, 중복 61 제외) |
-| **Official Topic** | 10+ | 공식 시험 범위 (덤프와 중복 제외 후) |
-| **Practice** | 20+ | 연습 문제 (덤프와 중복 제외 후) |
-| **합계** | **210** | |
+| **Dump** | 180 | Korea + HWP 120문제 덤프 (중복 제거) |
+| **Official Topic** | 30 | NVIDIA 공식 문서 기반 (NVLink, Spectrum-X, SHARP, SuperNIC 등) |
+| **Practice** | 35 | 공식 자료 기반 연습 문제 |
+| **합계** | **245** | |
 
-덤프 병합 시 **문제 지문 기준 중복 61문항** 자동 제거 (Korea Dump 우선 유지)
+### NVIDIA 공식 기술 문제 (`dumps/nvidia_official_tech.json`)
+
+[NVIDIA 공식 문서](https://www.nvidia.com/en-us/data-center/nvlink/), [Spectrum-X Docs](https://docs.nvidia.com/networking/display/kubernetes2640/spectrum-x/spectrum-x.html), [UFM SHARP](https://docs.nvidia.com/networking/display/UFMEnterpriseUMv6171/appendix-nvidia-sharp-integration.pdf) 기반:
+
+- **NVLink**: Hopper 900GB/s, Blackwell 1.8TB/s, Rubin 3.6TB/s, NVL72, Fabric Manager
+- **Spectrum-X / SuperNIC**: BlueField-3(a2dc), ConnectX-8(1023), hwplb, spectrumXOptimized
+- **SHARP / InfiniBand**: AllReduce 오프로드, UFM sharp_enabled, OpenSM 설정
+- **Kubernetes**: Network Operator, NIC Configuration Operator
 
 ### 덤프 파일
 
