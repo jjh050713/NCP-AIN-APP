@@ -245,10 +245,6 @@ function bindChips() {
       else if (label === '북마크') filters = { dumpOnly: false, bookmarkOnly: true, shuffle: false, category: null };
       else if (label.startsWith('셔플')) filters.shuffle = !filters.shuffle;
       else if (chip.dataset.cat) filters = { dumpOnly: false, bookmarkOnly: false, shuffle: filters.shuffle, category: chip.dataset.cat };
-      else {
-        const entry = Object.entries(CATEGORIES).find(([, m]) => m.short === label);
-        if (entry) filters = { dumpOnly: false, bookmarkOnly: false, shuffle: filters.shuffle, category: entry[0] };
-      }
       currentIndex = 0;
       renderStudy();
     });
