@@ -115,7 +115,7 @@ function renderHome() {
     <div class="card">
       <div class="subtitle">✓ NVIDIA Certified Professional</div>
       <h2 style="margin-top:4px">AI Networking (NCP-AIN)</h2>
-      <p class="subtitle">덤프 암기 모드 — 문제와 보기만 표시하고 정답을 확인하세요.</p>
+      <p class="subtitle">덤프 암기 모드 — 문제와 정답 보기만 표시합니다. (오답 보기는 숨김)</p>
     </div>
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center">
@@ -174,10 +174,12 @@ function renderStudy() {
   const isRevealed = revealed.has(q.id);
   const labels = ['A','B','C','D','E','F'];
 
-  let choicesHTML = q.choices.map((text, i) => {
-    const correct = isRevealed && q.correctIndices.includes(i);
+  let choicesHTML = q.correctIndices.map((i) => {
+    const text = q.choices[i];
+    if (text === undefined) return '';
+    const correct = isRevealed;
     return `<div class="choice${correct ? ' correct' : ''}">
-      <span class="choice-label">${labels[i] || i+1}</span>
+      <span class="choice-label">${labels[i] || i + 1}</span>
       <span>${escapeHtml(text)}</span>
       ${correct ? ' ✓' : ''}
     </div>`;
