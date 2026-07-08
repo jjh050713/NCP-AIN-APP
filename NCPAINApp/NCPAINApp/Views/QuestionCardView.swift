@@ -9,14 +9,21 @@ struct QuestionCardView: View {
     let onReveal: () -> Void
     let onToggleBookmark: () -> Void
 
-    private let choiceLabels = ["A", "B", "C", "D", "E", "F"]
+    private let answerLabels = ["A", "B", "C", "D", "E", "F"]
+
+    private var correctAnswers: [(label: String, text: String)] {
+        question.correctIndices.enumerated().compactMap { offset, index in
+            guard question.choices.indices.contains(index) else { return nil }
+            let label = offset < answerLabels.count ? answerLabels[offset] : "\(offset + 1)"
+            return (label, question.choices[index])
+        }
+    }
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 header
-                questionText
-                choicesList
+                flashcard
                 revealSection
             }
             .padding(.vertical, 8)
@@ -51,85 +58,48 @@ struct QuestionCardView: View {
         }
     }
 
-    private var questionText: some View {
-        VStack(alignment: .leading, spacing: 8) {
+    private var flashcard: some View {
+        VStack(alignment: .leading, spacing: 16) {
             if question.isMultiSelect {
                 Label("복수 정답", systemImage: "checklist")
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.orange)
             }
 
-            Text(question.question)
-                .font(.body.weight(.medium))
-                .fixedSize(horizontal: false, vertical: true)
-                .textSelection(.enabled)
+            HStack(alignment: .top, spacing: 6) {
+                Text("Q:")
+                    .font(.body.weight(.bold))
+                Text(question.question)
+                    .font(.body.weight(.medium))
+                    .fixedSize(horizontal: false, vertical: true)
+                    .textSelection(.enabled)
+            }
+
+            if isRevealed {
+                Divider()
+
+                ForEach(Array(correctAnswers.enumerated()), id: \.offset) { _, answer in
+                    HStack(alignment: .top, spacing: 6) {
+                        Text("\(answer.label) :")
+                            .font(.body.weight(.bold))
+                            .foregroundStyle(.green)
+                        Text(answer.text)
+                            .font(.body.weight(.medium))
+                            .foregroundStyle(.green)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .textSelection(.enabled)
+                    }
+                }
+            }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
         .background(.background, in: RoundedRectangle(cornerRadius: 12))
     }
 
-    private var choicesList: some View {
-        VStack(spacing: 10) {
-            ForEach(question.correctIndices, id: \.self) { index in
-                if question.choices.indices.contains(index) {
-                    choiceRow(index: index, text: question.choices[index])
-                }
-            }
-        }
-    }
-
-    private func choiceRow(index: Int, text: String) -> some View {
-        let label = index < choiceLabels.count ? choiceLabels[index] : "\(index + 1)"
-        let isCorrect = isRevealed
-
-        return HStack(alignment: .top, spacing: 12) {
-            Text(label)
-                .font(.subheadline.bold().monospacedDigit())
-                .frame(width: 24, height: 24)
-                .background(circleColor(isCorrect: isCorrect))
-                .foregroundStyle(isCorrect ? .white : .primary)
-                .clipShape(Circle())
-
-            Text(text)
-                .font(.subheadline)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-            if isCorrect {
-                Image(systemName: "checkmark.circle.fill")
-                    .foregroundStyle(.green)
-            }
-        }
-        .padding(12)
-        .background(rowBackground(isCorrect: isCorrect), in: RoundedRectangle(cornerRadius: 10))
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(isCorrect ? Color.green : Color.clear, lineWidth: 2)
-        )
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("보기 \(label), \(text)")
-        .accessibilityAddTraits(isCorrect ? .isSelected : [])
-    }
-
     private var revealSection: some View {
-        VStack(spacing: 12) {
-            if isRevealed {
-                HStack {
-                    Image(systemName: "checkmark.seal.fill")
-                        .foregroundStyle(.green)
-                    Text("정답: \(question.correctAnswerLabel)")
-                        .font(.subheadline.weight(.semibold))
-                    if question.isMultiSelect {
-                        Text(question.correctAnswer)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
-                .background(Color.green.opacity(0.1), in: RoundedRectangle(cornerRadius: 12))
-            } else {
+        Group {
+            if !isRevealed {
                 Button(action: onReveal) {
                     Label("정답 보기", systemImage: "eye.fill")
                         .font(.headline)
@@ -141,18 +111,6 @@ struct QuestionCardView: View {
             }
         }
         .padding(.top, 4)
-    }
-
-    private func choiceLabel(for index: Int) -> String {
-        index < choiceLabels.count ? choiceLabels[index] : "\(index + 1)"
-    }
-
-    private func circleColor(isCorrect: Bool) -> Color {
-        isCorrect ? .green : Color(.systemGray4)
-    }
-
-    private func rowBackground(isCorrect: Bool) -> Color {
-        isCorrect ? Color.green.opacity(0.12) : Color(.secondarySystemGroupedBackground)
     }
 }
 
