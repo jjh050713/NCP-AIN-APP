@@ -20,8 +20,8 @@ let currentTab = 'home';
 let filters = { dumpOnly: false, bookmarkOnly: false, shuffle: false, category: null };
 
 const $ = (s) => document.querySelector(s);
-const main = $('#main-content');
-const pageTitle = $('#page-title');
+let main;
+let pageTitle;
 
 function loadJSON(key, fallback) {
   try { return JSON.parse(localStorage.getItem(key)) ?? fallback; }
@@ -61,6 +61,7 @@ async function loadQuestions() {
   const seen = new Set();
   allQuestions = [];
   for (const q of [...bundled, ...imported]) {
+    if (!q || typeof q.question !== 'string') continue;
     const key = q.question.trim().toLowerCase();
     if (seen.has(key)) continue;
     seen.add(key);
@@ -343,17 +344,26 @@ function switchTab(tab) {
 }
 
 async function init() {
+  main = $('#main-content');
+  pageTitle = $('#page-title');
+  if (!main || !pageTitle) return;
+
   main.innerHTML = '<div class="loading">문제 로딩 중…</div>';
-  await loadQuestions();
-  switchTab('home');
+  try {
+    await loadQuestions();
+    switchTab('home');
 
-  document.querySelectorAll('.tab').forEach((tab) => {
-    tab.addEventListener('click', () => switchTab(tab.dataset.tab));
-  });
-
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js').catch(() => {});
+    document.querySelectorAll('.tab').forEach((tab) => {
+      tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+    });
+  } catch (e) {
+    console.error(e);
+    main.innerHTML = '<div class="loading">앱 로딩 실패<br><small>새로고침해 주세요.</small></div>';
   }
 }
 
-init();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}

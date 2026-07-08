@@ -35,6 +35,48 @@
   </div>
 
   <div id="toast" class="toast" hidden></div>
-  <script src="js/app.js?v=5" type="module"></script>
+  <script>
+    (function () {
+      var KEY = 'ncpain_cache_reset_v7';
+
+      function loadApp() {
+        var s = document.createElement('script');
+        s.src = 'js/app.js?v=7';
+        document.body.appendChild(s);
+      }
+
+      if (sessionStorage.getItem(KEY)) {
+        loadApp();
+        return;
+      }
+
+      function done() {
+        sessionStorage.setItem(KEY, '1');
+        location.reload();
+      }
+
+      var tasks = [];
+      if ('serviceWorker' in navigator) {
+        tasks.push(
+          navigator.serviceWorker.getRegistrations().then(function (regs) {
+            return Promise.all(regs.map(function (r) { return r.unregister(); }));
+          })
+        );
+      }
+      if ('caches' in window) {
+        tasks.push(
+          caches.keys().then(function (keys) {
+            return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+          })
+        );
+      }
+      if (!tasks.length) {
+        sessionStorage.setItem(KEY, '1');
+        loadApp();
+        return;
+      }
+      Promise.all(tasks).then(done).catch(done);
+    })();
+  </script>
 </body>
 </html>
