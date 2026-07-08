@@ -1,0 +1,440 @@
+{
+  "version": "1.0.0",
+  "questions": [
+    {
+      "id": "practice-001",
+      "category": "Spectrum Networking",
+      "question": "RoCEv2 무손실 네트워크에서 ECN과 PFC의 역할 관계로 가장 올바른 설명은?",
+      "choices": [
+        "ECN은 예방적 혼잡 알림, PFC는 버퍼 임계 초과 시 최후의 Pause 제어",
+        "PFC가 먼저 동작하고 ECN은 백업용",
+        "ECN과 PFC는 동일한 계층에서 중복 동작",
+        "PFC는 L3에서, ECN은 L2에서만 동작"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-002",
+      "category": "Troubleshooting Tools",
+      "question": "ib_write_bw 테스트에서 RDMA 장치를 지정하는 옵션은?",
+      "choices": ["-d", "-s", "-q", "-x"],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-003",
+      "category": "Troubleshooting Tools",
+      "question": "RoCEv2 환경에서 ib_write_bw 실행 시 GID 인덱스를 지정하는 필수 옵션은?",
+      "choices": ["-x", "-d", "-S", "-q"],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-004",
+      "category": "AI Data Center Design",
+      "question": "NCCL의 PXN(Peer eXchange Network)이 해결하는 문제는?",
+      "choices": [
+        "서로 다른 PCIe 트리에 연결된 GPU 간 통신 효율 저하",
+        "InfiniBand SM 장애 조치",
+        "VLAN 간 라우팅",
+        "DNS 쿼리 지연"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-005",
+      "category": "AI Data Center Design",
+      "question": "GPUDirect RDMA의 핵심 이점은?",
+      "choices": [
+        "GPU와 NIC가 CPU/시스템 메모리를 거치지 않고 직접 메모리 접근",
+        "GPU 클럭 속도 향상",
+        "디스크 IOPS 증가",
+        "TLS 암호화 자동 적용"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-006",
+      "category": "InfiniBand Networking",
+      "question": "UFM Cyber-AI 플랫폼이 수행하는 핵심 기능은?",
+      "choices": [
+        "트래픽 패턴 학습 후 이상 탐지 및 장애 예측",
+        "BGP 라우팅 테이블 관리",
+        "Kubernetes Pod 스케줄링",
+        "GPU 드라이버 설치"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-007",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X에서 Adaptive Routing을 활성화하는 NVUE 명령은?",
+      "choices": [
+        "nv set router adaptive-routing state enabled",
+        "nv set qos roce enable on",
+        "nv set bridge domain br_default vlan 1",
+        "nv set router bgp enable on"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-008",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X RoCE lossless 모드를 설정하는 NVUE 명령은?",
+      "choices": [
+        "nv set qos roce mode lossless",
+        "nv set roce qos mode on",
+        "nv set interface swp1 roce enable",
+        "nv set qos pfc enable all"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-009",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X 패브릭에서 RoCE 구성을 검증할 때 NetQ에서 확인하는 명령은?",
+      "choices": [
+        "netq show roce-config",
+        "netq show bgp",
+        "netq show kubernetes",
+        "netq show sminfo"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-010",
+      "category": "Spectrum Networking",
+      "question": "호스트 SuperNIC에서 RoCEv2 모드를 설정할 때 사용하는 명령은?",
+      "choices": [
+        "cma_roce_mode -d mlx5_0 -p 1 -m 2",
+        "ibstat -d mlx5_0",
+        "nv set qos roce enable on",
+        "mlnx_qos -i ens1f0 --pfc all"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-011",
+      "category": "AI Data Center Design",
+      "question": "AI 클러스터에서 노드 내(intra-node) GPU 통신과 노드 간(inter-node) 통신에 가장 적합한 NVIDIA 기술 조합은?",
+      "choices": [
+        "NVLink(노드 내) + InfiniBand(노드 간)",
+        "InfiniBand만 사용",
+        "NVLink만 사용",
+        "PCIe(노드 내) + TCP(노드 간)"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-012",
+      "category": "AI Data Center Design",
+      "question": "BlueField DPU가 AI 데이터센터에서 담당하는 주요 역할은?",
+      "choices": [
+        "네트워킹·보안·스토리지 인프라 오프로드",
+        "GPU CUDA 코어 연산",
+        "LLM 추론 엔진 실행",
+        "BIOS 펌웨어 관리"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-013",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X 아키텍처에서 Adaptive Routing 사용 시 out-of-order 패킷 재정렬을 담당하는 컴포넌트는?",
+      "choices": ["BlueField-3 SuperNIC", "Spectrum-4 switch", "NetQ", "UFM"],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-014",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X 혼잡 제어 알고리즘을 실행하는 주요 컴포넌트는?",
+      "choices": [
+        "BlueField-3 SuperNIC",
+        "Spectrum-4 switch only",
+        "NetQ only",
+        "Kubernetes Network Operator"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-015",
+      "category": "InfiniBand Networking",
+      "question": "InfiniBand 멀티테넌시에서 Full membership과 Limited membership의 차이로 올바른 것은?",
+      "choices": [
+        "Limited는 Full과 통신 가능하지만 동일 Limited 멤버 간 통신 불가",
+        "Limited는 모든 노드와 자유롭게 통신",
+        "Full은 SM 전용",
+        "Limited는 SM이 될 수 없음"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-016",
+      "category": "Automation & Configuration",
+      "question": "NVUE 구성을 스위치에 적용하는 명령은?",
+      "choices": [
+        "nv config apply",
+        "nv config save",
+        "nv set apply",
+        "nv commit"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-017",
+      "category": "Automation & Configuration",
+      "question": "적용 전후 NVUE 구성 차이를 확인하는 명령은?",
+      "choices": [
+        "nv config diff",
+        "nv config show",
+        "nv diff apply",
+        "ibdiagnet"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-018",
+      "category": "Kubernetes Integration",
+      "question": "Kubernetes에서 RDMA 디바이스를 Pod에 노출하기 위해 NicClusterPolicy에서 설정하는 항목은?",
+      "choices": [
+        "RDMA Shared Device Plugin",
+        "GPU Operator",
+        "Calico IPAM",
+        "Ingress Controller"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-019",
+      "category": "Troubleshooting Tools",
+      "question": "InfiniBand fabric에서 마스터 Subnet Manager 호스트 이름을 확인하는 명령 순서는?",
+      "choices": [
+        "sminfo → smpquery ND <LID>",
+        "ibstat → ibping",
+        "ibnetdiscover → ibnodes",
+        "netq show agents"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-020",
+      "category": "AI Data Center Design",
+      "question": "NVIDIA DGX SuperPOD 레퍼런스 아키텍처가 적합한 사용 사례는?",
+      "choices": [
+        "대규모 딥러닝 학습용 턴키 AI 인프라",
+        "홈 라우터 구성",
+        "단일 GPU 워크스테이션",
+        "모바일 추론 전용"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "official-001",
+      "category": "Spectrum Networking",
+      "question": "Cumulus Linux에서 RoCE를 활성화하는 NVUE 명령은?",
+      "choices": [
+        "nv set qos roce enable on",
+        "nv set roce qos enable on",
+        "nv roce qos enable on",
+        "nv qos roce enable on"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-002",
+      "category": "InfiniBand Networking",
+      "question": "InfiniBand fabric에서 Subnet Manager(SM)의 역할은?",
+      "choices": [
+        "토폴로지 탐색, LID 할당, 라우팅 테이블 관리",
+        "GPU 드라이버 로드",
+        "NFS 마운트",
+        "LDAP 인증"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-003",
+      "category": "InfiniBand Networking",
+      "question": "InfiniBand 멀티테넌시 격리에 사용하는 키는?",
+      "choices": [
+        "Partition Key (PKey)",
+        "SSH host key",
+        "TLS session key",
+        "WPA passphrase"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-004",
+      "category": "Troubleshooting Tools",
+      "question": "ibstat 명령의 용도는?",
+      "choices": [
+        "HCA 포트 상태 및 링크 정보 확인",
+        "BGP 라우팅 테이블 출력",
+        "디스크 SMART 정보",
+        "CPU 온도 측정"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-005",
+      "category": "Troubleshooting Tools",
+      "question": "ibdiagnet이 수행하는 작업은?",
+      "choices": [
+        "Fabric 전체 진단 및 오류 보고",
+        "컨테이너 이미지 pull",
+        "LDAP 그룹 동기화",
+        "GPU ECC 메모리 클리어"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-006",
+      "category": "AI Data Center Design",
+      "question": "Rail-optimized topology의 주요 설계 목적은?",
+      "choices": [
+        "GPU-to-GPU 통신 경로 최소화 및 대역폭 극대화",
+        "스토리지 트래픽만 분리",
+        "인터넷 게이트웨이 이중화",
+        "DNS 쿼리 지연 감소"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-007",
+      "category": "Spectrum Networking",
+      "question": "NVIDIA What Just Happened (WJH) 서비스의 주요 용도는?",
+      "choices": [
+        "실시간 패킷 드롭/혼잡 이벤트 분석",
+        "펌웨어 자동 업그레이드",
+        "DNS 캐시 관리",
+        "NTP 동기화"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-008",
+      "category": "Kubernetes Integration",
+      "question": "NVIDIA Network Operator의 주요 역할은?",
+      "choices": [
+        "Kubernetes에서 RDMA/InfiniBand 인터페이스 관리",
+        "Helm 차트 저장소 미러링만",
+        "etcd 백업",
+        "Ingress TLS 종료만"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-009",
+      "category": "Automation & Configuration",
+      "question": "Ansible로 자동화하기 좋은 Spectrum-X 작업은?",
+      "choices": [
+        "VLAN 생성 및 RoCE QoS 설정",
+        "물리 케이블 체결",
+        "랙 전원 배선",
+        "BIOS 패스워드 설정"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-010",
+      "category": "Spectrum Networking",
+      "question": "RoCE 환경에서 패킷 드롭 없이 혼잡을 알리기 위해 사용하는 메커니즘은?",
+      "choices": [
+        "ECN (Explicit Congestion Notification)",
+        "STP (Spanning Tree Protocol)",
+        "DHCP Snooping",
+        "ARP Proxy"
+      ],
+      "correctIndices": [0],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    }
+  ]
+}

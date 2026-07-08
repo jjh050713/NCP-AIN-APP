@@ -12,22 +12,16 @@ NVIDIA **NCP-AIN** (AI Networking) 자격증 덤프 암기용 **네이티브 iOS
 - **덤프 가져오기**: JSON 파일로 덤프 문제 추가
 - **진행률 추적**: 정답을 확인한 문제 비율 표시
 
-## 내장 문제 (Korea Dump v12.95)
+## 내장 문제
 
-| 항목 | 내용 |
-|------|------|
-| 출처 | `Korea_Dump_v12.95.docx` + `잡다한 Dump 1.docx` |
-| 고유 문항 | **90문항** (중복 20문항 자동 제거) |
-| 복수 정답 | **7문항** (AD, AB, AC, BC, BD 등) |
+| 출처 | 문항 수 | 설명 |
+|------|--------|------|
+| **Dump** | 90 | Korea_Dump_v12.95 + 잡다한 Dump 1 (중복 제거) |
+| **Official Topic** | 34 | NVIDIA 공식 시험 범위 기반 |
+| **Practice** | 49 | RoCE, InfiniBand, Spectrum-X, NVLink, DPU/SuperNIC 등 연습 문제 |
+| **합계** | **173** | 복수 정답 7문항 포함 |
 
-| 영역 | 문항 수 |
-|------|--------|
-| Spectrum Networking | 44 |
-| InfiniBand Networking | 21 |
-| Troubleshooting Tools | 11 |
-| AI Data Center Design | 7 |
-| Kubernetes Integration | 4 |
-| Automation & Configuration | 3 |
+주요 토픽: InfiniBand, RoCE, Spectrum-X, NVLink, BlueField DPU, SuperNIC, UFM, NetQ, NVUE, NCCL, Kubernetes Network Operator
 
 ## 덤프 추가/재변환
 
