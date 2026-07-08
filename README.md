@@ -44,7 +44,17 @@ python3 convert_exam_dump.py ../dumps/ncp_ain_exam_120.json -o /tmp/dump_hwp120.
 python3 merge_question_banks.py /tmp/dump_korea.json /tmp/dump_hwp120.json ../dumps/supplementary_practice.json ../dumps/nvidia_official_tech.json -o ../NCPAINApp/NCPAINApp/Resources/questions.json
 ```
 
-## iPhone 설치
+## 📱 iPhone만 있을 때 (Mac 불필요) — **추천**
+
+**Safari → 홈 화면에 추가** 하면 앱처럼 설치됩니다.
+
+👉 **https://jjh050713.github.io/NCP-AIN-APP/**
+
+자세한 방법: **[INSTALL_IPHONE.md](INSTALL_IPHONE.md)**
+
+---
+
+## iPhone 설치 (Mac + Xcode)
 
 **실기기 설치 방법은 [INSTALL.md](INSTALL.md)를 참고하세요.**
 

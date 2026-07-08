@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NCP-AIN">
+  <meta name="theme-color" content="#1a5c2e">
+  <title>NCP-AIN 암기</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="top-bar">
+      <h1 id="page-title">NCP-AIN</h1>
+      <button id="menu-btn" class="icon-btn" aria-label="메뉴" hidden>⋯</button>
+    </header>
+
+    <main id="main-content"></main>
+
+    <nav class="tab-bar" role="tablist">
+      <button class="tab active" data-tab="home" role="tab">
+        <span class="tab-icon">🏠</span><span>홈</span>
+      </button>
+      <button class="tab" data-tab="study" role="tab">
+        <span class="tab-icon">📚</span><span>암기</span>
+      </button>
+      <button class="tab" data-tab="import" role="tab">
+        <span class="tab-icon">📥</span><span>덤프</span>
+      </button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
