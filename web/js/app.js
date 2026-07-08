@@ -129,7 +129,7 @@ function renderHome() {
     <div class="card">
       <div class="subtitle">✓ NVIDIA Certified Professional</div>
       <h2 style="margin-top:4px">AI Networking (NCP-AIN)</h2>
-      <p class="subtitle">덤프 암기 모드 — Q: 문제만 보고, 정답 보기로 A: 정답을 확인하세요.</p>
+      <p class="subtitle">덤프 암기 모드 — Q: 문제와 A: 정답만 표시합니다. (오답 보기 없음)</p>
     </div>
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center">
@@ -183,16 +183,12 @@ function renderStudy() {
   }
 
   const q = sessionQuestions[currentIndex];
-  const revealed = getRevealed();
   const bookmarks = getBookmarks();
-  const isRevealed = revealed.has(q.id);
   const answers = getCorrectChoiceTexts(q);
 
-  const answerHTML = isRevealed
-    ? answers.map(({ label, text }) =>
-        `<p class="qa-line qa-answer"><strong>${label} :</strong> ${escapeHtml(text)}</p>`
-      ).join('')
-    : '';
+  const answerHTML = answers.map(({ label, text }) =>
+    `<p class="qa-line qa-answer"><strong>${label} :</strong> ${escapeHtml(text)}</p>`
+  ).join('');
 
   const multiBadge = q.isMultiSelect ? '<span class="q-badge multi">복수 정답</span>' : '';
   const cat = CATEGORIES[q.category] || { icon: '📋' };
@@ -215,9 +211,6 @@ function renderStudy() {
       <p class="qa-line qa-question"><strong>Q:</strong> ${escapeHtml(q.question)}</p>
       ${answerHTML}
     </div>
-    ${isRevealed
-      ? ''
-      : `<button class="btn-primary" id="reveal-btn">👁 정답 보기</button>`}
     <div class="nav-bar">
       <button class="nav-btn" id="prev-btn">‹ 이전</button>
       <span class="nav-counter">${currentIndex + 1} / ${sessionQuestions.length}</span>
@@ -225,13 +218,6 @@ function renderStudy() {
     </div>`;
 
   bindChips();
-  $('#reveal-btn')?.addEventListener('click', () => {
-    const r = getRevealed();
-    r.add(q.id);
-    saveJSON(STORAGE.revealed, [...r]);
-    vibrate('success');
-    renderStudy();
-  });
   $('#bookmark-btn')?.addEventListener('click', () => {
     const b = getBookmarks();
     b.has(q.id) ? b.delete(q.id) : b.add(q.id);
@@ -265,9 +251,18 @@ function bindChips() {
   });
 }
 
+function markStudied(q) {
+  const r = getRevealed();
+  if (!r.has(q.id)) {
+    r.add(q.id);
+    saveJSON(STORAGE.revealed, [...r]);
+  }
+}
+
 function goNext() {
   vibrate();
   if (!sessionQuestions.length) return;
+  markStudied(sessionQuestions[currentIndex]);
   if (currentIndex >= sessionQuestions.length - 1) {
     currentIndex = 0;
     vibrate('success');

@@ -4,9 +4,7 @@ struct QuestionCardView: View {
     let question: Question
     let index: Int
     let total: Int
-    let isRevealed: Bool
     let isBookmarked: Bool
-    let onReveal: () -> Void
     let onToggleBookmark: () -> Void
 
     private let answerLabels = ["A", "B", "C", "D", "E", "F"]
@@ -24,7 +22,6 @@ struct QuestionCardView: View {
             VStack(alignment: .leading, spacing: 20) {
                 header
                 flashcard
-                revealSection
             }
             .padding(.vertical, 8)
         }
@@ -75,42 +72,24 @@ struct QuestionCardView: View {
                     .textSelection(.enabled)
             }
 
-            if isRevealed {
-                Divider()
+            Divider()
 
-                ForEach(Array(correctAnswers.enumerated()), id: \.offset) { _, answer in
-                    HStack(alignment: .top, spacing: 6) {
-                        Text("\(answer.label) :")
-                            .font(.body.weight(.bold))
-                            .foregroundStyle(.green)
-                        Text(answer.text)
-                            .font(.body.weight(.medium))
-                            .foregroundStyle(.green)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .textSelection(.enabled)
-                    }
+            ForEach(Array(correctAnswers.enumerated()), id: \.offset) { _, answer in
+                HStack(alignment: .top, spacing: 6) {
+                    Text("\(answer.label) :")
+                        .font(.body.weight(.bold))
+                        .foregroundStyle(.green)
+                    Text(answer.text)
+                        .font(.body.weight(.medium))
+                        .foregroundStyle(.green)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .textSelection(.enabled)
                 }
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
         .background(.background, in: RoundedRectangle(cornerRadius: 12))
-    }
-
-    private var revealSection: some View {
-        Group {
-            if !isRevealed {
-                Button(action: onReveal) {
-                    Label("정답 보기", systemImage: "eye.fill")
-                        .font(.headline)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(.green)
-            }
-        }
-        .padding(.top, 4)
     }
 }
 
@@ -132,9 +111,7 @@ struct QuestionCardView: View {
         ),
         index: 1,
         total: 10,
-        isRevealed: false,
         isBookmarked: false,
-        onReveal: {},
         onToggleBookmark: {}
     )
     .padding()

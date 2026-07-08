@@ -108,12 +108,7 @@ struct StudyView: View {
                     question: sessionQuestions[currentIndex],
                     index: currentIndex + 1,
                     total: sessionQuestions.count,
-                    isRevealed: store.isRevealed(sessionQuestions[currentIndex]),
                     isBookmarked: store.isBookmarked(sessionQuestions[currentIndex]),
-                    onReveal: {
-                        store.reveal(sessionQuestions[currentIndex])
-                        HapticManager.success()
-                    },
                     onToggleBookmark: { store.toggleBookmark(sessionQuestions[currentIndex]) }
                 )
                 .padding(.horizontal)
@@ -176,6 +171,7 @@ struct StudyView: View {
     private func goToNext() {
         guard !sessionQuestions.isEmpty else { return }
 
+        store.reveal(sessionQuestions[currentIndex])
         HapticManager.lightTap()
         withAnimation(.easeInOut(duration: 0.25)) {
             if currentIndex >= sessionQuestions.count - 1 {
