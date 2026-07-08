@@ -55,6 +55,10 @@ final class QuestionStore: ObservableObject {
         questions.filter { bookmarkedIDs.contains($0.id) }
     }
 
+    func dumpQuestions() -> [Question] {
+        questions.filter { $0.source == .dump }
+    }
+
     func isRevealed(_ question: Question) -> Bool {
         revealedIDs.contains(question.id)
     }

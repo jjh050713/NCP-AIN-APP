@@ -41,7 +41,7 @@ NVIDIA **NCP-AIN** (AI Networking) 자격증 덤프 암기용 **네이티브 iOS
 cd scripts
 python3 convert_user_dump.py ../dumps/source_dump.json -o /tmp/dump_korea.json
 python3 convert_exam_dump.py ../dumps/ncp_ain_exam_120.json -o /tmp/dump_hwp120.json
-python3 merge_question_banks.py /tmp/dump_korea.json /tmp/dump_hwp120.json ../dumps/supplementary_practice.json -o ../NCPAINApp/NCPAINApp/Resources/questions.json
+python3 merge_question_banks.py /tmp/dump_korea.json /tmp/dump_hwp120.json ../dumps/supplementary_practice.json ../dumps/nvidia_official_tech.json -o ../NCPAINApp/NCPAINApp/Resources/questions.json
 ```
 
 ## 빌드 방법 (macOS + Xcode)
