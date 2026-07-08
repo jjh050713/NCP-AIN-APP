@@ -16,19 +16,25 @@ NVIDIA **NCP-AIN** (AI Networking) 자격증 덤프 암기용 **네이티브 iOS
 
 | 출처 | 문항 수 | 설명 |
 |------|--------|------|
-| **Dump** | 90 | Korea_Dump_v12.95 + 잡다한 Dump 1 (중복 제거) |
-| **Official Topic** | 34 | NVIDIA 공식 시험 범위 기반 |
-| **Practice** | 49 | RoCE, InfiniBand, Spectrum-X, NVLink, DPU/SuperNIC 등 연습 문제 |
-| **합계** | **173** | 복수 정답 7문항 포함 |
+| **Dump** | 180 | Korea_Dump_v12.95 (90) + NCP-AIN-EXAM 120문제 HWP (151, 중복 61 제외) |
+| **Official Topic** | 10+ | 공식 시험 범위 (덤프와 중복 제외 후) |
+| **Practice** | 20+ | 연습 문제 (덤프와 중복 제외 후) |
+| **합계** | **210** | |
 
-주요 토픽: InfiniBand, RoCE, Spectrum-X, NVLink, BlueField DPU, SuperNIC, UFM, NetQ, NVUE, NCCL, Kubernetes Network Operator
+덤프 병합 시 **문제 지문 기준 중복 61문항** 자동 제거 (Korea Dump 우선 유지)
 
-## 덤프 추가/재변환
+### 덤프 파일
 
-원본 덤프 JSON을 `dumps/source_dump.json`에 넣고:
+- `dumps/source_dump.json` — Korea v12.95 + 잡다한 Dump 1
+- `dumps/ncp_ain_exam_120.json` — NCP-AIN-EXAM 정리 120문제 HWP (151항목)
+
+## 문제 은행 병합
 
 ```bash
-python3 scripts/convert_user_dump.py dumps/source_dump.json
+cd scripts
+python3 convert_user_dump.py ../dumps/source_dump.json -o /tmp/dump_korea.json
+python3 convert_exam_dump.py ../dumps/ncp_ain_exam_120.json -o /tmp/dump_hwp120.json
+python3 merge_question_banks.py /tmp/dump_korea.json /tmp/dump_hwp120.json ../dumps/supplementary_practice.json -o ../NCPAINApp/NCPAINApp/Resources/questions.json
 ```
 
 ## 빌드 방법 (macOS + Xcode)

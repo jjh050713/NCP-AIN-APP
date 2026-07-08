@@ -1535,599 +1535,1534 @@
       "source": "Dump"
     },
     {
-      "id": "adc-001",
+      "id": "dump-hwp-001-in-a-large-scale-ai-training-cluster-using-rocev",
+      "category": "Spectrum Networking",
+      "question": "In a large-scale AI training cluster using RoCEv2, engineers observe that latency is significantly higher between certain GPU nodes, while other nodes communicate normally. There is no evidence of packet loss, and all links appear operational. What is the MOST likely root cause of this issue?",
+      "choices": [
+        "MTU mismatch causing fragmentation",
+        "ECMP hash imbalance leading to uneven path utilization",
+        "DNS resolution delay affecting routing",
+        "Lack of VLAN tagging on interfaces"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-003-an-ai-infrastructure-team-deploys-a-roce-based-n",
+      "category": "Spectrum Networking",
+      "question": "An AI infrastructure team deploys a RoCE-based network but notices frequent pause frames being generated across multiple switches. Over time, this leads to widespread congestion and reduced throughput. Which of the following is the BEST explanation for this behavior?",
+      "choices": [
+        "ECN is aggressively marking packets",
+        "PFC is being triggered excessively due to congestion",
+        "RDMA is incorrectly configured at the NIC level",
+        "TCP retransmissions are overwhelming the network"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-005-during-performance-testing-a-sudden-drop-in-thro",
+      "category": "Spectrum Networking",
+      "question": "During performance testing, a sudden drop in throughput occurs when multiple GPU nodes simultaneously send data to a single aggregation node. Switch buffer utilization spikes rapidly. What is this scenario commonly referred to as?",
+      "choices": [
+        "ECMP polarization",
+        "Microburst",
+        "Incast",
+        "Head-of-line blocking"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-007-a-network-engineer-is-designing-a-high-performan",
+      "category": "Spectrum Networking",
+      "question": "A network engineer is designing a high-performance AI fabric and wants to ensure minimal latency and consistent performance across all nodes. Which design choice BEST achieves this goal?",
+      "choices": [
+        "Implement a hub-and-spoke topology",
+        "Use a Leaf-Spine architecture with equal-cost paths",
+        "Deploy a single large Layer 2 domain",
+        "Use oversubscription ratio of 5:1"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-009-in-a-rocev2-network-packet-drops-are-observed-un",
+      "category": "Spectrum Networking",
+      "question": "In a RoCEv2 network, packet drops are observed under heavy load conditions, leading to severe degradation in application performance. Why does packet loss have such a significant impact in this environment?",
+      "choices": [
+        "TCP retransmissions are disabled",
+        "RDMA assumes a lossless network for optimal performance",
+        "UDP guarantees delivery",
+        "ECMP cannot handle packet drops"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-012-a-data-center-operator-notices-that-enabling-onl",
+      "category": "Spectrum Networking",
+      "question": "A data center operator notices that enabling only PFC in a RoCE network leads to intermittent traffic stalls and potential deadlocks. Which additional mechanism should be implemented to mitigate this issue?",
+      "choices": [
+        "NAT",
+        "ECN",
+        "DHCP",
+        "ARP"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-014-in-a-distributed-ai-training-job-flows-are-consi",
+      "category": "Spectrum Networking",
+      "question": "In a distributed AI training job, flows are consistently mapped to the same physical links, resulting in uneven utilization across the network fabric. What is the MOST likely cause?",
+      "choices": [
+        "VLAN misconfiguration",
+        "ECMP hashing algorithm limitations",
+        "DNS resolution issues",
+        "MTU mismatch"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-015-a-network-engineer-observes-that-packets-are-arr",
+      "category": "Spectrum Networking",
+      "question": "A network engineer observes that packets are arriving out of order at the destination, affecting RDMA performance. Which condition MOST likely caused this issue?",
+      "choices": [
+        "Single path routing",
+        "ECMP with inconsistent hashing across paths",
+        "VLAN tagging errors",
+        "ARP table overflow"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-017-an-ai-cluster-is-experiencing-frequent-congestio",
+      "category": "Spectrum Networking",
+      "question": "An AI cluster is experiencing frequent congestion events, and ECN marking is observed on many packets. What is the expected behavior of the sender upon receiving ECN signals?",
+      "choices": [
+        "Increase transmission rate",
+        "Decrease transmission rate",
+        "Drop packets immediately",
+        "Switch to TCP"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-019-a-system-architect-wants-to-reduce-cpu-overhead",
+      "category": "Spectrum Networking",
+      "question": "A system architect wants to reduce CPU overhead and improve data processing efficiency in a high-performance AI cluster. Which technology should be introduced to achieve this goal?",
+      "choices": [
+        "Traditional NIC",
+        "Software-based routing",
+        "Data Processing Unit (DPU)",
+        "NAT gateway"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-021-during-network-analysis-it-is-found-that-buffer",
+      "category": "Spectrum Networking",
+      "question": "During network analysis, it is found that buffer memory on switches is frequently exhausted during peak workloads, leading to packet drops. What is the BEST mitigation strategy?",
+      "choices": [
+        "Reduce MTU size",
+        "Increase buffer allocation and tune thresholds",
+        "Disable ECMP",
+        "Remove VLAN tagging"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-022-when-utilizing-the-ib-write-bw-tool-for-performa",
+      "category": "Troubleshooting Tools",
+      "question": "When utilizing the ib_write_bw tool for performance testing, what does the –S flag define?",
+      "choices": [
+        "The burst size",
+        "The number of QP's",
+        "The maximum rate of sent packages",
+        "Which service level to use"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-023-a-network-is-configured-with-rocev1-but-communic",
+      "category": "Spectrum Networking",
+      "question": "A network is configured with RoCEv1, but communication across Layer 3 boundaries is failing. What is the MOST likely reason?",
+      "choices": [
+        "RoCEv1 operates only at Layer 2",
+        "ECMP is not enabled",
+        "MTU is too large",
+        "TCP is required"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-027-in-a-high-performance-fabric-a-cut-through-switc",
+      "category": "Spectrum Networking",
+      "question": "In a high-performance fabric, a cut-through switching mechanism is used instead of store-and-forward. What is the PRIMARY advantage of this choice?",
+      "choices": [
+        "Improved packet filtering",
+        "Reduced latency",
+        "Increased buffer capacity",
+        "Enhanced encryption"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-029-however-what-is-a-potential-drawback-of-cut-thro",
+      "category": "Spectrum Networking",
+      "question": "However, what is a potential drawback of cut-through switching?",
+      "choices": [
+        "Increased latency",
+        "Higher CPU usage",
+        "Forwarding corrupted packets",
+        "Reduced throughput"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-031-a-cloud-service-provider-is-deploying-the-nvidia",
+      "category": "Spectrum Networking",
+      "question": "A cloud service provider is deploying the NVIDIA Spectrum-X Ethernet platform in a multi- tenant environment. To ensure the security and isolation of each tenant's AI workload, the provider wants to implement a feature that prevents unauthorized access to the network. Which of the following features of the Spectrum-X platform should the provider implement?",
+      "choices": [
+        "Congestion Control",
+        "Streaming Telemetry",
+        "Adaptive Routing",
+        "Traffic Isolation"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-032-a-network-engineer-observes-that-one-uplink-in-a",
       "category": "AI Data Center Design",
-      "question": "NVIDIA AI Factory 아키텍처에서 GPU 간 고속 통신을 위해 주로 사용되는 토폴로지는?",
+      "question": "A network engineer observes that one uplink in a Leaf-Spine topology is heavily utilized, while others remain underutilized. What is the MOST likely explanation?",
       "choices": [
-        "Rail-optimized topology",
-        "Traditional three-tier topology",
-        "Hub-and-spoke topology",
-        "Ring topology only"
+        "ECMP hash imbalance",
+        "VLAN mismatch",
+        "MTU issue",
+        "DNS failure"
       ],
       "correctIndices": [
         0
       ],
       "answerKey": "A",
       "isMultiSelect": false,
-      "source": "Official Topic"
+      "source": "Dump"
     },
     {
-      "id": "adc-002",
+      "id": "dump-hwp-033-you-have-recently-implemented-nvidia-spectrum-x",
+      "category": "Spectrum Networking",
+      "question": "You have recently implemented NVIDIA Spectrum-X in your data center to optimize AI workloads. You need to verify the performance improvements and create a baseline for future comparisons. Which tool would be most appropriate for creating performance baseline results in this Spectrum-X environment?",
+      "choices": [
+        "NetQ",
+        "CloudAI Benchmark",
+        "MLNX-OS",
+        "Ansible"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-045-a-large-ai-training-job-is-suffering-from-high-l",
+      "category": "Spectrum Networking",
+      "question": "A large AI training job is suffering from high latency spikes, particularly during synchronization phases. What is the MOST likely cause?",
+      "choices": [
+        "Incast traffic pattern",
+        "NAT traversal",
+        "DNS resolution",
+        "VLAN segmentation"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-046-in-a-roce-network-what-is-the-role-of-dcqcn",
+      "category": "Spectrum Networking",
+      "question": "In a RoCE network, what is the role of DCQCN?",
+      "choices": [
+        "Routing protocol",
+        "Congestion control mechanism",
+        "Encryption method",
+        "VLAN tagging"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-048-an-engineer-detects-frequent-microbursts-in-traf",
+      "category": "Troubleshooting Tools",
+      "question": "An engineer detects frequent microbursts in traffic patterns. What is a typical consequence of microbursts?",
+      "choices": [
+        "Stable throughput",
+        "Buffer overflow",
+        "Reduced latency",
+        "Improved routing"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-049-why-is-a-jumbo-frame-e-g-mtu-9000-typically-used",
+      "category": "Spectrum Networking",
+      "question": "Why is a jumbo frame (e.g., MTU 9000) typically used in RoCE networks?",
+      "choices": [
+        "To increase packet loss",
+        "To reduce overhead and improve efficiency",
+        "To enable NAT",
+        "To support DNS"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-051-which-of-the-following-represents-the-best-overa",
+      "category": "Spectrum Networking",
+      "question": "Which of the following represents the BEST overall design for a scalable AI network?",
+      "choices": [
+        "TCP-based network with high oversubscription",
+        "RoCEv2 with Leaf-Spine, ECMP, PFC, and ECN",
+        "Single Layer 2 network with STP",
+        "Hub-and-spoke architecture"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-052-a-large-scale-ai-training-environment-uses-a-lea",
+      "category": "Spectrum Networking",
+      "question": "A large-scale AI training environment uses a Leaf-Spine topology with RoCEv2. During distributed training, engineers observe that latency between certain GPU pairs is significantly higher than others. Monitoring shows no packet drops, link failures, or congestion alerts. However, traffic analysis reveals that specific flows consistently take the same physical path. What is the MOST likely cause of this issue?",
+      "choices": [
+        "MTU inconsistency between nodes causing hidden fragmentation",
+        "ECMP hash polarization leading to uneven path utilization",
+        "PFC configuration preventing packet transmission",
+        "Improper VLAN tagging causing broadcast flooding"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-054-in-a-data-center-running-ai-workloads-multiple-g",
+      "category": "Spectrum Networking",
+      "question": "In a data center running AI workloads, multiple GPU nodes simultaneously send gradient updates to a single parameter server. During this phase, switch buffer usage spikes rapidly, and packet drops begin to occur despite sufficient overall bandwidth. What is the BEST explanation for this behavior?",
+      "choices": [
+        "ECMP hashing imbalance",
+        "Incast traffic overwhelming buffers",
+        "VLAN trunk misconfiguration",
+        "DNS resolution delay"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-055-a-rocev2-based-fabric-experiences-intermittent-t",
+      "category": "Spectrum Networking",
+      "question": "A RoCEv2-based fabric experiences intermittent traffic stalls. Engineers observe a large number of PFC pause frames being generated across several switches, even though traffic levels are not consistently high. What is the MOST likely root cause?",
+      "choices": [
+        "ECN thresholds are set too low, causing early marking",
+        "Congestion is triggering excessive PFC pauses",
+        "MTU mismatch is causing packet fragmentation",
+        "RDMA is incorrectly configured at the application layer"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-059-a-network-architect-wants-to-improve-congestion",
+      "category": "Spectrum Networking",
+      "question": "A network architect wants to improve congestion handling in an AI fabric without introducing traffic stoppages or increasing the risk of deadlocks. Which solution BEST meets this requirement?",
+      "choices": [
+        "Increase PFC priority levels",
+        "Enable and properly tune ECN",
+        "Disable ECMP load balancing",
+        "Reduce link bandwidth"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-060-during-stress-testing-an-ai-cluster-shows-severe",
+      "category": "Spectrum Networking",
+      "question": "During stress testing, an AI cluster shows severe performance degradation whenever packet drops occur, even at very low drop rates. Why does this behavior occur in RDMA-based networks?",
+      "choices": [
+        "RDMA protocols rely on TCP retransmission mechanisms",
+        "RDMA assumes a lossless network and does not handle drops efficiently",
+        "UDP guarantees packet delivery",
+        "ECMP cannot recover from packet loss"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-061-a-leaf-spine-network-is-deployed-with-equal-cost",
       "category": "AI Data Center Design",
-      "question": "Rail-optimized topology의 주요 설계 목적은?",
+      "question": "A Leaf-Spine network is deployed with equal-cost paths, but one spine switch consistently shows higher utilization than others. Traffic patterns appear uneven despite symmetric topology design. What is the MOST likely explanation?",
       "choices": [
-        "GPU-to-GPU 통신 경로 최소화 및 대역폭 극대화",
-        "스토리지 트래픽만 분리",
-        "인터넷 게이트웨이 이중화",
-        "DNS 쿼리 지연 감소"
+        "VLAN misconfiguration causing traffic flooding",
+        "ECMP hashing imbalance due to flow characteristics",
+        "DNS resolution delay affecting path selection",
+        "PFC blocking specific traffic classes"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-063-an-ai-workload-experiences-degraded-performance",
+      "category": "Spectrum Networking",
+      "question": "An AI workload experiences degraded performance due to packets arriving out of order. The network uses multiple equal-cost paths between endpoints. Which condition MOST likely caused this issue?",
+      "choices": [
+        "Static routing with single path",
+        "ECMP hashing distributing packets inconsistently",
+        "VLAN segmentation",
+        "ARP cache overflow"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-064-engineers-observe-that-ecn-markings-are-frequent",
+      "category": "Spectrum Networking",
+      "question": "Engineers observe that ECN markings are frequently set in packets during peak workloads. No packet drops are recorded. What should be the expected behavior from the sending hosts?",
+      "choices": [
+        "Increase transmission rate to compensate",
+        "Reduce transmission rate to alleviate congestion",
+        "Drop packets proactively",
+        "Switch communication to TCP"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-065-a-roce-network-is-experiencing-periodic-deadlock",
+      "category": "Spectrum Networking",
+      "question": "A RoCE network is experiencing periodic deadlocks, where traffic appears to halt across multiple switches simultaneously. What is the BEST approach to mitigate this issue?",
+      "choices": [
+        "Disable PFC entirely",
+        "Enable ECN to complement PFC",
+        "Reduce MTU size",
+        "Increase VLAN segmentation"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-066-you-are-configuring-the-unified-fabric-manager-u",
+      "category": "InfiniBand Networking",
+      "question": "You are configuring the Unified Fabric Manager (UFM) for an InfiniBand fabric in a multi- tenant environment. You need to implement a solution that can detect potential security threats. Which UFM feature uses analytics to detect security threats and predict network failures in InfiniBand data centers?",
+      "choices": [
+        "Host Agent",
+        "Telemetry platform",
+        "Cyber-AI platform",
+        "Enterprise platform"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-068-you-are-managing-a-large-infiniband-fabric-for-a",
+      "category": "InfiniBand Networking",
+      "question": "You are managing a large InfiniBand fabric for an AI research cluster. You need to implement a solution that can proactively detect potential network issues and optimize performance. Which feature of NVIDIA's Unified Fabric Manager (UFM) is specifically designed to use AI-powered analytics for detecting security threats and predicting network failures in InfiniBand data centers?",
+      "choices": [
+        "Cyber-AI platform",
+        "Host Agent",
+        "Enterprise platform",
+        "Telemetry platform"
       ],
       "correctIndices": [
         0
       ],
       "answerKey": "A",
       "isMultiSelect": false,
-      "source": "Official Topic"
+      "source": "Dump"
     },
     {
-      "id": "adc-003",
+      "id": "dump-hwp-069-a-network-designer-is-evaluating-topologies-for",
+      "category": "Spectrum Networking",
+      "question": "A network designer is evaluating topologies for a new AI cluster requiring predictable latency and high bandwidth scalability. Which architecture BEST satisfies these requirements?",
+      "choices": [
+        "Hub-and-spoke topology with centralized routing",
+        "Leaf-Spine topology with ECMP",
+        "Single large Layer 2 domain",
+        "Ring topology with redundancy"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-070-a-switch-frequently-runs-out-of-buffer-space-dur",
+      "category": "Spectrum Networking",
+      "question": "A switch frequently runs out of buffer space during short bursts of high traffic, causing packet drops even though average utilization is low. What is the MOST appropriate solution?",
+      "choices": [
+        "Reduce MTU size",
+        "Increase buffer allocation and tune thresholds",
+        "Disable ECMP",
+        "Use TCP instead of RDMA"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-074-you-are-designing-a-new-ai-data-center-for-a-res",
       "category": "AI Data Center Design",
-      "question": "AI 데이터센터에서 BlueField DPU의 주요 역할은?",
+      "question": "You are designing a new AI data center for a research institution that requires high- performance computing for large-scale deep learning models. The institution wants to leverage NVIDIA's reference architectures for optimal performance. Which NVIDIA reference architecture would be most suitable for this high-performance AI research environment?",
       "choices": [
-        "인프라 오프로드 및 네트워크/스토리지 가속",
-        "GPU 렌더링 전용",
-        "BIOS 펌웨어 업데이트",
-        "전원 관리만 담당"
+        "NVIDIA Base Command Platform",
+        "NVIDIA DGX Cloud",
+        "NVIDIA LaunchPad",
+        "NVIDIA DGX SuperPOD"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-075-an-ai-cluster-uses-rocev1-but-communication-fail",
+      "category": "Spectrum Networking",
+      "question": "An AI cluster uses RoCEv1, but communication fails across different subnets despite correct IP routing. What is the MOST likely cause?",
+      "choices": [
+        "RoCEv1 operates only at Layer 2",
+        "ECMP is not enabled",
+        "MTU is too large",
+        "TCP is required for routing"
       ],
       "correctIndices": [
         0
       ],
       "answerKey": "A",
       "isMultiSelect": false,
-      "source": "Practice"
+      "source": "Dump"
     },
     {
-      "id": "adc-004",
+      "id": "dump-hwp-076-a-network-engineer-selects-cut-through-switching",
+      "category": "Spectrum Networking",
+      "question": "A network engineer selects cut-through switching for an AI workload. What is the PRIMARY advantage of this approach?",
+      "choices": [
+        "Improved packet filtering",
+        "Reduced latency by forwarding packets early",
+        "Increased buffer capacity",
+        "Better error detection"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-081-however-what-is-a-potential-drawback-of-cut-thro",
+      "category": "Spectrum Networking",
+      "question": "However, what is a potential drawback of cut-through switching in this scenario?",
+      "choices": [
+        "Increased latency",
+        "Forwarding corrupted packets without full validation",
+        "Reduced throughput under load",
+        "Inability to support VLAN tagging"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-082-in-a-multi-path-network-one-link-becomes-congest",
+      "category": "Spectrum Networking",
+      "question": "In a multi-path network, one link becomes congested while others remain underutilized. What is the MOST likely explanation?",
+      "choices": [
+        "ECMP hash imbalance",
+        "MTU mismatch",
+        "VLAN misconfiguration",
+        "DNS resolution issue"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-085-during-distributed-ai-training-latency-spikes-oc",
+      "category": "Spectrum Networking",
+      "question": "During distributed AI training, latency spikes occur specifically during synchronization phases when all nodes communicate simultaneously. What is the MOST likely cause?",
+      "choices": [
+        "Incast traffic pattern overwhelming buffers",
+        "NAT traversal delay",
+        "DNS lookup overhead",
+        "VLAN segmentation"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-086-a-network-engineer-wants-to-reduce-cpu-overhead",
+      "category": "Spectrum Networking",
+      "question": "A network engineer wants to reduce CPU overhead on servers handling AI workloads. Which technology BEST addresses this requirement?",
+      "choices": [
+        "Standard NIC",
+        "Software-based routing",
+        "Data Processing Unit (DPU)",
+        "NAT gateway"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-089-traffic-analysis-reveals-frequent-microbursts-in",
+      "category": "Troubleshooting Tools",
+      "question": "Traffic analysis reveals frequent microbursts in the network. What is the MOST likely impact of this pattern?",
+      "choices": [
+        "Stable latency",
+        "Buffer overflow and packet loss",
+        "Improved throughput",
+        "Reduced congestion"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-090-a-roce-network-uses-standard-mtu-1500-bytes-resu",
+      "category": "Spectrum Networking",
+      "question": "A RoCE network uses standard MTU (1500 bytes), resulting in lower-than-expected performance. Why is this configuration suboptimal?",
+      "choices": [
+        "Smaller MTU increases packet loss",
+        "Smaller MTU increases overhead and reduces efficiency",
+        "MTU affects routing decisions",
+        "MTU impacts DNS resolution"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-093-you-are-tasked-with-configuring-multi-tenancy-us",
+      "category": "InfiniBand Networking",
+      "question": "You are tasked with configuring multi-tenancy using partition key (PKey) for a high- performance storage fabric running on InfiniBand. Each tenant's GPU server is allowed to access the shared storage system but cannot communicate with another tenant's GPU server. Which of the following partition key membership configurations would you implement to set up multi- tenancy in this environment?",
+      "choices": [
+        "Assign full membership to both GPU servers and storage system.",
+        "Assign limited membership to both GPU servers and storage system.",
+        "Assign limited membership PKey to the shared storage system and full membership PKey to each tenant's GPU servers.",
+        "Assign full membership PKey to the shared storage system and limited membership PKey to each tenant's GPU servers."
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-094-a-congestion-control-mechanism-is-required-to-ad",
+      "category": "Spectrum Networking",
+      "question": "A congestion control mechanism is required to adjust sending rates dynamically based on network conditions. Which mechanism fulfills this role in RoCE environments?",
+      "choices": [
+        "BGP",
+        "DCQCN",
+        "STP",
+        "ARP"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-095-a-network-experiences-intermittent-latency-spike",
+      "category": "Spectrum Networking",
+      "question": "A network experiences intermittent latency spikes with no packet loss. What is the MOST likely explanation?",
+      "choices": [
+        "Microburst traffic",
+        "VLAN mismatch",
+        "DNS delay",
+        "NAT overload"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-099-which-command-should-be-used-to-configure-roce-o",
+      "category": "Spectrum Networking",
+      "question": "Which command should be used to configure RoCE on a Cumulus switch?",
+      "choices": [
+        "nv set roce qos enable on",
+        "nv set qos roce enable on",
+        "nv qos roce enable on",
+        "nv roce qos enable on"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-100-engineers-observe-head-of-line-blocking-in-the-n",
+      "category": "Spectrum Networking",
+      "question": "Engineers observe head-of-line blocking in the network. Which mechanism is MOST likely responsible?",
+      "choices": [
+        "ECMP",
+        "PFC",
+        "DNS",
+        "NAT"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-101-a-new-ai-cluster-is-being-designed-with-minimal",
+      "category": "Spectrum Networking",
+      "question": "A new AI cluster is being designed with minimal congestion and maximum throughput in mind. What oversubscription ratio should be targeted?",
+      "choices": [
+        "5:1",
+        "3:1",
+        "1:1",
+        "10:1"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-102-a-network-shows-fragmentation-and-packet-drops-w",
+      "category": "Spectrum Networking",
+      "question": "A network shows fragmentation and packet drops when communicating between nodes. What is the MOST likely cause?",
+      "choices": [
+        "MTU mismatch",
+        "ECMP imbalance",
+        "VLAN issue",
+        "DNS delay"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-103-a-financial-services-company-is-planning-to-impl",
+      "category": "Spectrum Networking",
+      "question": "A financial services company is planning to implement an AI infrastructure to support real-time fraud detection and risk assessment. They need a solution that can handle both training and inference workloads while maintaining data privacy and security. Which NVIDIA reference architecture component would be most appropriate to address the data privacy and security concerns in this AI networking setup?",
+      "choices": [
+        "NVIDIA CUDA-X AI libraries",
+        "NVIDIA Magnum IO",
+        "NVIDIA BlueField DPUs",
+        "NVIDIA Spectrum switches"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-105-when-creating-a-simu-lation-in-nvidia-air-what-s",
+      "category": "Spectrum Networking",
+      "question": "When creating a simu-lation in NVIDIA AIR, what syntax would you use to define a link between port 1 on spine-01 and port 41 on gpu-leaf-01?",
+      "choices": [
+        "\"spine-01\":“swp01\" -- ”gpu-leaf-01\":\"swp41\"",
+        "\"spine-01\":\"swp1\" to \"gpu-leaf-01\":\"swp41\"",
+        "\"spine-01 'eth1\" to \"gpu-leaf-01\":\"eth41\"",
+        "\"spine-01\":\"eth1\" -- \"gpu-leaf-01\":\"eth41“"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-107-a-switch-buffer-is-designed-to-handle-bursts-of",
+      "category": "Spectrum Networking",
+      "question": "A switch buffer is designed to handle bursts of traffic. What is its PRIMARY purpose?",
+      "choices": [
+        "Encrypt traffic",
+        "Absorb temporary spikes in traffic",
+        "Route packets",
+        "Assign IP addresses"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-108-a-network-shows-congestion-signals-but-no-packet",
+      "category": "Spectrum Networking",
+      "question": "A network shows congestion signals but no packet drops. Which feature is MOST likely functioning correctly?",
+      "choices": [
+        "ECN",
+        "DNS",
+        "VLAN",
+        "NAT"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-109-an-ai-workload-requires-low-latency-and-minimal",
+      "category": "Spectrum Networking",
+      "question": "An AI workload requires low latency and minimal CPU overhead. Why is RDMA preferred over TCP?",
+      "choices": [
+        "It increases CPU usage",
+        "It bypasses CPU and reduces latency",
+        "It requires NAT",
+        "It uses DNS"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-111-traffic-flows-in-a-multi-path-network-are-consis",
+      "category": "Spectrum Networking",
+      "question": "Traffic flows in a multi-path network are consistently mapped to the same physical path, leading to uneven utilization. What is this phenomenon called?",
+      "choices": [
+        "Load balancing",
+        "Polarization",
+        "Fragmentation",
+        "Flooding"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-112-a-network-experiences-packet-drops-during-burst",
+      "category": "Spectrum Networking",
+      "question": "A network experiences packet drops during burst traffic conditions despite having sufficient average bandwidth. What is the MOST likely cause?",
+      "choices": [
+        "Insufficient buffer capacity",
+        "DNS delay",
+        "VLAN mismatch",
+        "NAT"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-113-a-network-architect-is-designing-congestion-cont",
+      "category": "Spectrum Networking",
+      "question": "A network architect is designing congestion control for a RoCE-based AI fabric. The goal is to minimize packet loss while avoiding traffic stalls. Which approach BEST achieves this objective?",
+      "choices": [
+        "TCP-based congestion control only",
+        "PFC only across all traffic classes",
+        "ECN combined with PFC, properly tuned",
+        "Disable congestion control mechanisms"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-116-traffic-flows-are-consistently-mapped-to-the-sam",
+      "category": "Spectrum Networking",
+      "question": "Traffic flows are consistently mapped to the same physical path in a multi-path network. What is this phenomenon called?",
+      "choices": [
+        "Load balancing",
+        "Polarization",
+        "Fragmentation",
+        "Flooding"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-117-a-network-experiences-packet-drops-during-bursts",
+      "category": "Spectrum Networking",
+      "question": "A network experiences packet drops during bursts. What is the MOST likely cause?",
+      "choices": [
+        "Insufficient buffer capacity",
+        "DNS delay",
+        "VLAN mismatch",
+        "NAT"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-118-in-a-leaf-spine-topology-what-is-the-primary-rol",
       "category": "AI Data Center Design",
-      "question": "Scalable Unit(SU) 개념과 가장 관련 깊은 것은?",
+      "question": "In a Leaf-Spine topology, what is the PRIMARY role of Spine switches?",
       "choices": [
-        "반복 가능한 AI 클러스터 빌딩 블록",
-        "단일 랙 스위치 모델",
-        "백업 전원 장치",
-        "OS 패치 주기"
+        "Connect end hosts",
+        "Provide high-speed core connectivity",
+        "Assign IP addresses",
+        "Perform NAT"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-120-in-a-large-scale-ai-training-cluster-using-rocev",
+      "category": "Spectrum Networking",
+      "question": "In a large-scale AI training cluster using RoCEv2 over a Leaf-Spine topology, engineers observe that certain GPU nodes consistently achieve lower throughput compared to others, despite identical hardware and symmetric network design. Detailed traffic analysis shows that specific flows are repeatedly mapped to the same physical paths, leading to uneven utilization across available links. Which of the following is the MOST likely root cause of this behavior?",
+      "choices": [
+        "MTU mismatch between GPU nodes causing packet fragmentation",
+        "ECMP hash imbalance leading to flow polarization across limited paths",
+        "PFC misconfiguration causing selective packet drops",
+        "VLAN misconfiguration causing broadcast domain overlap"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-121-during-a-distributed-training-workload-a-network",
+      "category": "Spectrum Networking",
+      "question": "During a distributed training workload, a network engineer notices that throughput drops significantly during synchronization phases, where all GPU nodes send updates to a central aggregation node. Monitoring tools indicate that switch buffer occupancy increases rapidly, and packet drops occur even though average network utilization is below capacity. What is the MOST likely explanation for this issue?",
+      "choices": [
+        "ECMP imbalance causing uneven traffic distribution",
+        "Incast traffic pattern overwhelming switch buffers",
+        "DNS resolution delays affecting routing",
+        "MTU mismatch causing fragmentation"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-122-a-rocev2-based-data-center-network-is-experienci",
+      "category": "Spectrum Networking",
+      "question": "A RoCEv2-based data center network is experiencing periodic traffic stalls. Engineers observe that PFC pause frames are propagating across multiple switches, effectively halting traffic in certain parts of the fabric. Which condition MOST likely caused this behavior?",
+      "choices": [
+        "ECN thresholds are set too aggressively, causing excessive marking",
+        "Congestion is triggering cascading PFC pauses across the network",
+        "VLAN tagging is incorrectly configured",
+        "RDMA is falling back to TCP"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-124-a-network-architect-is-designing-congestion-mana",
+      "category": "Spectrum Networking",
+      "question": "A network architect is designing congestion management strategies for an AI fabric. The goal is to prevent packet loss while avoiding complete traffic stoppages that could lead to deadlocks. Which combination of technologies BEST achieves this goal?",
+      "choices": [
+        "PFC only, configured on all priorities",
+        "ECN only, without any flow control",
+        "PFC combined with ECN, properly tuned",
+        "TCP-based congestion control"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-125-a-switch-buffer-is-designed-to-handle-bursts-of",
+      "category": "Spectrum Networking",
+      "question": "A switch buffer is designed to handle bursts of traffic in an AI network. What is its PRIMARY purpose?",
+      "choices": [
+        "Encrypt traffic",
+        "Absorb temporary traffic spikes",
+        "Route packets",
+        "Assign IP addresses"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-126-a-network-shows-congestion-signals-but-no-packet",
+      "category": "Spectrum Networking",
+      "question": "A network shows congestion signals but no packet drops. Performance is stable but slightly reduced. Which feature is MOST likely functioning correctly?",
+      "choices": [
+        "ECN",
+        "DNS",
+        "VLAN",
+        "NAT"
       ],
       "correctIndices": [
         0
       ],
       "answerKey": "A",
       "isMultiSelect": false,
-      "source": "Practice"
+      "source": "Dump"
     },
     {
-      "id": "adc-005",
+      "id": "dump-hwp-127-an-ai-workload-requires-minimal-latency-and-cpu",
+      "category": "Spectrum Networking",
+      "question": "An AI workload requires minimal latency and CPU overhead for communication between nodes. Why is RDMA preferred over TCP in this scenario?",
+      "choices": [
+        "It increases CPU utilization",
+        "It bypasses CPU and reduces latency",
+        "It requires NAT",
+        "It depends on DNS"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-128-an-ai-cluster-using-rdma-over-rocev2-experiences",
+      "category": "Spectrum Networking",
+      "question": "An AI cluster using RDMA over RoCEv2 experiences significant performance degradation whenever even a small percentage of packet loss occurs. Why is RDMA particularly sensitive to packet loss in this environment?",
+      "choices": [
+        "RDMA relies on TCP retransmissions for recovery",
+        "RDMA assumes a lossless fabric and lacks efficient retransmission mechanisms",
+        "UDP guarantees delivery in RDMA",
+        "ECMP does not support retransmission"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-129-in-a-leaf-spine-topology-one-spine-switch-consis",
       "category": "AI Data Center Design",
-      "question": "대규모 AI 학습에서 GPU-to-GPU 통신이 중요한 이유는?",
+      "question": "In a Leaf-Spine topology, one spine switch consistently experiences higher traffic load than others, even though all links are operational and evenly provisioned. Engineers suspect that traffic distribution is not optimal. What is the MOST likely cause?",
       "choices": [
-        "All-reduce 등 collective 연산의 병목을 줄이기 위해",
-        "웹 서버 응답 속도 향상",
-        "SNMP 폴링 간격 단축",
-        "DHCP 리스 갱신"
+        "MTU mismatch causing selective packet drops",
+        "ECMP hashing behavior leading to uneven flow distribution",
+        "VLAN misconfiguration creating asymmetric paths",
+        "PFC preventing traffic on certain links"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-131-an-ai-workload-suffers-from-degraded-performance",
+      "category": "Spectrum Networking",
+      "question": "An AI workload suffers from degraded performance due to out-of-order packet delivery. The network uses ECMP across multiple equal-cost paths. What is the MOST likely explanation for this issue?",
+      "choices": [
+        "Static routing forcing single-path forwarding",
+        "ECMP hashing inconsistencies causing packets of the same flow to take different paths",
+        "VLAN segmentation causing traffic isolation",
+        "ARP table overflow"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-132-during-peak-workloads-network-monitoring-shows-a",
+      "category": "Spectrum Networking",
+      "question": "During peak workloads, network monitoring shows a high number of ECN-marked packets, but no packet drops are observed. Application performance remains stable but slightly reduced. What is the expected behavior of the sending hosts in this situation?",
+      "choices": [
+        "Increase sending rate to compensate for marking",
+        "Reduce sending rate in response to congestion signals",
+        "Drop packets proactively",
+        "Switch to TCP-based communication"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-133-a-roce-network-experiences-intermittent-deadlock",
+      "category": "Spectrum Networking",
+      "question": "A RoCE network experiences intermittent deadlocks where traffic stops across multiple switches. Investigation reveals that PFC is heavily utilized, but ECN is not configured. What is the BEST solution to prevent this issue?",
+      "choices": [
+        "Disable PFC entirely",
+        "Enable ECN to complement PFC and reduce pause events",
+        "Reduce MTU size",
+        "Increase VLAN segmentation"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-135-engineers-observe-head-of-line-blocking-in-a-roc",
+      "category": "Spectrum Networking",
+      "question": "Engineers observe head-of-line blocking in a RoCE network, where one blocked queue prevents others from progressing. Which mechanism is MOST likely responsible?",
+      "choices": [
+        "ECMP",
+        "PFC",
+        "DNS",
+        "NAT"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-136-a-new-ai-cluster-is-being-designed-with-the-goal",
+      "category": "Spectrum Networking",
+      "question": "A new AI cluster is being designed with the goal of minimizing congestion and maximizing throughput across all nodes. What oversubscription ratio is MOST appropriate?",
+      "choices": [
+        "5:1",
+        "3:1",
+        "1:1",
+        "10:1"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-137-a-network-shows-packet-fragmentation-and-drops-w",
+      "category": "Spectrum Networking",
+      "question": "A network shows packet fragmentation and drops when traffic flows between nodes with different configurations. What is the MOST likely cause?",
+      "choices": [
+        "MTU mismatch",
+        "ECMP imbalance",
+        "VLAN issue",
+        "DNS delay"
       ],
       "correctIndices": [
         0
       ],
       "answerKey": "A",
       "isMultiSelect": false,
-      "source": "Official Topic"
+      "source": "Dump"
     },
     {
-      "id": "adc-006",
+      "id": "dump-hwp-138-a-data-center-architect-is-selecting-a-network-t",
       "category": "AI Data Center Design",
-      "question": "NCP-AIN 시험의 문항 수와 시간은?",
+      "question": "A data center architect is selecting a network topology for a large AI cluster requiring consistent latency and high scalability. The design must support thousands of GPU nodes with minimal congestion. Which architecture BEST meets these requirements?",
       "choices": [
-        "70-75문항, 120분",
-        "50문항, 60분",
-        "100문항, 180분",
-        "30문항, 45분"
+        "Hub-and-spoke with centralized core switches",
+        "Leaf-Spine with ECMP-based load balancing",
+        "Single Layer 2 domain using STP",
+        "Ring topology with redundancy"
       ],
       "correctIndices": [
-        0
+        1
       ],
-      "answerKey": "A",
+      "answerKey": "B",
       "isMultiSelect": false,
-      "source": "Official Topic"
+      "source": "Dump"
     },
     {
-      "id": "auto-001",
-      "category": "Automation & Configuration",
-      "question": "NVUE 템플릿을 사용하는 이유는?",
+      "id": "dump-hwp-139-a-switch-in-an-ai-network-frequently-experiences",
+      "category": "Spectrum Networking",
+      "question": "A switch in an AI network frequently experiences buffer exhaustion during short bursts of high traffic. These bursts are not sustained, but they cause packet drops and temporary performance degradation. What is the MOST effective mitigation strategy?",
       "choices": [
-        "일관된 스위치 구성을 재사용 및 자동 적용",
-        "InfiniBand 케이블 라벨링",
-        "GPU 펌웨어 플래시",
-        "K8s Secret 생성"
+        "Reduce MTU size",
+        "Increase buffer allocation and tune thresholds",
+        "Disable ECMP",
+        "Switch to TCP"
       ],
       "correctIndices": [
-        0
+        1
       ],
-      "answerKey": "A",
+      "answerKey": "B",
       "isMultiSelect": false,
-      "source": "Official Topic"
+      "source": "Dump"
     },
     {
-      "id": "auto-002",
-      "category": "Automation & Configuration",
-      "question": "Ansible로 자동화하기 좋은 Spectrum-X 작업은?",
+      "id": "dump-hwp-140-an-ai-cluster-is-configured-with-rocev1-but-comm",
+      "category": "Spectrum Networking",
+      "question": "An AI cluster is configured with RoCEv1, but communication fails when traffic needs to traverse Layer 3 boundaries between subnets. What is the MOST likely reason for this behavior?",
       "choices": [
-        "VLAN 생성 및 RoCE QoS 설정",
-        "물리 케이블 체결",
-        "랙 전원 배선",
-        "BIOS 패스워드 설정"
+        "RoCEv1 operates only at Layer 2 and does not support routing",
+        "ECMP is not enabled",
+        "MTU is too large",
+        "TCP is required for inter-subnet communication"
       ],
       "correctIndices": [
         0
       ],
       "answerKey": "A",
       "isMultiSelect": false,
-      "source": "Official Topic"
+      "source": "Dump"
     },
     {
-      "id": "auto-003",
-      "category": "Automation & Configuration",
-      "question": "nv config apply 명령의 의미는?",
+      "id": "dump-hwp-141-a-roce-network-is-configured-with-a-standard-mtu",
+      "category": "Spectrum Networking",
+      "question": "A RoCE network is configured with a standard MTU of 1500 bytes. Performance testing shows higher CPU overhead and lower throughput than expected. Why is this configuration suboptimal?",
       "choices": [
-        "준비된 NVUE 구성을 스위치에 적용",
-        "Kubernetes apply와 동일",
-        "UFM 라이선스 활성화",
-        "SM 페일오버 강제"
+        "Smaller MTU increases packet loss",
+        "Smaller MTU increases overhead due to more packets",
+        "MTU affects routing decisions",
+        "MTU impacts DNS resolution"
       ],
       "correctIndices": [
-        0
+        1
       ],
-      "answerKey": "A",
+      "answerKey": "B",
       "isMultiSelect": false,
-      "source": "Practice"
+      "source": "Dump"
     },
     {
-      "id": "auto-004",
-      "category": "Automation & Configuration",
-      "question": "Ansible playbook에서 RoCE 설정 자동화 시 포함해야 할 항목은?",
+      "id": "dump-hwp-142-a-congestion-control-mechanism-is-required-to-dy",
+      "category": "Spectrum Networking",
+      "question": "A congestion control mechanism is required to dynamically adjust transmission rates based on network conditions in a RoCE environment. Which mechanism fulfills this role?",
       "choices": [
-        "QoS, PFC, ECN 및 인터페이스 우선순위",
-        "STP root guard만",
-        "RIP 타이머",
-        "HTTP basic auth"
+        "BGP",
+        "DCQCN",
+        "STP",
+        "ARP"
       ],
       "correctIndices": [
-        0
+        1
       ],
-      "answerKey": "A",
+      "answerKey": "B",
       "isMultiSelect": false,
-      "source": "Practice"
+      "source": "Dump"
     },
     {
-      "id": "auto-005",
-      "category": "Automation & Configuration",
-      "question": "NVUE에서 구성을 템플릿화할 때의 이점은?",
+      "id": "dump-hwp-143-a-network-experiences-intermittent-latency-spike",
+      "category": "Spectrum Networking",
+      "question": "A network experiences intermittent latency spikes without packet loss. Traffic patterns show sudden bursts followed by idle periods. What is the MOST likely explanation?",
       "choices": [
-        "다수 스위치에 동일 baseline을 빠르게 배포",
-        "SM을 자동 제거",
-        "PKey를 0으로 고정",
-        "RDMA 비활성화"
+        "Microburst traffic",
+        "VLAN mismatch",
+        "DNS delay",
+        "NAT overload"
       ],
       "correctIndices": [
         0
       ],
       "answerKey": "A",
       "isMultiSelect": false,
-      "source": "Practice"
+      "source": "Dump"
     },
     {
-      "id": "auto-006",
-      "category": "Automation & Configuration",
-      "question": "nv config diff 명령의 용도는?",
+      "id": "dump-hwp-145-a-network-engineer-chooses-cut-through-switching",
+      "category": "Spectrum Networking",
+      "question": "A network engineer chooses cut-through switching for an AI workload to minimize latency. What is the PRIMARY advantage of this switching method?",
       "choices": [
-        "적용 전후 구성 차이 확인",
-        "ibdiagnet 대체",
-        "Kubernetes diff",
-        "LDAP 그룹 비교"
+        "Full packet inspection before forwarding",
+        "Reduced latency by forwarding packets before full reception",
+        "Increased buffer capacity",
+        "Improved encryption"
       ],
       "correctIndices": [
-        0
+        1
       ],
-      "answerKey": "A",
+      "answerKey": "B",
       "isMultiSelect": false,
-      "source": "Practice"
+      "source": "Dump"
     },
     {
-      "id": "ib-001",
-      "category": "InfiniBand Networking",
-      "question": "InfiniBand fabric에서 Subnet Manager(SM)의 역할은?",
+      "id": "dump-hwp-146-however-in-the-same-environment-what-is-a-potent",
+      "category": "Spectrum Networking",
+      "question": "However, in the same environment, what is a potential drawback of cut-through switching?",
       "choices": [
-        "토폴로지 탐색, LID 할당, 라우팅 테이블 관리",
-        "GPU 드라이버 로드",
-        "NFS 마운트",
-        "LDAP 인증"
+        "Increased latency due to buffering",
+        "Forwarding of corrupted packets without full validation",
+        "Reduced throughput under heavy load",
+        "Incompatibility with VLANs"
       ],
       "correctIndices": [
-        0
+        1
       ],
-      "answerKey": "A",
+      "answerKey": "B",
       "isMultiSelect": false,
-      "source": "Official Topic"
+      "source": "Dump"
     },
     {
-      "id": "ib-002",
-      "category": "InfiniBand Networking",
-      "question": "InfiniBand에서 멀티테넌시 격리에 사용하는 키는?",
+      "id": "dump-hwp-147-in-a-multi-path-ai-network-one-uplink-consistent",
+      "category": "AI Data Center Design",
+      "question": "In a multi-path AI network, one uplink consistently becomes congested while others remain underutilized. The topology and link capacities are identical. What is the MOST likely explanation?",
       "choices": [
-        "Partition Key (PKey)",
-        "SSH host key",
-        "TLS session key",
-        "WPA passphrase"
+        "ECMP hash imbalance",
+        "MTU mismatch",
+        "VLAN misconfiguration",
+        "DNS resolution issue"
       ],
       "correctIndices": [
         0
       ],
       "answerKey": "A",
       "isMultiSelect": false,
-      "source": "Official Topic"
+      "source": "Dump"
     },
     {
-      "id": "ib-003",
-      "category": "InfiniBand Networking",
-      "question": "UFM(Unified Fabric Manager)의 주요 기능은?",
+      "id": "dump-hwp-149-during-distributed-training-latency-spikes-occur",
+      "category": "Spectrum Networking",
+      "question": "During distributed training, latency spikes occur specifically when all nodes simultaneously send synchronization data. Packet drops are observed, and buffer utilization peaks. What is the MOST likely cause?",
       "choices": [
-        "InfiniBand 링크 상태 및 대역폭 모니터링",
-        "Kubernetes CNI 플러그인만 제공",
-        "Windows 도메인 컨트롤러",
-        "SAN 스냅샷 스케줄링"
+        "Incast traffic overwhelming buffers",
+        "NAT traversal delays",
+        "DNS resolution overhead",
+        "VLAN segmentation"
       ],
       "correctIndices": [
         0
       ],
       "answerKey": "A",
       "isMultiSelect": false,
-      "source": "Official Topic"
+      "source": "Dump"
     },
     {
-      "id": "ib-004",
-      "category": "InfiniBand Networking",
-      "question": "InfiniBand HA(High Availability) 구성 시 일반적으로 필요한 것은?",
+      "id": "dump-hwp-150-a-data-center-operator-wants-to-reduce-cpu-overh",
+      "category": "Spectrum Networking",
+      "question": "A data center operator wants to reduce CPU overhead on servers handling high-performance AI workloads and offload networking tasks. Which technology BEST achieves this objective?",
       "choices": [
-        "다중 Subnet Manager 및 장애 조치",
-        "단일 스위치만 사용",
-        "모든 노드 DHCP",
-        "STP 활성화"
+        "Standard NIC",
+        "Software-based switching",
+        "Data Processing Unit (DPU)",
+        "NAT gateway"
       ],
       "correctIndices": [
-        0
+        2
       ],
-      "answerKey": "A",
+      "answerKey": "C",
       "isMultiSelect": false,
-      "source": "Official Topic"
+      "source": "Dump"
     },
     {
-      "id": "ib-005",
-      "category": "InfiniBand Networking",
-      "question": "ibstat 명령의 용도는?",
+      "id": "dump-hwp-151-traffic-monitoring-reveals-frequent-microbursts",
+      "category": "Troubleshooting Tools",
+      "question": "Traffic monitoring reveals frequent microbursts in the network, characterized by sudden spikes in traffic over very short durations. What is the MOST likely consequence of this pattern?",
       "choices": [
-        "HCA 포트 상태 및 링크 정보 확인",
-        "BGP 라우팅 테이블 출력",
-        "디스크 SMART 정보",
-        "CPU 온도 측정"
+        "Stable latency",
+        "Buffer overflow leading to packet drops",
+        "Reduced congestion",
+        "Improved throughput"
       ],
       "correctIndices": [
-        0
+        1
       ],
-      "answerKey": "A",
+      "answerKey": "B",
       "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "ib-006",
-      "category": "InfiniBand Networking",
-      "question": "ibdiagnet이 수행하는 작업은?",
-      "choices": [
-        "Fabric 전체 진단 및 오류 보고",
-        "컨테이너 이미지 pull",
-        "LDAP 그룹 동기화",
-        "GPU ECC 메모리 클리어"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "ib-007",
-      "category": "InfiniBand Networking",
-      "question": "ibping의 목적은?",
-      "choices": [
-        "RDMA 노드 간 연결성 테스트",
-        "ICMP 대체 DNS 조회",
-        "펌웨어 롤백",
-        "RAID 레벨 변경"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "ib-008",
-      "category": "InfiniBand Networking",
-      "question": "ibnetdiscover 명령으로 확인할 수 있는 것은?",
-      "choices": [
-        "Fabric 토폴로지 및 노드/스위치 정보",
-        "Kubernetes 서비스 목록",
-        "Active Directory 사용자",
-        "iSCSI LUN 크기"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "ib-009",
-      "category": "InfiniBand Networking",
-      "question": "ib_write_bw 벤치마크가 측정하는 것은?",
-      "choices": [
-        "RDMA 쓰기 대역폭",
-        "CPU 클럭 속도",
-        "디스크 IOPS만",
-        "DNS 응답 시간"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "ib-010",
-      "category": "InfiniBand Networking",
-      "question": "ib_write_lat가 측정하는 주요 지표는?",
-      "choices": [
-        "RDMA 쓰기 지연 시간",
-        "스위치 팬 RPM",
-        "배터리 잔량",
-        "VLAN 개수"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "ib-011",
-      "category": "InfiniBand Networking",
-      "question": "sminfo 또는 smpquery로 확인할 수 있는 것은?",
-      "choices": [
-        "마스터 Subnet Manager 정보",
-        "BGP neighbor 상태",
-        "Docker 컨테이너 로그",
-        "NTP stratum"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "ib-012",
-      "category": "InfiniBand Networking",
-      "question": "iblinkinfo 명령의 용도는?",
-      "choices": [
-        "포트 링크 상태 및 속도 확인",
-        "Ansible inventory 생성",
-        "GPU 온도 리포트",
-        "SSL 인증서 갱신"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "ib-013",
-      "category": "InfiniBand Networking",
-      "question": "ibnodes 명령이 출력하는 정보는?",
-      "choices": [
-        "Fabric 내 노드 GUID 및 타입",
-        "Kubernetes namespace",
-        "LDAP OU 구조",
-        "RAID 배열 상태"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "ib-014",
-      "category": "InfiniBand Networking",
-      "question": "InfiniBand Adaptive Routing의 이점은?",
-      "choices": [
-        "혼잡 시 경로를 동적으로 변경해 성능 유지",
-        "모든 QP를 단일 경로로 고정",
-        "PKey를 자동 삭제",
-        "SM을 비활성화"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "ib-015",
-      "category": "InfiniBand Networking",
-      "question": "PKey 기반 보안에서 잘못된 PKey를 가진 노드는?",
-      "choices": [
-        "해당 파티션 통신에 참여할 수 없음",
-        "자동으로 SM이 됨",
-        "모든 파티션에 접근 가능",
-        "GPU 메모리가 초기화됨"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "ib-016",
-      "category": "InfiniBand Networking",
-      "question": "InfiniBand 포트가 Active가 아닐 때 iblinkinfo에서 볼 수 있는 상태 예시는?",
-      "choices": [
-        "Down 또는 Init",
-        "Established",
-        "Listening",
-        "SYN_SENT"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "ib-017",
-      "category": "InfiniBand Networking",
-      "question": "Subnet Manager가 없는 InfiniBand fabric에서 발생하는 문제는?",
-      "choices": [
-        "라우팅 및 주소 할당이 이루어지지 않음",
-        "GPU 온도 상승",
-        "DNS 실패",
-        "TLS 핸드셰이크 오류"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "k8s-001",
-      "category": "Kubernetes Integration",
-      "question": "NVIDIA Network Operator의 주요 역할은?",
-      "choices": [
-        "Kubernetes에서 RDMA/InfiniBand 인터페이스 관리",
-        "Helm 차트 저장소 미러링만",
-        "etcd 백업",
-        "Ingress TLS 종료만"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "k8s-002",
-      "category": "Kubernetes Integration",
-      "question": "Network Operator 배포 후 검증 시 확인해야 할 것은?",
-      "choices": [
-        "RDMA 디바이스 플러그인 및 네트워크 리소스 정상 동작",
-        "모든 Pod가 default namespace에 있는지",
-        "노드 OS가 Windows인지",
-        "kube-proxy 비활성화"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "k8s-003",
-      "category": "Kubernetes Integration",
-      "question": "AI 워크로드용 Kubernetes에서 RDMA 리소스가 필요한 이유는?",
-      "choices": [
-        "GPU 노드 간 고속 통신을 스케줄링에 반영",
-        "Pod 로그 로테이션",
-        "Secret 암호화",
-        "HPA 메트릭"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "k8s-004",
-      "category": "Kubernetes Integration",
-      "question": "Multus CNI와 Network Operator의 관계는?",
-      "choices": [
-        "추가 네트워크 인터페이스(RDMA 등)를 Pod에 연결",
-        "GPU 드라이버 설치",
-        "Cluster DNS 대체",
-        "PV 프로비저닝"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "k8s-005",
-      "category": "Kubernetes Integration",
-      "question": "InfiniBand를 Kubernetes에서 사용할 때 Network Operator가 관리하는 항목은?",
-      "choices": [
-        "SR-IOV/IB 디바이스 및 관련 DaemonSet",
-        "Ingress Controller만",
-        "Metrics Server",
-        "Calico IPAM만"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "k8s-006",
-      "category": "Kubernetes Integration",
-      "question": "GPU 워크로드 Pod에 RDMA 리소스를 요청하는 이유는?",
-      "choices": [
-        "스케줄러가 RDMA 가능 노드에 배치",
-        "이미지 pull 속도 향상",
-        "Secret 자동 마운트",
-        "HPA 임계값 설정"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
+      "source": "Dump"
     },
     {
       "id": "official-001",
@@ -2138,6 +3073,23 @@
         "nv set roce qos enable on",
         "nv roce qos enable on",
         "nv qos roce enable on"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-002",
+      "category": "InfiniBand Networking",
+      "question": "InfiniBand fabric에서 Subnet Manager(SM)의 역할은?",
+      "choices": [
+        "토폴로지 탐색, LID 할당, 라우팅 테이블 관리",
+        "GPU 드라이버 로드",
+        "NFS 마운트",
+        "LDAP 인증"
       ],
       "correctIndices": [
         0
@@ -2164,6 +3116,57 @@
       "source": "Official Topic"
     },
     {
+      "id": "official-004",
+      "category": "Troubleshooting Tools",
+      "question": "ibstat 명령의 용도는?",
+      "choices": [
+        "HCA 포트 상태 및 링크 정보 확인",
+        "BGP 라우팅 테이블 출력",
+        "디스크 SMART 정보",
+        "CPU 온도 측정"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-005",
+      "category": "Troubleshooting Tools",
+      "question": "ibdiagnet이 수행하는 작업은?",
+      "choices": [
+        "Fabric 전체 진단 및 오류 보고",
+        "컨테이너 이미지 pull",
+        "LDAP 그룹 동기화",
+        "GPU ECC 메모리 클리어"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-006",
+      "category": "AI Data Center Design",
+      "question": "Rail-optimized topology의 주요 설계 목적은?",
+      "choices": [
+        "GPU-to-GPU 통신 경로 최소화 및 대역폭 극대화",
+        "스토리지 트래픽만 분리",
+        "인터넷 게이트웨이 이중화",
+        "DNS 쿼리 지연 감소"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
       "id": "official-007",
       "category": "Spectrum Networking",
       "question": "NVIDIA What Just Happened (WJH) 서비스의 주요 용도는?",
@@ -2172,6 +3175,40 @@
         "펌웨어 자동 업그레이드",
         "DNS 캐시 관리",
         "NTP 동기화"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-008",
+      "category": "Kubernetes Integration",
+      "question": "NVIDIA Network Operator의 주요 역할은?",
+      "choices": [
+        "Kubernetes에서 RDMA/InfiniBand 인터페이스 관리",
+        "Helm 차트 저장소 미러링만",
+        "etcd 백업",
+        "Ingress TLS 종료만"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-009",
+      "category": "Automation & Configuration",
+      "question": "Ansible로 자동화하기 좋은 Spectrum-X 작업은?",
+      "choices": [
+        "VLAN 생성 및 RoCE QoS 설정",
+        "물리 케이블 체결",
+        "랙 전원 배선",
+        "BIOS 패스워드 설정"
       ],
       "correctIndices": [
         0
@@ -2529,414 +3566,6 @@
         "홈 라우터 구성",
         "단일 GPU 워크스테이션",
         "모바일 추론 전용"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "spc-001",
-      "category": "Spectrum Networking",
-      "question": "Spectrum-X에서 RoCE(RDMA over Converged Ethernet)를 활성화하는 NVUE 명령은?",
-      "choices": [
-        "nv set qos roce enable on",
-        "nv set interface swp1 link up",
-        "nv set router bgp enable on",
-        "nv set bridge domain br_default vlan 1"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "spc-003",
-      "category": "Spectrum Networking",
-      "question": "RoCE 트래픽의 무손실 전달을 위해 L2에서 설정하는 기능은?",
-      "choices": [
-        "PFC (Priority Flow Control)",
-        "VRRP",
-        "LACP only",
-        "RIP"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "spc-004",
-      "category": "Spectrum Networking",
-      "question": "Spectrum-X에서 테넌트 워크로드를 격리하기 위해 사용하는 기술은?",
-      "choices": [
-        "BGP-EVPN multi-tenancy",
-        "Static NAT only",
-        "Telnet ACL",
-        "FTP chroot"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "spc-006",
-      "category": "Spectrum Networking",
-      "question": "NetQ가 제공하는 핵심 기능은?",
-      "choices": [
-        "실시간 네트워크 모니터링 및 지연/혼잡 탐지",
-        "GPU 드라이버 설치",
-        "Kubernetes Pod 스케줄링",
-        "InfiniBand Subnet Manager 대체"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "spc-007",
-      "category": "Spectrum Networking",
-      "question": "Adaptive Routing이 혼잡 시 수행하는 동작은?",
-      "choices": [
-        "대체 경로로 트래픽을 동적으로 전환",
-        "모든 포트를 shutdown",
-        "VLAN 1만 허용",
-        "BGP 세션을 강제 종료"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "spc-008",
-      "category": "Spectrum Networking",
-      "question": "NVIDIA Air의 주요 목적은?",
-      "choices": [
-        "네트워크 환경 시뮬레이션 및 사전 검증",
-        "물리 스위치 펌웨어 플래시",
-        "GPU 벤치마크",
-        "LDAP 사용자 관리"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "spc-009",
-      "category": "Spectrum Networking",
-      "question": "DOCA(DPUs and Networking SDK) 설치가 필요한 이유는?",
-      "choices": [
-        "고급 패킷 처리 및 가속 기능 활용",
-        "BIOS 비밀번호 설정",
-        "iSCSI 타겟 생성만",
-        "Windows AD 조인"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "spc-010",
-      "category": "Spectrum Networking",
-      "question": "NVIDIA SuperNIC의 주요 기능은?",
-      "choices": [
-        "고급 패킷 처리 및 혼잡 제어",
-        "전원 분배 유닛",
-        "랙 온도 센서",
-        "KVM 콘솔"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "spc-011",
-      "category": "Spectrum Networking",
-      "question": "In-band telemetry을 사용하는 주된 이유는?",
-      "choices": [
-        "데이터 플레인에서 혼잡/손실 정보를 수집",
-        "SSH 키 배포",
-        "RAID 재구성",
-        "CPU 주파수 조절"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "spc-012",
-      "category": "Spectrum Networking",
-      "question": "Cumulus Linux에서 NVUE의 역할은?",
-      "choices": [
-        "통합 CLI/API로 스위치 구성 관리",
-        "InfiniBand SM 실행",
-        "GPU CUDA 컴파일",
-        "컨테이너 이미지 빌드"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "spc-013",
-      "category": "Spectrum Networking",
-      "question": "RoCEv2가 사용하는 전송 계층은?",
-      "choices": [
-        "UDP/IP",
-        "SCTP only",
-        "ICMP only",
-        "RSVP-TE"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "spc-014",
-      "category": "Spectrum Networking",
-      "question": "PFC가 pause 프레임을 보내는 목적은?",
-      "choices": [
-        "특정 우선순위 큐의 송신을 일시 중지해 버퍼 오버플로 방지",
-        "BGP keepalive 전송",
-        "LLDP neighbor 삭제",
-        "STP root bridge 선출"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "spc-015",
-      "category": "Spectrum Networking",
-      "question": "Spectrum-X에서 QoS와 RoCE를 함께 구성할 때 가장 중요한 것은?",
-      "choices": [
-        "우선순위 큐, ECN, PFC의 일관된 end-to-end 설정",
-        "모든 VLAN에 동일 MTU 576",
-        "BGP AS 번호 무작위 변경",
-        "SNMP v1만 사용"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "spc-016",
-      "category": "Spectrum Networking",
-      "question": "RoCE와 일반 TCP 트래픽이 공존할 때 권장되는 설계는?",
-      "choices": [
-        "우선순위 기반 QoS로 RoCE 트래픽 보호",
-        "모든 트래픽 best-effort",
-        "RoCE만 허용하고 TCP 차단",
-        "VLAN 없이 단일 브로드캐스트 도메인"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "spc-017",
-      "category": "Spectrum Networking",
-      "question": "BGP-EVPN에서 VNI의 역할은?",
-      "choices": [
-        "L2 세그먼트(테넌트) 식별",
-        "GPU UUID 매핑",
-        "SM priority 설정",
-        "RDMA QP 번호"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "ts-001",
-      "category": "Troubleshooting Tools",
-      "question": "Spectrum-X 환경에서 cl-resource-query의 용도는?",
-      "choices": [
-        "스위치 리소스 할당 상태 확인",
-        "InfiniBand SM 선출",
-        "GPU ECC 통계",
-        "LDAP bind 테스트"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "ts-002",
-      "category": "Troubleshooting Tools",
-      "question": "WJH로 진단하기 좋은 문제 유형은?",
-      "choices": [
-        "버퍼 드롭, ECN 마킹, PFC pause 이벤트",
-        "BIOS 버전 불일치",
-        "NTP leap second",
-        "RAID 배터리 교체"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "ts-003",
-      "category": "Troubleshooting Tools",
-      "question": "UFM system health로 확인 가능한 것은?",
-      "choices": [
-        "InfiniBand 링크 오류 및 포트 상태",
-        "Windows 패치 수준",
-        "Docker Hub rate limit",
-        "S3 버킷 정책"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "ts-004",
-      "category": "Troubleshooting Tools",
-      "question": "GPU-CPU-스토리지 간 low-latency interconnect 검증에 사용할 수 있는 도구는?",
-      "choices": [
-        "ib_write_lat / ib_write_bw 및 링크 진단 도구",
-        "nslookup",
-        "whois",
-        "traceroute only"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Official Topic"
-    },
-    {
-      "id": "ts-005",
-      "category": "Troubleshooting Tools",
-      "question": "ibdiagnet 실행 후 자주 확인하는 항목은?",
-      "choices": [
-        "링크 다운, BER, 케이블/포트 오류",
-        "Kubernetes RBAC",
-        "Git 브랜치",
-        "Cron 표현식"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "ts-006",
-      "category": "Troubleshooting Tools",
-      "question": "RoCE 성능 저하 시 우선 점검할 설정은?",
-      "choices": [
-        "PFC/ECN/QoS end-to-end 일치 여부",
-        "SNMP community 문자열",
-        "NTP timezone",
-        "HTTP redirect"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "ts-007",
-      "category": "Troubleshooting Tools",
-      "question": "ibstat에서 Port STATE가 DOWN이면 다음 단계는?",
-      "choices": [
-        "물리 링크, 케이블, 스위치 포트 및 SM 상태 확인",
-        "즉시 OS 재설치",
-        "모든 PKey 삭제",
-        "BGP 재분배"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "ts-008",
-      "category": "Troubleshooting Tools",
-      "question": "NetQ에서 혼잡 탐지에 활용하는 데이터는?",
-      "choices": [
-        "Telemetry, WJH 이벤트, 지연 메트릭",
-        "GPU shader 로그",
-        "LDAP audit",
-        "컨테이너 이미지 digest"
-      ],
-      "correctIndices": [
-        0
-      ],
-      "answerKey": "A",
-      "isMultiSelect": false,
-      "source": "Practice"
-    },
-    {
-      "id": "ts-009",
-      "category": "Troubleshooting Tools",
-      "question": "대규모 IB fabric에서 단일 노드 연결 문제를 빠르게 확인하는 명령 조합은?",
-      "choices": [
-        "ibstat → ibping → iblinkinfo",
-        "ping → arp → ftp",
-        "dig → whois → curl",
-        "fdisk → mkfs → mount"
       ],
       "correctIndices": [
         0
