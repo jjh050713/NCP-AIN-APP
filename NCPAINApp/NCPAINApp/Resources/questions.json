@@ -1,0 +1,798 @@
+{
+  "version": "1.0.0",
+  "questions": [
+    {
+      "id": "adc-001",
+      "category": "AI Data Center Design",
+      "question": "NVIDIA AI Factory 아키텍처에서 GPU 간 고속 통신을 위해 주로 사용되는 토폴로지는?",
+      "choices": [
+        "Rail-optimized topology",
+        "Traditional three-tier topology",
+        "Hub-and-spoke topology",
+        "Ring topology only"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "adc-002",
+      "category": "AI Data Center Design",
+      "question": "Rail-optimized topology의 주요 설계 목적은?",
+      "choices": [
+        "GPU-to-GPU 통신 경로 최소화 및 대역폭 극대화",
+        "스토리지 트래픽만 분리",
+        "인터넷 게이트웨이 이중화",
+        "DNS 쿼리 지연 감소"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "adc-003",
+      "category": "AI Data Center Design",
+      "question": "AI 데이터센터에서 BlueField DPU의 주요 역할은?",
+      "choices": [
+        "인프라 오프로드 및 네트워크/스토리지 가속",
+        "GPU 렌더링 전용",
+        "BIOS 펌웨어 업데이트",
+        "전원 관리만 담당"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "adc-004",
+      "category": "AI Data Center Design",
+      "question": "Scalable Unit(SU) 개념과 가장 관련 깊은 것은?",
+      "choices": [
+        "반복 가능한 AI 클러스터 빌딩 블록",
+        "단일 랙 스위치 모델",
+        "백업 전원 장치",
+        "OS 패치 주기"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "adc-005",
+      "category": "AI Data Center Design",
+      "question": "대규모 AI 학습에서 GPU-to-GPU 통신이 중요한 이유는?",
+      "choices": [
+        "All-reduce 등 collective 연산의 병목을 줄이기 위해",
+        "웹 서버 응답 속도 향상",
+        "SNMP 폴링 간격 단축",
+        "DHCP 리스 갱신"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "spc-001",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X에서 RoCE(RDMA over Converged Ethernet)를 활성화하는 NVUE 명령은?",
+      "choices": [
+        "nv set qos roce enable on",
+        "nv set interface swp1 link up",
+        "nv set router bgp enable on",
+        "nv set bridge domain br_default vlan 1"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "spc-002",
+      "category": "Spectrum Networking",
+      "question": "RoCE 환경에서 패킷 드롭 없이 혼잡을 알리기 위해 사용하는 메커니즘은?",
+      "choices": [
+        "ECN (Explicit Congestion Notification)",
+        "STP (Spanning Tree Protocol)",
+        "DHCP Snooping",
+        "ARP Proxy"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "spc-003",
+      "category": "Spectrum Networking",
+      "question": "RoCE 트래픽의 무손실 전달을 위해 L2에서 설정하는 기능은?",
+      "choices": [
+        "PFC (Priority Flow Control)",
+        "VRRP",
+        "LACP only",
+        "RIP"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "spc-004",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X에서 테넌트 워크로드를 격리하기 위해 사용하는 기술은?",
+      "choices": [
+        "BGP-EVPN multi-tenancy",
+        "Static NAT only",
+        "Telnet ACL",
+        "FTP chroot"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "spc-005",
+      "category": "Spectrum Networking",
+      "question": "NVIDIA What Just Happened (WJH) 서비스의 주요 용도는?",
+      "choices": [
+        "실시간 패킷 드롭/혼잡 이벤트 분석",
+        "펌웨어 자동 업그레이드",
+        "DNS 캐시 관리",
+        "NTP 동기화"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "spc-006",
+      "category": "Spectrum Networking",
+      "question": "NetQ가 제공하는 핵심 기능은?",
+      "choices": [
+        "실시간 네트워크 모니터링 및 지연/혼잡 탐지",
+        "GPU 드라이버 설치",
+        "Kubernetes Pod 스케줄링",
+        "InfiniBand Subnet Manager 대체"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "spc-007",
+      "category": "Spectrum Networking",
+      "question": "Adaptive Routing이 혼잡 시 수행하는 동작은?",
+      "choices": [
+        "대체 경로로 트래픽을 동적으로 전환",
+        "모든 포트를 shutdown",
+        "VLAN 1만 허용",
+        "BGP 세션을 강제 종료"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "spc-008",
+      "category": "Spectrum Networking",
+      "question": "NVIDIA Air의 주요 목적은?",
+      "choices": [
+        "네트워크 환경 시뮬레이션 및 사전 검증",
+        "물리 스위치 펌웨어 플래시",
+        "GPU 벤치마크",
+        "LDAP 사용자 관리"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "spc-009",
+      "category": "Spectrum Networking",
+      "question": "DOCA(DPUs and Networking SDK) 설치가 필요한 이유는?",
+      "choices": [
+        "고급 패킷 처리 및 가속 기능 활용",
+        "BIOS 비밀번호 설정",
+        "iSCSI 타겟 생성만",
+        "Windows AD 조인"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "spc-010",
+      "category": "Spectrum Networking",
+      "question": "NVIDIA SuperNIC의 주요 기능은?",
+      "choices": [
+        "고급 패킷 처리 및 혼잡 제어",
+        "전원 분배 유닛",
+        "랙 온도 센서",
+        "KVM 콘솔"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "spc-011",
+      "category": "Spectrum Networking",
+      "question": "In-band telemetry을 사용하는 주된 이유는?",
+      "choices": [
+        "데이터 플레인에서 혼잡/손실 정보를 수집",
+        "SSH 키 배포",
+        "RAID 재구성",
+        "CPU 주파수 조절"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "spc-012",
+      "category": "Spectrum Networking",
+      "question": "Cumulus Linux에서 NVUE의 역할은?",
+      "choices": [
+        "통합 CLI/API로 스위치 구성 관리",
+        "InfiniBand SM 실행",
+        "GPU CUDA 컴파일",
+        "컨테이너 이미지 빌드"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "spc-013",
+      "category": "Spectrum Networking",
+      "question": "RoCEv2가 사용하는 전송 계층은?",
+      "choices": [
+        "UDP/IP",
+        "SCTP only",
+        "ICMP only",
+        "RSVP-TE"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "spc-014",
+      "category": "Spectrum Networking",
+      "question": "PFC가 pause 프레임을 보내는 목적은?",
+      "choices": [
+        "특정 우선순위 큐의 송신을 일시 중지해 버퍼 오버플로 방지",
+        "BGP keepalive 전송",
+        "LLDP neighbor 삭제",
+        "STP root bridge 선출"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "spc-015",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X에서 QoS와 RoCE를 함께 구성할 때 가장 중요한 것은?",
+      "choices": [
+        "우선순위 큐, ECN, PFC의 일관된 end-to-end 설정",
+        "모든 VLAN에 동일 MTU 576",
+        "BGP AS 번호 무작위 변경",
+        "SNMP v1만 사용"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "ib-001",
+      "category": "InfiniBand Networking",
+      "question": "InfiniBand fabric에서 Subnet Manager(SM)의 역할은?",
+      "choices": [
+        "토폴로지 탐색, LID 할당, 라우팅 테이블 관리",
+        "GPU 드라이버 로드",
+        "NFS 마운트",
+        "LDAP 인증"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ib-002",
+      "category": "InfiniBand Networking",
+      "question": "InfiniBand에서 멀티테넌시 격리에 사용하는 키는?",
+      "choices": [
+        "Partition Key (PKey)",
+        "SSH host key",
+        "TLS session key",
+        "WPA passphrase"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ib-003",
+      "category": "InfiniBand Networking",
+      "question": "UFM(Unified Fabric Manager)의 주요 기능은?",
+      "choices": [
+        "InfiniBand 링크 상태 및 대역폭 모니터링",
+        "Kubernetes CNI 플러그인만 제공",
+        "Windows 도메인 컨트롤러",
+        "SAN 스냅샷 스케줄링"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ib-004",
+      "category": "InfiniBand Networking",
+      "question": "InfiniBand HA(High Availability) 구성 시 일반적으로 필요한 것은?",
+      "choices": [
+        "다중 Subnet Manager 및 장애 조치",
+        "단일 스위치만 사용",
+        "모든 노드 DHCP",
+        "STP 활성화"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ib-005",
+      "category": "InfiniBand Networking",
+      "question": "ibstat 명령의 용도는?",
+      "choices": [
+        "HCA 포트 상태 및 링크 정보 확인",
+        "BGP 라우팅 테이블 출력",
+        "디스크 SMART 정보",
+        "CPU 온도 측정"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ib-006",
+      "category": "InfiniBand Networking",
+      "question": "ibdiagnet이 수행하는 작업은?",
+      "choices": [
+        "Fabric 전체 진단 및 오류 보고",
+        "컨테이너 이미지 pull",
+        "LDAP 그룹 동기화",
+        "GPU ECC 메모리 클리어"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ib-007",
+      "category": "InfiniBand Networking",
+      "question": "ibping의 목적은?",
+      "choices": [
+        "RDMA 노드 간 연결성 테스트",
+        "ICMP 대체 DNS 조회",
+        "펌웨어 롤백",
+        "RAID 레벨 변경"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ib-008",
+      "category": "InfiniBand Networking",
+      "question": "ibnetdiscover 명령으로 확인할 수 있는 것은?",
+      "choices": [
+        "Fabric 토폴로지 및 노드/스위치 정보",
+        "Kubernetes 서비스 목록",
+        "Active Directory 사용자",
+        "iSCSI LUN 크기"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ib-009",
+      "category": "InfiniBand Networking",
+      "question": "ib_write_bw 벤치마크가 측정하는 것은?",
+      "choices": [
+        "RDMA 쓰기 대역폭",
+        "CPU 클럭 속도",
+        "디스크 IOPS만",
+        "DNS 응답 시간"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ib-010",
+      "category": "InfiniBand Networking",
+      "question": "ib_write_lat가 측정하는 주요 지표는?",
+      "choices": [
+        "RDMA 쓰기 지연 시간",
+        "스위치 팬 RPM",
+        "배터리 잔량",
+        "VLAN 개수"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ib-011",
+      "category": "InfiniBand Networking",
+      "question": "sminfo 또는 smpquery로 확인할 수 있는 것은?",
+      "choices": [
+        "마스터 Subnet Manager 정보",
+        "BGP neighbor 상태",
+        "Docker 컨테이너 로그",
+        "NTP stratum"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "ib-012",
+      "category": "InfiniBand Networking",
+      "question": "iblinkinfo 명령의 용도는?",
+      "choices": [
+        "포트 링크 상태 및 속도 확인",
+        "Ansible inventory 생성",
+        "GPU 온도 리포트",
+        "SSL 인증서 갱신"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ib-013",
+      "category": "InfiniBand Networking",
+      "question": "ibnodes 명령이 출력하는 정보는?",
+      "choices": [
+        "Fabric 내 노드 GUID 및 타입",
+        "Kubernetes namespace",
+        "LDAP OU 구조",
+        "RAID 배열 상태"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ib-014",
+      "category": "InfiniBand Networking",
+      "question": "InfiniBand Adaptive Routing의 이점은?",
+      "choices": [
+        "혼잡 시 경로를 동적으로 변경해 성능 유지",
+        "모든 QP를 단일 경로로 고정",
+        "PKey를 자동 삭제",
+        "SM을 비활성화"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "ib-015",
+      "category": "InfiniBand Networking",
+      "question": "PKey 기반 보안에서 잘못된 PKey를 가진 노드는?",
+      "choices": [
+        "해당 파티션 통신에 참여할 수 없음",
+        "자동으로 SM이 됨",
+        "모든 파티션에 접근 가능",
+        "GPU 메모리가 초기화됨"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "k8s-001",
+      "category": "Kubernetes Integration",
+      "question": "NVIDIA Network Operator의 주요 역할은?",
+      "choices": [
+        "Kubernetes에서 RDMA/InfiniBand 인터페이스 관리",
+        "Helm 차트 저장소 미러링만",
+        "etcd 백업",
+        "Ingress TLS 종료만"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "k8s-002",
+      "category": "Kubernetes Integration",
+      "question": "Network Operator 배포 후 검증 시 확인해야 할 것은?",
+      "choices": [
+        "RDMA 디바이스 플러그인 및 네트워크 리소스 정상 동작",
+        "모든 Pod가 default namespace에 있는지",
+        "노드 OS가 Windows인지",
+        "kube-proxy 비활성화"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "k8s-003",
+      "category": "Kubernetes Integration",
+      "question": "AI 워크로드용 Kubernetes에서 RDMA 리소스가 필요한 이유는?",
+      "choices": [
+        "GPU 노드 간 고속 통신을 스케줄링에 반영",
+        "Pod 로그 로테이션",
+        "Secret 암호화",
+        "HPA 메트릭"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "k8s-004",
+      "category": "Kubernetes Integration",
+      "question": "Multus CNI와 Network Operator의 관계는?",
+      "choices": [
+        "추가 네트워크 인터페이스(RDMA 등)를 Pod에 연결",
+        "GPU 드라이버 설치",
+        "Cluster DNS 대체",
+        "PV 프로비저닝"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "k8s-005",
+      "category": "Kubernetes Integration",
+      "question": "InfiniBand를 Kubernetes에서 사용할 때 Network Operator가 관리하는 항목은?",
+      "choices": [
+        "SR-IOV/IB 디바이스 및 관련 DaemonSet",
+        "Ingress Controller만",
+        "Metrics Server",
+        "Calico IPAM만"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "ts-001",
+      "category": "Troubleshooting Tools",
+      "question": "Spectrum-X 환경에서 cl-resource-query의 용도는?",
+      "choices": [
+        "스위치 리소스 할당 상태 확인",
+        "InfiniBand SM 선출",
+        "GPU ECC 통계",
+        "LDAP bind 테스트"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ts-002",
+      "category": "Troubleshooting Tools",
+      "question": "WJH로 진단하기 좋은 문제 유형은?",
+      "choices": [
+        "버퍼 드롭, ECN 마킹, PFC pause 이벤트",
+        "BIOS 버전 불일치",
+        "NTP leap second",
+        "RAID 배터리 교체"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ts-003",
+      "category": "Troubleshooting Tools",
+      "question": "UFM system health로 확인 가능한 것은?",
+      "choices": [
+        "InfiniBand 링크 오류 및 포트 상태",
+        "Windows 패치 수준",
+        "Docker Hub rate limit",
+        "S3 버킷 정책"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ts-004",
+      "category": "Troubleshooting Tools",
+      "question": "GPU-CPU-스토리지 간 low-latency interconnect 검증에 사용할 수 있는 도구는?",
+      "choices": [
+        "ib_write_lat / ib_write_bw 및 링크 진단 도구",
+        "nslookup",
+        "whois",
+        "traceroute only"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "ts-005",
+      "category": "Troubleshooting Tools",
+      "question": "ibdiagnet 실행 후 자주 확인하는 항목은?",
+      "choices": [
+        "링크 다운, BER, 케이블/포트 오류",
+        "Kubernetes RBAC",
+        "Git 브랜치",
+        "Cron 표현식"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "ts-006",
+      "category": "Troubleshooting Tools",
+      "question": "RoCE 성능 저하 시 우선 점검할 설정은?",
+      "choices": [
+        "PFC/ECN/QoS end-to-end 일치 여부",
+        "SNMP community 문자열",
+        "NTP timezone",
+        "HTTP redirect"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "ts-007",
+      "category": "Troubleshooting Tools",
+      "question": "ibstat에서 Port STATE가 DOWN이면 다음 단계는?",
+      "choices": [
+        "물리 링크, 케이블, 스위치 포트 및 SM 상태 확인",
+        "즉시 OS 재설치",
+        "모든 PKey 삭제",
+        "BGP 재분배"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "ts-008",
+      "category": "Troubleshooting Tools",
+      "question": "NetQ에서 혼잡 탐지에 활용하는 데이터는?",
+      "choices": [
+        "Telemetry, WJH 이벤트, 지연 메트릭",
+        "GPU shader 로그",
+        "LDAP audit",
+        "컨테이너 이미지 digest"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "auto-001",
+      "category": "Automation & Configuration",
+      "question": "NVUE 템플릿을 사용하는 이유는?",
+      "choices": [
+        "일관된 스위치 구성을 재사용 및 자동 적용",
+        "InfiniBand 케이블 라벨링",
+        "GPU 펌웨어 플래시",
+        "K8s Secret 생성"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "auto-002",
+      "category": "Automation & Configuration",
+      "question": "Ansible로 자동화하기 좋은 Spectrum-X 작업은?",
+      "choices": [
+        "VLAN 생성 및 RoCE QoS 설정",
+        "물리 케이블 체결",
+        "랙 전원 배선",
+        "BIOS 패스워드 설정"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "auto-003",
+      "category": "Automation & Configuration",
+      "question": "nv config apply 명령의 의미는?",
+      "choices": [
+        "준비된 NVUE 구성을 스위치에 적용",
+        "Kubernetes apply와 동일",
+        "UFM 라이선스 활성화",
+        "SM 페일오버 강제"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "auto-004",
+      "category": "Automation & Configuration",
+      "question": "Ansible playbook에서 RoCE 설정 자동화 시 포함해야 할 항목은?",
+      "choices": [
+        "QoS, PFC, ECN 및 인터페이스 우선순위",
+        "STP root guard만",
+        "RIP 타이머",
+        "HTTP basic auth"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "auto-005",
+      "category": "Automation & Configuration",
+      "question": "NVUE에서 구성을 템플릿화할 때의 이점은?",
+      "choices": [
+        "다수 스위치에 동일 baseline을 빠르게 배포",
+        "SM을 자동 제거",
+        "PKey를 0으로 고정",
+        "RDMA 비활성화"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "spc-016",
+      "category": "Spectrum Networking",
+      "question": "RoCE와 일반 TCP 트래픽이 공존할 때 권장되는 설계는?",
+      "choices": [
+        "우선순위 기반 QoS로 RoCE 트래픽 보호",
+        "모든 트래픽 best-effort",
+        "RoCE만 허용하고 TCP 차단",
+        "VLAN 없이 단일 브로드캐스트 도메인"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "ib-016",
+      "category": "InfiniBand Networking",
+      "question": "InfiniBand 포트가 Active가 아닐 때 iblinkinfo에서 볼 수 있는 상태 예시는?",
+      "choices": [
+        "Down 또는 Init",
+        "Established",
+        "Listening",
+        "SYN_SENT"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "ts-009",
+      "category": "Troubleshooting Tools",
+      "question": "대규모 IB fabric에서 단일 노드 연결 문제를 빠르게 확인하는 명령 조합은?",
+      "choices": [
+        "ibstat → ibping → iblinkinfo",
+        "ping → arp → ftp",
+        "dig → whois → curl",
+        "fdisk → mkfs → mount"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "adc-006",
+      "category": "AI Data Center Design",
+      "question": "NCP-AIN 시험의 문항 수와 시간은?",
+      "choices": [
+        "70-75문항, 120분",
+        "50문항, 60분",
+        "100문항, 180분",
+        "30문항, 45분"
+      ],
+      "correctIndex": 0,
+      "source": "Official Topic"
+    },
+    {
+      "id": "spc-017",
+      "category": "Spectrum Networking",
+      "question": "BGP-EVPN에서 VNI의 역할은?",
+      "choices": [
+        "L2 세그먼트(테넌트) 식별",
+        "GPU UUID 매핑",
+        "SM priority 설정",
+        "RDMA QP 번호"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "ib-017",
+      "category": "InfiniBand Networking",
+      "question": "Subnet Manager가 없는 InfiniBand fabric에서 발생하는 문제는?",
+      "choices": [
+        "라우팅 및 주소 할당이 이루어지지 않음",
+        "GPU 온도 상승",
+        "DNS 실패",
+        "TLS 핸드셰이크 오류"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "k8s-006",
+      "category": "Kubernetes Integration",
+      "question": "GPU 워크로드 Pod에 RDMA 리소스를 요청하는 이유는?",
+      "choices": [
+        "스케줄러가 RDMA 가능 노드에 배치",
+        "이미지 pull 속도 향상",
+        "Secret 자동 마운트",
+        "HPA 임계값 설정"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    },
+    {
+      "id": "auto-006",
+      "category": "Automation & Configuration",
+      "question": "nv config diff 명령의 용도는?",
+      "choices": [
+        "적용 전후 구성 차이 확인",
+        "ibdiagnet 대체",
+        "Kubernetes diff",
+        "LDAP 그룹 비교"
+      ],
+      "correctIndex": 0,
+      "source": "Practice"
+    }
+  ]
+}
