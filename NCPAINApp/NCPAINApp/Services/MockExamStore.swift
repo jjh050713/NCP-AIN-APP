@@ -13,6 +13,11 @@ struct MockExamState: Codable, Equatable {
     var currentIndex = 0
     var answers: [String: [Int]] = [:]
     var score: ExamScore?
+    var shuffle = false
+    /// Display order as indices into MockExamStore.questions. Answers are
+    /// keyed by question id (not position), so shuffling this order never
+    /// affects grading — it only changes which question appears next.
+    var order: [Int] = []
 }
 
 @MainActor
@@ -52,7 +57,25 @@ final class MockExamStore: ObservableObject {
     }
 
     var currentQuestion: Question? {
-        questions.indices.contains(currentIndex) ? questions[currentIndex] : nil
+        orderedQuestion(at: currentIndex)
+    }
+
+    private func orderedQuestion(at displayIndex: Int) -> Question? {
+        if state.order.indices.contains(displayIndex) {
+            let realIndex = state.order[displayIndex]
+            if questions.indices.contains(realIndex) {
+                return questions[realIndex]
+            }
+        }
+        return questions.indices.contains(displayIndex) ? questions[displayIndex] : nil
+    }
+
+    /// All questions sorted the way the user actually saw them this attempt.
+    private func orderedQuestions() -> [Question] {
+        guard state.order.count == questions.count else { return questions }
+        return state.order.compactMap { realIndex in
+            questions.indices.contains(realIndex) ? questions[realIndex] : nil
+        }
     }
 
     var isLastQuestion: Bool {
@@ -68,7 +91,15 @@ final class MockExamStore: ObservableObject {
     }
 
     func start() {
+        if state.order.count != questions.count {
+            state.order = Self.buildOrder(count: questions.count, shuffled: state.shuffle)
+        }
         state.started = true
+        persist()
+    }
+
+    func toggleShuffle(_ enabled: Bool) {
+        state.shuffle = enabled
         persist()
     }
 
@@ -119,11 +150,14 @@ final class MockExamStore: ObservableObject {
     }
 
     func wrongQuestions() -> [Question] {
-        questions.filter { !isCorrect($0) }
+        orderedQuestions().filter { !isCorrect($0) }
     }
 
+    /// Resets progress but returns to the intro screen (rather than jumping
+    /// straight into question 1) so the shuffle toggle stays reachable
+    /// before every new attempt. The shuffle preference itself persists.
     func retry() {
-        state = MockExamState(started: true)
+        state = MockExamState(shuffle: state.shuffle)
         persist()
     }
 
@@ -136,6 +170,11 @@ final class MockExamStore: ObservableObject {
 
     private nonisolated static func decodeState(_ data: Data) -> MockExamState {
         (try? JSONDecoder().decode(MockExamState.self, from: data)) ?? MockExamState()
+    }
+
+    private nonisolated static func buildOrder(count: Int, shuffled: Bool) -> [Int] {
+        let indices = Array(0..<count)
+        return shuffled ? indices.shuffled() : indices
     }
 
     private nonisolated static func loadFromBundle() -> [Question] {

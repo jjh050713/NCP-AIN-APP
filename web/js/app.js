@@ -95,7 +95,7 @@ function loadExamQuestions() {
 }
 
 function defaultExamState() {
-  return { started: false, finished: false, currentIndex: 0, answers: {}, score: null };
+  return { started: false, finished: false, currentIndex: 0, answers: {}, score: null, shuffle: false, order: [] };
 }
 
 function getExamState() {
@@ -105,6 +105,35 @@ function getExamState() {
 
 function saveExamState(state) {
   saveJSON(STORAGE.examState, state);
+}
+
+// Fisher-Yates: unbiased shuffle, unlike Array#sort(() => Math.random() - 0.5).
+function shuffledIndices(count) {
+  const arr = Array.from({ length: count }, (_, i) => i);
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function sequentialIndices(count) {
+  return Array.from({ length: count }, (_, i) => i);
+}
+
+// Answers are keyed by question id, not position, so shuffling the display
+// order never affects grading — it only changes which question shows next.
+function ensureExamOrder(state) {
+  if (Array.isArray(state.order) && state.order.length === examQuestions.length) {
+    return state;
+  }
+  state.order = state.shuffle ? shuffledIndices(examQuestions.length) : sequentialIndices(examQuestions.length);
+  return state;
+}
+
+function getOrderedQuestion(state, displayIndex) {
+  const realIndex = state.order[displayIndex];
+  return examQuestions[realIndex] ?? examQuestions[displayIndex];
 }
 
 function isExamAnswerCorrect(q, state) {
@@ -372,26 +401,43 @@ function renderExamIntro(state) {
         <div><div class="num">${answeredCount}</div><div class="label">답변 완료</div></div>
       </div>
     </div>
+    <div class="card exam-shuffle-card">
+      <label class="exam-shuffle-toggle">
+        <div>
+          <div class="exam-shuffle-title">🔀 문제 순서 셔플</div>
+          <div class="subtitle">켜면 매번 새로운 순서로 120문제가 출제됩니다.</div>
+        </div>
+        <input type="checkbox" id="exam-shuffle-checkbox" ${state.shuffle ? 'checked' : ''}>
+      </label>
+    </div>
     <button class="btn-primary" id="start-exam-btn">${hasProgress ? '이어서 풀기' : '모의고사 시작'}</button>
     ${hasProgress ? '<button class="btn-danger exam-restart-link" id="restart-exam-btn">처음부터 다시 시작</button>' : ''}
   `;
 
+  $('#exam-shuffle-checkbox')?.addEventListener('change', (e) => {
+    const s = getExamState();
+    s.shuffle = e.target.checked;
+    saveExamState(s);
+    vibrate();
+  });
   $('#start-exam-btn')?.addEventListener('click', () => {
     const s = getExamState();
     s.started = true;
+    ensureExamOrder(s);
     saveExamState(s);
     renderExam();
   });
   $('#restart-exam-btn')?.addEventListener('click', () => {
     if (!confirm('처음부터 다시 시작할까요? 진행 상황이 모두 초기화됩니다.')) return;
-    saveExamState({ ...defaultExamState(), started: true });
+    saveExamState({ ...defaultExamState(), shuffle: state.shuffle });
     renderExam();
   });
 }
 
 function renderExamQuestion(state) {
+  ensureExamOrder(state);
   const idx = Math.min(Math.max(state.currentIndex, 0), examQuestions.length - 1);
-  const q = examQuestions[idx];
+  const q = getOrderedQuestion(state, idx);
   const selected = new Set(state.answers[q.id] || []);
   const isLast = idx === examQuestions.length - 1;
   const answeredCount = Object.keys(state.answers).length;
@@ -485,8 +531,10 @@ function submitExam() {
 }
 
 function renderExamResult(state) {
+  ensureExamOrder(state);
   const { correct, total, percent } = state.score;
-  const wrongList = examQuestions.filter((q) => !isExamAnswerCorrect(q, state));
+  const orderedQuestions = state.order.map((realIndex) => examQuestions[realIndex]).filter(Boolean);
+  const wrongList = orderedQuestions.filter((q) => !isExamAnswerCorrect(q, state));
 
   const wrongHTML = wrongList.map((q) => {
     const givenIndices = state.answers[q.id] || [];
@@ -519,7 +567,7 @@ function renderExamResult(state) {
 
   $('#retry-exam-btn')?.addEventListener('click', () => {
     if (!confirm('새로운 모의고사를 시작할까요? 이전 결과는 사라집니다.')) return;
-    saveExamState({ ...defaultExamState(), started: true });
+    saveExamState({ ...defaultExamState(), shuffle: state.shuffle });
     renderExam();
   });
 }
