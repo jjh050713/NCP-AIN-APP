@@ -380,26 +380,65 @@ private struct ExamResultView: View {
 
     private func reviewRow(_ question: Question) -> some View {
         let given = examStore.selectedIndices(for: question).sorted()
-        let givenLabel = given.isEmpty
-            ? "(답변 없음)"
-            : given.map { $0 < labels.count ? labels[$0] : "\($0 + 1)" }.joined(separator: ", ")
-        let answerLabel = question.correctAnswerLabel
 
-        return VStack(alignment: .leading, spacing: 4) {
+        return VStack(alignment: .leading, spacing: 10) {
             Text(question.question)
                 .font(.subheadline.weight(.medium))
                 .fixedSize(horizontal: false, vertical: true)
-            Text("내 답: \(givenLabel)")
-                .font(.caption)
-                .foregroundStyle(.secondary)
-            Text("정답: \(answerLabel)")
-                .font(.caption)
-                .foregroundStyle(.green)
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text("❌ 내 답")
+                    .font(.caption2.weight(.bold))
+                    .foregroundStyle(.secondary)
+                if given.isEmpty {
+                    reviewChoiceRow(label: nil, text: "(답변 없음)", isCorrect: false)
+                } else {
+                    ForEach(given, id: \.self) { index in
+                        reviewChoiceRow(label: label(for: index), text: choiceText(question, index), isCorrect: false)
+                    }
+                }
+            }
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text("✅ 정답")
+                    .font(.caption2.weight(.bold))
+                    .foregroundStyle(.secondary)
+                ForEach(question.correctIndices, id: \.self) { index in
+                    reviewChoiceRow(label: label(for: index), text: choiceText(question, index), isCorrect: true)
+                }
+            }
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, 10)
         .overlay(alignment: .bottom) {
             Divider()
         }
+    }
+
+    private func reviewChoiceRow(label: String?, text: String, isCorrect: Bool) -> some View {
+        HStack(alignment: .top, spacing: 8) {
+            if let label {
+                Text(label)
+                    .font(.caption.bold())
+            }
+            Text(text)
+                .font(.caption)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(8)
+        .background(
+            (isCorrect ? Color.green : Color.red).opacity(0.12),
+            in: RoundedRectangle(cornerRadius: 8)
+        )
+        .foregroundStyle(isCorrect ? Color.green : Color.red)
+    }
+
+    private func label(for index: Int) -> String {
+        index < labels.count ? labels[index] : "\(index + 1)"
+    }
+
+    private func choiceText(_ question: Question, _ index: Int) -> String {
+        question.choices.indices.contains(index) ? question.choices[index] : ""
     }
 }
 
