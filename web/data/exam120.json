@@ -436,7 +436,7 @@
         "ibv_devices -c mlx5_0",
         "cat /proc/net/ib/device",
         "sudo ibnodes -C mlx5_0",
-        "ibstat –d mlx5_X"
+        "ibstat -d mlx5_X"
       ],
       "correctIndices": [
         3
@@ -467,10 +467,10 @@
       "category": "Spectrum Networking",
       "question": "What command sequence is used to identify the exact name of the server that runs as the master SM in a multi-node fabric?",
       "choices": [
-        "sminfo smpquery ND < LID >",
-        "sminfo smpquery Nl < LID >",
-        "ibstat sminfo < LID >",
-        "ibis ibsim < LID >"
+        "sminfo \n smpquery ND <LID>",
+        "sminfo \n smpquery Nl <LID>",
+        "ibstat \n sminfo <LID>",
+        "ibis \n ibsim <LID>"
       ],
       "correctIndices": [
         0
@@ -502,14 +502,14 @@
       "question": "You are deploying a Kubernetes cluster for AI workloads using NVIDIA Spectrum-X switches. You need to automate the deployment and management of networking components in this environment. Which NVIDIA tool is specifically designed to automate the deployment and management of networking components in a Kubernetes cluster with Spectrum-X switches?",
       "choices": [
         "Mellanox OFED",
+        "Container Runtime",
         "Network Operator",
-        "GPU Operator",
-        "Container Runtime"
+        "GPU Operator"
       ],
       "correctIndices": [
-        1
+        2
       ],
-      "answerKey": "B",
+      "answerKey": "C",
       "isMultiSelect": false,
       "source": "Dump"
     },
@@ -1321,7 +1321,7 @@
         "It is used for routing traffic between nodes in the local subnet.",
         "It provides the LIDs from the local subnet manager.",
         "It allows traffic on a local link only.",
-        "It provides the parameters for each local HCA"
+        "It provides the parameters for each local HCA."
       ],
       "correctIndices": [
         0
@@ -1643,7 +1643,7 @@
         "TCP/IP Offloading",
         "SHARP",
         "Direct Memory Access (DMA)",
-        "PKey"
+        "Pkey"
       ],
       "correctIndices": [
         2
@@ -1932,7 +1932,8 @@
       "choices": [
         "WJH",
         "ONIE",
-        "NCLU D. BGP"
+        "NCLU",
+        "BGP"
       ],
       "correctIndices": [
         0
@@ -1998,7 +1999,8 @@
       "question": "What is the purpose of WJH (What Just Happened)?",
       "choices": [
         "Provide contextual information regarding dropped packets in order to aid debugging.",
-        "Send notifications of failed login attempts to a pre-defined Slack channel. gather C. Identify potential cyberattacks or unusual traffic patterns across the cluster.",
+        "Send notifications of failed login attempts to a pre-defined Slack channel.",
+        "Identify potential cyberattacks or unusual traffic patterns across the cluster.",
         "Collate operating system logs and diagnose system crashes."
       ],
       "correctIndices": [

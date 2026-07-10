@@ -12,18 +12,39 @@ duplicate number).
 from __future__ import annotations
 
 import json
+import re
 from collections import Counter
 from pathlib import Path
 
 from convert_exam_dump import parse_answer_list
-from convert_user_dump import categorize, normalize_text
+from convert_user_dump import categorize, extract_questions, normalize_text
 
 SOURCE = Path("dumps/ncp_ain_exam_120.json")
+KOREA_SOURCE = Path("dumps/source_dump.json")
 OUTPUTS = [
     Path("web/data/exam120.json"),
     Path("NCPAINApp/NCPAINApp/Resources/exam120.json"),
 ]
 EXAM_SIZE = 120
+
+# The HWP extraction glued a couple of options together (e.g. one choice's
+# text literally contains "... D. BGP", swallowing the next option), which
+# looks like a real, embedded option label ("B. ", "C. ", etc.) in the
+# middle of another choice's text.
+CORRUPTION_PATTERN = re.compile(r"\s[B-F]\.\s")
+
+
+def load_korea_lookup() -> dict[str, dict]:
+    """Normalized question text -> cleaned Korea-dump question, used to
+    repair HWP items whose options were corrupted during extraction."""
+    if not KOREA_SOURCE.exists():
+        return {}
+    payload = json.loads(KOREA_SOURCE.read_text(encoding="utf-8"))
+    return {normalize_text(item["question_text"]): item for item in extract_questions(payload)}
+
+
+def is_corrupted(choices: list[str]) -> bool:
+    return any(CORRUPTION_PATTERN.search(choice) for choice in choices)
 
 
 def extract_first_120(payload: dict) -> list[dict]:
@@ -39,7 +60,7 @@ def extract_first_120(payload: dict) -> list[dict]:
     return items
 
 
-def to_app_question(item: dict, index: int) -> dict:
+def to_app_question(item: dict, index: int, korea_lookup: dict[str, dict]) -> dict:
     question_text = item["question"].strip()
     options = item.get("options", [])
     ordered = sorted(options, key=lambda o: o.get("key", ""))
@@ -47,6 +68,23 @@ def to_app_question(item: dict, index: int) -> dict:
 
     answer = item.get("answer", ["A"])
     indices, answer_key, is_multi = parse_answer_list(answer, len(choices))
+
+    korea_match = korea_lookup.get(normalize_text(question_text))
+    if korea_match:
+        # Prefer the manually-transcribed Korea dump's choices whenever the
+        # same question exists there too — it's what 암기 mode already shows
+        # for this text (dedup keeps the Korea copy), and it fixes HWP OCR
+        # artifacts (stray line breaks, en-dashes, missing periods) even
+        # when they're too subtle to flag as outright corruption.
+        if choices != korea_match["choices"]:
+            tag = "repaired" if is_corrupted(choices) else "aligned"
+            print(f"  [{tag}] #{item['source_number']}: {question_text[:60]!r}")
+        choices = korea_match["choices"]
+        indices = korea_match["correctIndices"]
+        answer_key = korea_match["answerKey"]
+        is_multi = korea_match["isMultiSelect"]
+    elif is_corrupted(choices):
+        print(f"  [WARNING] corrupted options with no fix available: #{item['source_number']}: {question_text[:60]!r}")
 
     slug = normalize_text(question_text)
     slug = "".join(c if c.isalnum() else "-" for c in slug)
@@ -75,7 +113,8 @@ def main() -> int:
             f"Expected {EXAM_SIZE} unique numbered questions, got {len(raw_items)}"
         )
 
-    questions = [to_app_question(item, i + 1) for i, item in enumerate(raw_items)]
+    korea_lookup = load_korea_lookup()
+    questions = [to_app_question(item, i + 1, korea_lookup) for i, item in enumerate(raw_items)]
 
     result = {
         "version": "1.0.0",
