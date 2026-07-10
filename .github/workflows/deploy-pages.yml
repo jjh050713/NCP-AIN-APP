@@ -14,6 +14,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Cache-bust versioned assets
+        # Manually bumping ?v=N is easy to forget (it has bitten us more
+        # than once), so every deploy now stamps a fresh, unique version
+        # automatically from the commit SHA. This guarantees browsers/PWAs
+        # fetch the latest app.js/style.css/data after each deploy,
+        # regardless of whether a human remembered to bump a version number.
+        run: |
+          VERSION="${GITHUB_SHA::8}"
+          PATTERN='(app\.js|style\.css|questions\.json|exam120\.json)\?v=[A-Za-z0-9]+'
+          sed -i -E "s/${PATTERN}/\1?v=${VERSION}/g" web/index.html web/js/app.js
+          grep -rn "?v=${VERSION}" web/index.html web/js/app.js
+
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
