@@ -544,14 +544,28 @@ function renderExamResult(state) {
 
   const wrongHTML = wrongList.map((q) => {
     const givenIndices = state.answers[q.id] || [];
-    const givenLabel = givenIndices.length
-      ? givenIndices.map((i) => EXAM_LABELS[i] || i + 1).join(', ')
-      : '(답변 없음)';
-    const answerLabel = q.answerKey || q.correctIndices.map((i) => EXAM_LABELS[i] || i + 1).join(', ');
+    const choiceText = (i) => (q.choices && q.choices[i] !== undefined ? q.choices[i] : '');
+
+    const givenHTML = givenIndices.length
+      ? givenIndices.map((i) =>
+          `<div class="review-choice review-wrong-choice"><span class="review-choice-label">${EXAM_LABELS[i] || i + 1}</span>${escapeHtml(choiceText(i))}</div>`
+        ).join('')
+      : '<div class="review-choice review-wrong-choice">(답변 없음)</div>';
+
+    const correctHTML = q.correctIndices.map((i) =>
+      `<div class="review-choice review-correct-choice"><span class="review-choice-label">${EXAM_LABELS[i] || i + 1}</span>${escapeHtml(choiceText(i))}</div>`
+    ).join('');
+
     return `<div class="review-item">
       <p class="review-q">${escapeHtml(q.question)}</p>
-      <p class="review-line">내 답: <strong>${escapeHtml(givenLabel)}</strong></p>
-      <p class="review-line review-correct">정답: <strong>${escapeHtml(answerLabel)}</strong></p>
+      <div class="review-block">
+        <div class="review-block-label">❌ 내 답</div>
+        ${givenHTML}
+      </div>
+      <div class="review-block">
+        <div class="review-block-label">✅ 정답</div>
+        ${correctHTML}
+      </div>
     </div>`;
   }).join('');
 
