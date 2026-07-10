@@ -22,6 +22,9 @@ struct MockExamView: View {
             }
             .navigationTitle("모의고사")
             .navigationBarTitleDisplayMode(.inline)
+            .task {
+                examStore.loadIfNeeded()
+            }
         }
     }
 }
