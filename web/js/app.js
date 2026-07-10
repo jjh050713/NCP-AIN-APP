@@ -58,7 +58,7 @@ async function loadQuestions() {
   const imported = loadJSON(STORAGE.imported, []);
   let bundled = [];
   try {
-    const res = await fetch('./data/questions.json');
+    const res = await fetch('./data/questions.json?v=DEV');
     const data = await res.json();
     bundled = data.questions || [];
   } catch (e) {
@@ -79,7 +79,7 @@ async function loadQuestions() {
 // doesn't have to wait on ~75KB of exam data most sessions never need.
 function loadExamQuestions() {
   if (examQuestionsPromise) return examQuestionsPromise;
-  examQuestionsPromise = fetch('./data/exam120.json')
+  examQuestionsPromise = fetch('./data/exam120.json?v=DEV')
     .then((res) => res.json())
     .then((data) => {
       examQuestions = Array.isArray(data.questions) ? data.questions : [];
