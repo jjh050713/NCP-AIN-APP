@@ -23,18 +23,28 @@ final class MockExamStore: ObservableObject {
 
     @AppStorage("mockExamStateData") private var stateData = Data()
 
+    private var hasLoaded = false
+    private var loadTask: Task<Void, Never>?
+
     init() {
         state = Self.decodeState(stateData)
-        Task { await loadQuestions() }
     }
 
-    func loadQuestions() async {
+    /// Loads the 120-question exam bank the first time the 모의고사 tab is
+    /// actually opened, rather than eagerly at app launch alongside the main
+    /// study question bank. Cheap to call repeatedly; only loads once.
+    func loadIfNeeded() {
+        guard !hasLoaded, loadTask == nil else { return }
         isLoading = true
-        let loaded = await Task.detached(priority: .userInitiated) {
-            Self.loadFromBundle()
-        }.value
-        questions = loaded
-        isLoading = false
+        loadTask = Task {
+            let loaded = await Task.detached(priority: .userInitiated) {
+                Self.loadFromBundle()
+            }.value
+            questions = loaded
+            isLoading = false
+            hasLoaded = true
+            loadTask = nil
+        }
     }
 
     var currentIndex: Int {

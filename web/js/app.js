@@ -18,6 +18,8 @@ const CATEGORIES = {
 
 let allQuestions = [];
 let examQuestions = [];
+let examQuestionsLoaded = false;
+let examQuestionsPromise = null;
 let sessionQuestions = [];
 let currentIndex = 0;
 let currentTab = 'home';
@@ -73,15 +75,23 @@ async function loadQuestions() {
   }
 }
 
-async function loadExamQuestions() {
-  try {
-    const res = await fetch('./data/exam120.json');
-    const data = await res.json();
-    examQuestions = Array.isArray(data.questions) ? data.questions : [];
-  } catch (e) {
-    console.error(e);
-    examQuestions = [];
-  }
+// Loaded lazily (only once the 모의고사 tab is opened) so the home screen
+// doesn't have to wait on ~75KB of exam data most sessions never need.
+function loadExamQuestions() {
+  if (examQuestionsPromise) return examQuestionsPromise;
+  examQuestionsPromise = fetch('./data/exam120.json')
+    .then((res) => res.json())
+    .then((data) => {
+      examQuestions = Array.isArray(data.questions) ? data.questions : [];
+    })
+    .catch((e) => {
+      console.error(e);
+      examQuestions = [];
+    })
+    .finally(() => {
+      examQuestionsLoaded = true;
+    });
+  return examQuestionsPromise;
 }
 
 function defaultExamState() {
@@ -321,6 +331,14 @@ function goPrev() {
 
 function renderExam() {
   pageTitle.textContent = '모의고사';
+
+  if (!examQuestionsLoaded) {
+    main.innerHTML = '<div class="loading">모의고사 문제 로딩 중…</div>';
+    loadExamQuestions().then(() => {
+      if (currentTab === 'exam') renderExam();
+    });
+    return;
+  }
 
   if (!examQuestions.length) {
     main.innerHTML = '<div class="loading">모의고사 문제를 불러올 수 없습니다.<br><small>새로고침해 주세요.</small></div>';
@@ -572,7 +590,7 @@ async function init() {
 
   main.innerHTML = '<div class="loading">문제 로딩 중…</div>';
   try {
-    await Promise.all([loadQuestions(), loadExamQuestions()]);
+    await loadQuestions();
     switchTab('home');
 
     document.querySelectorAll('.tab').forEach((tab) => {

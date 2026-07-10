@@ -39,29 +39,32 @@
 
   <div id="toast" class="toast" hidden></div>
   <script>
+    // One-time cleanup for devices that still have a stale service worker
+    // or cache from older app versions (see sw.js). Once cleaned, this
+    // becomes a no-op forever, so it no longer reloads the page on every
+    // launch (that used to make the app load twice on every open).
     (function () {
-      var KEY = 'ncpain_cache_reset_v7';
+      var DONE_KEY = 'ncpain_cache_reset_v7';
 
       function loadApp() {
         var s = document.createElement('script');
-        s.src = 'js/app.js?v=7';
+        s.src = 'js/app.js?v=8';
         document.body.appendChild(s);
       }
 
-      if (sessionStorage.getItem(KEY)) {
+      if (localStorage.getItem(DONE_KEY)) {
         loadApp();
         return;
       }
 
-      function done() {
-        sessionStorage.setItem(KEY, '1');
-        location.reload();
-      }
-
+      var hadServiceWorker = false;
+      var hadCache = false;
       var tasks = [];
+
       if ('serviceWorker' in navigator) {
         tasks.push(
           navigator.serviceWorker.getRegistrations().then(function (regs) {
+            hadServiceWorker = regs.length > 0;
             return Promise.all(regs.map(function (r) { return r.unregister(); }));
           })
         );
@@ -69,16 +72,22 @@
       if ('caches' in window) {
         tasks.push(
           caches.keys().then(function (keys) {
+            hadCache = keys.length > 0;
             return Promise.all(keys.map(function (k) { return caches.delete(k); }));
           })
         );
       }
-      if (!tasks.length) {
-        sessionStorage.setItem(KEY, '1');
-        loadApp();
-        return;
-      }
-      Promise.all(tasks).then(done).catch(done);
+
+      Promise.all(tasks)
+        .catch(function () {})
+        .then(function () {
+          localStorage.setItem(DONE_KEY, '1');
+          if (hadServiceWorker || hadCache) {
+            location.reload();
+          } else {
+            loadApp();
+          }
+        });
     })();
   </script>
 </body>
