@@ -2,7 +2,10 @@ const STORAGE = {
   revealed: 'ncpain_revealed',
   bookmarks: 'ncpain_bookmarks',
   imported: 'ncpain_imported',
+  examState: 'ncpain_exam_state',
 };
+
+const EXAM_LABELS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 const CATEGORIES = {
   'AI Data Center Design': { icon: '🏢', short: 'AI DC', weight: '5%' },
@@ -14,6 +17,7 @@ const CATEGORIES = {
 };
 
 let allQuestions = [];
+let examQuestions = [];
 let sessionQuestions = [];
 let currentIndex = 0;
 let currentTab = 'home';
@@ -67,6 +71,36 @@ async function loadQuestions() {
     seen.add(key);
     allQuestions.push(q);
   }
+}
+
+async function loadExamQuestions() {
+  try {
+    const res = await fetch('./data/exam120.json');
+    const data = await res.json();
+    examQuestions = Array.isArray(data.questions) ? data.questions : [];
+  } catch (e) {
+    console.error(e);
+    examQuestions = [];
+  }
+}
+
+function defaultExamState() {
+  return { started: false, finished: false, currentIndex: 0, answers: {}, score: null };
+}
+
+function getExamState() {
+  const state = loadJSON(STORAGE.examState, defaultExamState());
+  return { ...defaultExamState(), ...state };
+}
+
+function saveExamState(state) {
+  saveJSON(STORAGE.examState, state);
+}
+
+function isExamAnswerCorrect(q, state) {
+  const given = [...(state.answers[q.id] || [])].sort((a, b) => a - b);
+  const answer = [...q.correctIndices].sort((a, b) => a - b);
+  return given.length === answer.length && given.every((v, i) => v === answer[i]);
 }
 
 function getCorrectIndices(q) {
@@ -285,6 +319,193 @@ function goPrev() {
   renderStudy();
 }
 
+function renderExam() {
+  pageTitle.textContent = '모의고사';
+
+  if (!examQuestions.length) {
+    main.innerHTML = '<div class="loading">모의고사 문제를 불러올 수 없습니다.<br><small>새로고침해 주세요.</small></div>';
+    return;
+  }
+
+  const state = getExamState();
+
+  if (state.finished && state.score) {
+    renderExamResult(state);
+  } else if (!state.started) {
+    renderExamIntro(state);
+  } else {
+    renderExamQuestion(state);
+  }
+}
+
+function renderExamIntro(state) {
+  const answeredCount = Object.keys(state.answers).length;
+  const hasProgress = answeredCount > 0;
+
+  main.innerHTML = `
+    <div class="card exam-intro">
+      <div class="subtitle">📝 실전 모의고사</div>
+      <h2 style="margin-top:4px">기출 120제</h2>
+      <p class="subtitle">실제 시험처럼 오답 보기도 함께 표시됩니다. 120문제를 모두 풀면 몇 개 맞았는지 채점 결과를 확인할 수 있습니다.</p>
+    </div>
+    <div class="card">
+      <div class="stats">
+        <div><div class="num">${examQuestions.length}</div><div class="label">전체 문제</div></div>
+        <div><div class="num">${answeredCount}</div><div class="label">답변 완료</div></div>
+      </div>
+    </div>
+    <button class="btn-primary" id="start-exam-btn">${hasProgress ? '이어서 풀기' : '모의고사 시작'}</button>
+    ${hasProgress ? '<button class="btn-danger exam-restart-link" id="restart-exam-btn">처음부터 다시 시작</button>' : ''}
+  `;
+
+  $('#start-exam-btn')?.addEventListener('click', () => {
+    const s = getExamState();
+    s.started = true;
+    saveExamState(s);
+    renderExam();
+  });
+  $('#restart-exam-btn')?.addEventListener('click', () => {
+    if (!confirm('처음부터 다시 시작할까요? 진행 상황이 모두 초기화됩니다.')) return;
+    saveExamState({ ...defaultExamState(), started: true });
+    renderExam();
+  });
+}
+
+function renderExamQuestion(state) {
+  const idx = Math.min(Math.max(state.currentIndex, 0), examQuestions.length - 1);
+  const q = examQuestions[idx];
+  const selected = new Set(state.answers[q.id] || []);
+  const isLast = idx === examQuestions.length - 1;
+  const answeredCount = Object.keys(state.answers).length;
+  const pct = ((idx + 1) / examQuestions.length) * 100;
+
+  const choicesHTML = q.choices.map((text, i) => {
+    const isSelected = selected.has(i);
+    return `<button class="exam-choice${isSelected ? ' selected' : ''}" data-index="${i}" type="button">
+      <span class="choice-label">${EXAM_LABELS[i] || i + 1}</span>
+      <span>${escapeHtml(text)}</span>
+    </button>`;
+  }).join('');
+
+  const multiBadge = q.isMultiSelect ? '<span class="q-badge multi">복수 정답 (모두 선택)</span>' : '';
+  const cat = CATEGORIES[q.category] || { icon: '📋' };
+
+  main.innerHTML = `
+    <div class="exam-progress-row">
+      <span>${idx + 1} / ${examQuestions.length}</span>
+      <span>${answeredCount}개 답변 완료</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
+    <div class="q-header" style="margin-top:12px">
+      <div>${cat.icon} ${q.category}</div>
+    </div>
+    <div class="question-box">${multiBadge}<div style="margin-top:8px">${escapeHtml(q.question)}</div></div>
+    <div class="exam-choices">${choicesHTML}</div>
+    <div class="nav-bar">
+      <button class="nav-btn" id="exam-prev-btn" ${idx === 0 ? 'disabled' : ''}>‹ 이전</button>
+      ${isLast
+        ? '<button class="btn-primary exam-submit-btn" id="exam-submit-btn">제출하고 채점하기</button>'
+        : '<button class="nav-btn" id="exam-next-btn">다음 ›</button>'}
+    </div>
+  `;
+
+  main.querySelectorAll('.exam-choice').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      toggleExamChoice(q, Number(btn.dataset.index));
+    });
+  });
+  $('#exam-prev-btn')?.addEventListener('click', () => moveExam(-1));
+  $('#exam-next-btn')?.addEventListener('click', () => moveExam(1));
+  $('#exam-submit-btn')?.addEventListener('click', submitExam);
+}
+
+function toggleExamChoice(question, index) {
+  const state = getExamState();
+  const current = new Set(state.answers[question.id] || []);
+  if (question.isMultiSelect) {
+    current.has(index) ? current.delete(index) : current.add(index);
+  } else {
+    current.clear();
+    current.add(index);
+  }
+  state.answers[question.id] = [...current];
+  saveExamState(state);
+  vibrate();
+  renderExamQuestion(state);
+}
+
+function moveExam(delta) {
+  const state = getExamState();
+  const next = state.currentIndex + delta;
+  if (next < 0 || next >= examQuestions.length) return;
+  state.currentIndex = next;
+  saveExamState(state);
+  vibrate();
+  renderExam();
+}
+
+function submitExam() {
+  const state = getExamState();
+  const unanswered = examQuestions.filter((q) => !(state.answers[q.id] || []).length).length;
+  if (unanswered > 0 && !confirm(`아직 ${unanswered}개 문제에 답하지 않았습니다. 그래도 제출할까요?`)) {
+    return;
+  }
+
+  let correct = 0;
+  examQuestions.forEach((q) => {
+    if (isExamAnswerCorrect(q, state)) correct++;
+  });
+
+  const total = examQuestions.length;
+  const percent = Math.round((correct / total) * 1000) / 10;
+
+  state.finished = true;
+  state.score = { correct, total, percent };
+  saveExamState(state);
+  vibrate('success');
+  renderExam();
+}
+
+function renderExamResult(state) {
+  const { correct, total, percent } = state.score;
+  const wrongList = examQuestions.filter((q) => !isExamAnswerCorrect(q, state));
+
+  const wrongHTML = wrongList.map((q) => {
+    const givenIndices = state.answers[q.id] || [];
+    const givenLabel = givenIndices.length
+      ? givenIndices.map((i) => EXAM_LABELS[i] || i + 1).join(', ')
+      : '(답변 없음)';
+    const answerLabel = q.answerKey || q.correctIndices.map((i) => EXAM_LABELS[i] || i + 1).join(', ');
+    return `<div class="review-item">
+      <p class="review-q">${escapeHtml(q.question)}</p>
+      <p class="review-line">내 답: <strong>${escapeHtml(givenLabel)}</strong></p>
+      <p class="review-line review-correct">정답: <strong>${escapeHtml(answerLabel)}</strong></p>
+    </div>`;
+  }).join('');
+
+  main.innerHTML = `
+    <div class="card exam-result-card">
+      <div class="subtitle">모의고사 결과</div>
+      <div class="exam-score-big">${correct}<span>/${total}</span></div>
+      <div class="exam-score-percent">${percent}점</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:${percent}%"></div></div>
+    </div>
+    <button class="btn-primary" id="retry-exam-btn">다시 도전하기</button>
+    ${wrongList.length
+      ? `<div class="card" style="margin-top:16px">
+          <h2>틀린 문제 (${wrongList.length}개)</h2>
+          ${wrongHTML}
+        </div>`
+      : '<div class="card" style="margin-top:16px;text-align:center">🎉 전 문제 정답입니다!</div>'}
+  `;
+
+  $('#retry-exam-btn')?.addEventListener('click', () => {
+    if (!confirm('새로운 모의고사를 시작할까요? 이전 결과는 사라집니다.')) return;
+    saveExamState({ ...defaultExamState(), started: true });
+    renderExam();
+  });
+}
+
 function renderImport() {
   pageTitle.textContent = '덤프 관리';
   main.innerHTML = `
@@ -340,6 +561,7 @@ function switchTab(tab) {
   document.querySelectorAll('.tab').forEach((t) => t.classList.toggle('active', t.dataset.tab === tab));
   if (tab === 'home') renderHome();
   else if (tab === 'study') renderStudy();
+  else if (tab === 'exam') renderExam();
   else if (tab === 'import') renderImport();
 }
 
@@ -350,7 +572,7 @@ async function init() {
 
   main.innerHTML = '<div class="loading">문제 로딩 중…</div>';
   try {
-    await loadQuestions();
+    await Promise.all([loadQuestions(), loadExamQuestions()]);
     switchTab('home');
 
     document.querySelectorAll('.tab').forEach((tab) => {
