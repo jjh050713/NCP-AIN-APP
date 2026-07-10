@@ -458,6 +458,7 @@ function renderExamQuestion(state) {
     <div class="exam-progress-row">
       <span>${idx + 1} / ${examQuestions.length}</span>
       <span>${answeredCount}개 답변 완료</span>
+      <button class="exam-reset-btn" id="exam-reset-btn" type="button">⚙ 처음으로</button>
     </div>
     <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
     <div class="q-header" style="margin-top:12px">
@@ -481,6 +482,11 @@ function renderExamQuestion(state) {
   $('#exam-prev-btn')?.addEventListener('click', () => moveExam(-1));
   $('#exam-next-btn')?.addEventListener('click', () => moveExam(1));
   $('#exam-submit-btn')?.addEventListener('click', submitExam);
+  $('#exam-reset-btn')?.addEventListener('click', () => {
+    if (!confirm('처음 화면으로 돌아갈까요? 지금까지 답한 내용이 모두 사라집니다.')) return;
+    saveExamState({ ...defaultExamState(), shuffle: state.shuffle });
+    renderExam();
+  });
 }
 
 function toggleExamChoice(question, index) {

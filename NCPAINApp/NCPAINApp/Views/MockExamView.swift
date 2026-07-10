@@ -2,6 +2,7 @@ import SwiftUI
 
 struct MockExamView: View {
     @EnvironmentObject private var examStore: MockExamStore
+    @State private var showResetConfirm = false
 
     var body: some View {
         NavigationStack {
@@ -22,6 +23,32 @@ struct MockExamView: View {
             }
             .navigationTitle("모의고사")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                // Reaching the intro screen (and its shuffle toggle) again
+                // once an attempt is already in progress otherwise requires
+                // finishing it first, so always offer a way back.
+                if examStore.state.started && !examStore.state.finished {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Menu {
+                            Button("처음으로 (셔플 설정)", role: .destructive) {
+                                showResetConfirm = true
+                            }
+                        } label: {
+                            Image(systemName: "ellipsis.circle")
+                        }
+                    }
+                }
+            }
+            .confirmationDialog(
+                "처음 화면으로 돌아갈까요? 지금까지 답한 내용이 모두 사라집니다.",
+                isPresented: $showResetConfirm,
+                titleVisibility: .visible
+            ) {
+                Button("처음으로", role: .destructive) {
+                    examStore.retry()
+                }
+                Button("취소", role: .cancel) {}
+            }
             .task {
                 examStore.loadIfNeeded()
             }
