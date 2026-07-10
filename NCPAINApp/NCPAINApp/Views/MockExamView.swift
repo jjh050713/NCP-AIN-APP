@@ -60,6 +60,22 @@ private struct ExamIntroView: View {
                 .padding()
                 .background(.background, in: RoundedRectangle(cornerRadius: 16))
 
+                Toggle(isOn: Binding(
+                    get: { examStore.state.shuffle },
+                    set: { examStore.toggleShuffle($0) }
+                )) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("🔀 문제 순서 셔플")
+                            .font(.subheadline.weight(.semibold))
+                        Text("켜면 매번 새로운 순서로 120문제가 출제됩니다.")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                .tint(.green)
+                .padding()
+                .background(.background, in: RoundedRectangle(cornerRadius: 16))
+
                 Button {
                     examStore.start()
                 } label: {
