@@ -361,10 +361,25 @@ html, body {
 
 .exam-progress-row {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 8px;
   font-size: 0.8rem;
   color: var(--text-secondary);
   margin-bottom: 6px;
+}
+
+.exam-progress-row > span:first-child { flex-shrink: 0; }
+.exam-progress-row > span:nth-child(2) { flex: 1; text-align: center; }
+
+.exam-reset-btn {
+  flex-shrink: 0;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 4px 0;
 }
 
 .exam-choices {
