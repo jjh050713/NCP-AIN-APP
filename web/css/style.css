@@ -350,6 +350,104 @@ html, body {
   color: var(--text-secondary);
 }
 
+.exam-intro h2 { margin: 4px 0 8px; }
+
+.exam-restart-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.exam-progress-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.exam-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.exam-choice {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px;
+  background: #f2f2f7;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text);
+  font-family: inherit;
+}
+
+.exam-choice.selected {
+  background: var(--green-light);
+  border-color: var(--green);
+}
+
+.exam-choice.selected .choice-label {
+  background: var(--green);
+  color: white;
+}
+
+.exam-submit-btn {
+  flex: 1;
+  margin: 0 8px;
+}
+
+.exam-result-card { text-align: center; }
+
+.exam-score-big {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--green);
+  margin: 8px 0 4px;
+}
+
+.exam-score-big span {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.exam-score-percent {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.review-item {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.review-item:last-child { border-bottom: none; }
+
+.review-q {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.review-line {
+  margin: 2px 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.review-correct { color: var(--green-dark); }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #000000;
@@ -361,4 +459,6 @@ html, body {
   .choice { background: #2c2c2e; }
   .chip { background: #38383a; color: var(--text); }
   .qa-answer { color: var(--green); }
+  .exam-choice { background: #2c2c2e; color: var(--text); }
+  .review-correct { color: var(--green); }
 }

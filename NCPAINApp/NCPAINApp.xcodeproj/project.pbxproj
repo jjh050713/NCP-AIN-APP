@@ -18,6 +18,9 @@
 		A10000010000000000000009 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000009 /* questions.json */; };
 		A10000010000000000000010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000010 /* Assets.xcassets */; };
 		A10000010000000000000011 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000012 /* HapticManager.swift */; };
+		A10000010000000000000013 /* MockExamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000013 /* MockExamStore.swift */; };
+		A10000010000000000000014 /* MockExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000014 /* MockExamView.swift */; };
+		A10000010000000000000015 /* exam120.json in Resources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000015 /* exam120.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		A10000020000000000000010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10000020000000000000011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A10000020000000000000012 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		A10000020000000000000013 /* MockExamStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExamStore.swift; sourceTree = "<group>"; };
+		A10000020000000000000014 /* MockExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExamView.swift; sourceTree = "<group>"; };
+		A10000020000000000000015 /* exam120.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exam120.json; sourceTree = "<group>"; };
 		A10000030000000000000001 /* NCPAINApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NCPAINApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				A10000020000000000000004 /* QuestionStore.swift */,
+				A10000020000000000000013 /* MockExamStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -101,6 +108,7 @@
 				A10000020000000000000006 /* StudyView.swift */,
 				A10000020000000000000007 /* QuestionCardView.swift */,
 				A10000020000000000000008 /* ImportView.swift */,
+				A10000020000000000000014 /* MockExamView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				A10000020000000000000009 /* questions.json */,
+				A10000020000000000000015 /* exam120.json */,
 				A10000020000000000000010 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -182,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10000010000000000000009 /* questions.json in Resources */,
+				A10000010000000000000015 /* exam120.json in Resources */,
 				A10000010000000000000010 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +212,8 @@
 				A10000010000000000000007 /* QuestionCardView.swift in Sources */,
 				A10000010000000000000008 /* ImportView.swift in Sources */,
 				A10000010000000000000011 /* HapticManager.swift in Sources */,
+				A10000010000000000000013 /* MockExamStore.swift in Sources */,
+				A10000010000000000000014 /* MockExamView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +273,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -273,7 +285,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ncpain.memorization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -290,7 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -302,7 +314,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ncpain.memorization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

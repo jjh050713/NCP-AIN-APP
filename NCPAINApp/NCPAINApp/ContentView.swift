@@ -15,6 +15,11 @@ struct ContentView: View {
                     Label("암기", systemImage: "rectangle.stack.fill")
                 }
 
+            MockExamView()
+                .tabItem {
+                    Label("모의고사", systemImage: "doc.text.fill")
+                }
+
             ImportView()
                 .tabItem {
                     Label("덤프", systemImage: "square.and.arrow.down")
@@ -28,4 +33,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environmentObject(QuestionStore())
+        .environmentObject(MockExamStore())
 }
