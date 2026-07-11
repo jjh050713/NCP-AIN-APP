@@ -79,7 +79,7 @@ async function loadQuestions() {
 // doesn't have to wait on ~75KB of exam data most sessions never need.
 function loadExamQuestions() {
   if (examQuestionsPromise) return examQuestionsPromise;
-  examQuestionsPromise = fetch('./data/exam120.json?v=DEV')
+  examQuestionsPromise = fetch('./data/exam180.json?v=DEV')
     .then((res) => res.json())
     .then((data) => {
       examQuestions = Array.isArray(data.questions) ? data.questions : [];
@@ -392,8 +392,8 @@ function renderExamIntro(state) {
   main.innerHTML = `
     <div class="card exam-intro">
       <div class="subtitle">📝 실전 모의고사</div>
-      <h2 style="margin-top:4px">기출 120제</h2>
-      <p class="subtitle">실제 시험처럼 오답 보기도 함께 표시됩니다. 120문제를 모두 풀면 몇 개 맞았는지 채점 결과를 확인할 수 있습니다.</p>
+      <h2 style="margin-top:4px">기출 180제</h2>
+      <p class="subtitle">실제 시험처럼 오답 보기도 함께 표시됩니다. 180문제를 모두 풀면 몇 개 맞았는지 채점 결과를 확인할 수 있습니다.</p>
     </div>
     <div class="card">
       <div class="stats">
@@ -405,7 +405,7 @@ function renderExamIntro(state) {
       <label class="exam-shuffle-toggle">
         <div>
           <div class="exam-shuffle-title">🔀 문제 순서 셔플</div>
-          <div class="subtitle">켜면 매번 새로운 순서로 120문제가 출제됩니다.</div>
+          <div class="subtitle">켜면 매번 새로운 순서로 180문제가 출제됩니다.</div>
         </div>
         <input type="checkbox" id="exam-shuffle-checkbox" ${state.shuffle ? 'checked' : ''}>
       </label>
