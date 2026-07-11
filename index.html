@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NCP-AIN">
+  <meta name="theme-color" content="#1a5c2e">
+  <title>NCP-AIN 암기</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/style.css?v=d69693b3">
+</head>
+<body>
+  <div id="app">
+    <header class="top-bar">
+      <h1 id="page-title">NCP-AIN</h1>
+      <button id="menu-btn" class="icon-btn" aria-label="메뉴" hidden>⋯</button>
+    </header>
+
+    <main id="main-content"></main>
+
+    <nav class="tab-bar" role="tablist">
+      <button class="tab active" data-tab="home" role="tab">
+        <span class="tab-icon">🏠</span><span>홈</span>
+      </button>
+      <button class="tab" data-tab="study" role="tab">
+        <span class="tab-icon">📚</span><span>암기</span>
+      </button>
+      <button class="tab" data-tab="exam" role="tab">
+        <span class="tab-icon">📝</span><span>모의고사</span>
+      </button>
+      <button class="tab" data-tab="import" role="tab">
+        <span class="tab-icon">📥</span><span>덤프</span>
+      </button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <script>
+    // One-time cleanup for devices that still have a stale service worker
+    // or cache from older app versions (see sw.js). Once cleaned, this
+    // becomes a no-op forever, so it no longer reloads the page on every
+    // launch (that used to make the app load twice on every open).
+    (function () {
+      var DONE_KEY = 'ncpain_cache_reset_v7';
+
+      function loadApp() {
+        var s = document.createElement('script');
+        s.src = 'js/app.js?v=d69693b3';
+        document.body.appendChild(s);
+      }
+
+      if (localStorage.getItem(DONE_KEY)) {
+        loadApp();
+        return;
+      }
+
+      var hadServiceWorker = false;
+      var hadCache = false;
+      var tasks = [];
+
+      if ('serviceWorker' in navigator) {
+        tasks.push(
+          navigator.serviceWorker.getRegistrations().then(function (regs) {
+            hadServiceWorker = regs.length > 0;
+            return Promise.all(regs.map(function (r) { return r.unregister(); }));
+          })
+        );
+      }
+      if ('caches' in window) {
+        tasks.push(
+          caches.keys().then(function (keys) {
+            hadCache = keys.length > 0;
+            return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+          })
+        );
+      }
+
+      Promise.all(tasks)
+        .catch(function () {})
+        .then(function () {
+          localStorage.setItem(DONE_KEY, '1');
+          if (hadServiceWorker || hadCache) {
+            location.reload();
+          } else {
+            loadApp();
+          }
+        });
+    })();
+  </script>
+</body>
+</html>

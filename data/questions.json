@@ -1,0 +1,4173 @@
+{
+  "version": "2.1.0",
+  "questions": [
+    {
+      "id": "dump-001-you-are-optimizing-an-infiniband-network-for-ai",
+      "category": "InfiniBand Networking",
+      "question": "You are optimizing an InfiniBand network for AI workloads that require low-latency and high throughput data transfers. Which feature of InfiniBand networks minimizes CPU overhead during data transfers?",
+      "choices": [
+        "TCP/IP Offloading",
+        "SHARP",
+        "Direct Memory Access (DMA)",
+        "PKey"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-002-how-does-nvidia-s-ai-networking-solution-contrib",
+      "category": "Spectrum Networking",
+      "question": "How does NVIDIA's AI networking solution contribute to the success of deep learning models?",
+      "choices": [
+        "By providing data encryption and privacy for model training",
+        "By providing the necessary high-bandwidth, low-latency infrastructure for fast data transfer",
+        "By managing GPU utilization",
+        "By generating synthetic training data"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-003-which-technology-does-nvidia-use-to-provide-high",
+      "category": "Spectrum Networking",
+      "question": "Which technology does NVIDIA use to provide high-speed communication between GPUs in AI workloads?",
+      "choices": [
+        "CUDA-X AI",
+        "NVLink",
+        "Ethernet",
+        "HyperTransport"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-004-which-of-the-following-nccl-environment-variable",
+      "category": "InfiniBand Networking",
+      "question": "Which of the following NCCL environment variables enable SHARP aggregation with NCCL when using the NCCL-SHARP plugin? Pick the 2 correct responses below",
+      "choices": [
+        "NCCL_COLLNET_ENABLE=1",
+        "NCCL_ALGO=CollNet",
+        "NCCLSPECTRUM_ENABLE=1",
+        "NCCL_SHARP_AUTOINIT"
+      ],
+      "correctIndices": [
+        0,
+        3
+      ],
+      "answerKey": "AD",
+      "isMultiSelect": true,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-005-you-are-tasked-with-troubleshooting-a-link-flapp",
+      "category": "Troubleshooting Tools",
+      "question": "You are tasked with troubleshooting a link flapping issue in an InfiniBand AI fabric. You would like to start troubleshooting from the physical layer. What is the right NVIDIA tool to be used for this task?",
+      "choices": [
+        "nvidia-smi utility",
+        "mlxlink utility",
+        "tcpdump tool"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-006-in-cumulus-linux-which-technology-enables-the-ab",
+      "category": "Spectrum Networking",
+      "question": "In Cumulus Linux, which technology enables the ability to provide active-active redundancy to servers, without the need for direct inter-switch links?",
+      "choices": [
+        "MLAG",
+        "VSS",
+        "EVPN Multi-homing"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-007-what-is-the-total-throughput-of-the-sn5600-spect",
+      "category": "Spectrum Networking",
+      "question": "What is the total throughput of the SN5600 Spectrum-X switch?",
+      "choices": [
+        "12.8 petabits per second",
+        "25.6 terabits per second",
+        "102.4 gigabits per second",
+        "51.2 terabits per second"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-008-what-is-the-benefit-of-using-nvidia-s-gpu-accele",
+      "category": "Spectrum Networking",
+      "question": "What is the benefit of using NVIDIA's GPU-accelerated networking in AI inference?",
+      "choices": [
+        "Reducing the amount of data storage required",
+        "Speeding up the response time and improving throughput in real-time AI applications",
+        "Reducing the cost of AI hardware",
+        "Encrypting AI data for better security"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-009-you-are-troubleshooting-a-spectrum-x-network-and",
+      "category": "Troubleshooting Tools",
+      "question": "You are troubleshooting a Spectrum-X network and need to validate the fabric configuration. Which feature of Spectrum-X allows for automated fabric validation?",
+      "choices": [
+        "NVIDIA NetQ",
+        "RoCE Adaptive Routing",
+        "NVIDIA DOCA",
+        "RoCE Performance Isolation"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-010-in-which-mode-of-the-bluefield-dpu-does-the-arm",
+      "category": "AI Data Center Design",
+      "question": "In which mode of the BlueField DPU does the ARM system on the DPU control the NIC data path, but allow access to the DPU OS from the host?",
+      "choices": [
+        "Separated Host mode",
+        "NIC mode",
+        "DPU mode",
+        "Restricted mode"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-011-what-is-the-purpose-of-wjh-what-just-happened",
+      "category": "Troubleshooting Tools",
+      "question": "What is the purpose of WJH (What Just Happened)?",
+      "choices": [
+        "Provide contextual information regarding dropped packets in order to aid debugging.",
+        "Send notifications of failed login attempts to a pre-defined Slack channel.",
+        "Identify potential cyberattacks or unusual traffic patterns across the cluster.",
+        "Collate operating system logs and diagnose system crashes."
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-012-when-utilizing-the-ib-write-bw-tool-for-performa",
+      "category": "Troubleshooting Tools",
+      "question": "When utilizing the ib_write_bw tool for performance testing, what does the -S flag define?",
+      "choices": [
+        "The burst size",
+        "The number of QP's",
+        "The maximum rate of sent packages",
+        "Which service level to use"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-013-you-are-troubleshooting-infiniband-connectivity",
+      "category": "Kubernetes Integration",
+      "question": "You are troubleshooting InfiniBand connectivity issues in a cluster managed by the NVIDIA Network Operator. You need to verify the status of the InfiniBand interfaces. Which command should you use to check the state and link layer of InfiniBand interfaces on a node?",
+      "choices": [
+        "rdma show devices",
+        "ibstat -d mlx5_X",
+        "ifconfig ib0",
+        "ip link show dev ib0"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-014-when-designing-a-multi-tenancy-east-west-e-w-fab",
+      "category": "InfiniBand Networking",
+      "question": "When designing a multi-tenancy East/West (E/W) fabric using Unified Fabric Manager (UFM), which method should be used?",
+      "choices": [
+        "Partition / PKey",
+        "VLAN",
+        "ROMA",
+        "VXLAN"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-015-how-does-spectrum-x-achieve-network-isolation-fo",
+      "category": "Spectrum Networking",
+      "question": "How does Spectrum-X achieve network isolation for multiple tenants?",
+      "choices": [
+        "By assigning unique IP address ranges to each tenant.",
+        "By implementing a Layer 3 Virtual Network Identifier (L3VNI) per VRR",
+        "By implementing physical network segmentation.",
+        "Using manual configuration of access control lists (ACLs)."
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-016-what-are-the-prerequisites-for-performing-flow-a",
+      "category": "Spectrum Networking",
+      "question": "What are the prerequisites for performing Flow Analysis with NetQ?",
+      "choices": [
+        "Cumulus 4.x and later / Spectrum-2 and later / LCM enabled",
+        "Cumulus 5.x and later / Spectrum-3 and later / On-premises deployment",
+        "Cumulus 5.x and later / Spectrum-2 and later / On-premises deployment",
+        "Cumulus 5.x and later / Spectrum-2 and later / LCM enabled"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-017-how-is-congestion-evaluated-in-an-nvidia-spectru",
+      "category": "Spectrum Networking",
+      "question": "How is congestion evaluated in an NVIDIA Spectrum-X system?",
+      "choices": [
+        "By assessing the physical distance between network devices.",
+        "By monitoring the CPU and power usage of network devices.",
+        "By measuring the number of connected devices in the network.",
+        "By analyzing the egress queue loads ensuring all ports are well-balanced."
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-018-when-upgrading-cumulus-linux-to-a-new-version-wh",
+      "category": "Spectrum Networking",
+      "question": "When upgrading Cumulus Linux to a new version, which configuration files should be migrated from the old installation? Pick the 2 correct responses below.",
+      "choices": [
+        "All files in /etc/cumulus/acl",
+        "All files in /etc/network",
+        "All files in /etc",
+        "All files in /etc/mix"
+      ],
+      "correctIndices": [
+        0,
+        1
+      ],
+      "answerKey": "AB",
+      "isMultiSelect": true,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-019-you-suspect-there-might-be-connectivity-issues-i",
+      "category": "Troubleshooting Tools",
+      "question": "You suspect there might be connectivity issues in your InfiniBand fabric and need to perform a comprehensive check. Which tool should you use to run a full fabric diagnostic and generate a report?",
+      "choices": [
+        "ibnetdiscover",
+        "perfquery",
+        "ibdiagnet",
+        "taping"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-020-when-upgrading-doca-on-a-bluefield-dpu-what-comm",
+      "category": "Spectrum Networking",
+      "question": "When upgrading DOCA on a BlueField DPU, what command should first be run on the host?",
+      "choices": [
+        "sudo apt-get autoremove",
+        "/usr/sbin/ofed_uninstall.sh -force",
+        "sudo apt-get upgrade doca",
+        "sudo apt-get install doca"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-021-in-a-multi-tenant-infiniband-environment-managed",
+      "category": "InfiniBand Networking",
+      "question": "In a multi-tenant InfiniBand environment managed by UFM, you need to configure access controls to prevent unauthorized users from altering the fabric configuration. Which method is used within UFM to manage user access and ensure authorized modifications only?",
+      "choices": [
+        "Digital Certification Management (DCM)",
+        "Network Access Control (NAC)",
+        "Virtual Network Segmentation (VNS)",
+        "Role-Based Access Control (RBAC)"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-022-a-user-has-requested-confirmation-that-the-infin",
+      "category": "InfiniBand Networking",
+      "question": "A user has requested confirmation that the InfiniBand network is performing optimally and is not limiting the speed of a training run. To verify this, you would like to measure the RDMA throughput rate between two endpoints. Which tool should be used?",
+      "choices": [
+        "ibdiagnet",
+        "ib_write_bw",
+        "ping",
+        "iperf"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-023-you-are-planning-to-deploy-a-large-scale-spectru",
+      "category": "Spectrum Networking",
+      "question": "You are planning to deploy a large-scale Spectrum-X network for AI workloads. Before physical implementation, you want to validate the network design and configuration using a digital twin approach. Which NVIDIA tool would be most appropriate for creating and simulating a digital twin of your Spectrum-X network?",
+      "choices": [
+        "NVIDIA Base Command Manager",
+        "NVIDIA Omniverse",
+        "NVIDIA NetQ",
+        "NVIDIA Air"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-024-you-are-investigating-a-performance-issue-in-a-s",
+      "category": "Spectrum Networking",
+      "question": "You are investigating a performance issue in a Spectrum-X network and suspect there might be congestion problems. Which component executes the congestion control algorithm in a Spectrum-X environment?",
+      "choices": [
+        "BlueField-3 Super NICs",
+        "NVIDIA DOCA software",
+        "NVIDIA NetQ",
+        "Spectrum-4 switches"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-025-you-re-troubleshooting-a-spectrum-x-network-and",
+      "category": "Troubleshooting Tools",
+      "question": "You're troubleshooting a Spectrum-X network and notice that the System Status LED on a switch is blinking for more than 5 minutes. What is the most likely cause of this issue?",
+      "choices": [
+        "The power supply unit is failing",
+        "The switch is overheating",
+        "The Onyx software did not boot properly"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-026-which-of-the-following-options-correctly-describ",
+      "category": "InfiniBand Networking",
+      "question": "Which of the following options correctly describes the difference between UFM Telemetry, UFM Enterprise, and UFM Cyber AI?",
+      "choices": [
+        "UFM Telemetry provides real-time monitoring and analysis of network performance, UFM Enterprise focuses on network management and optimization, and UFM Cyber AI detects and mitigates network security threats.",
+        "UFM Telemetry provides real-time monitoring and analysis of network performance. UFM Enterprise detects and mitigates network security threats, and UFM Cyber AI focuses on network management and optimization.",
+        "UFM Telemetry detects and mitigates network security threats. UFM Enterprise provides real-time monitoring and analysis of network performance, and UFM Cyber AI focuses on network management and optimization.",
+        "UFM Telemetry focuses on network management and optimization, UFM Enterprise detects and mitigates network security threats, and UFM Cyber AI provides real-time monitoring and analysis of network performance."
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-027-you-have-implemented-adaptive-routing-in-your-sp",
+      "category": "Spectrum Networking",
+      "question": "You have implemented adaptive routing in your Spectrum-X network to optimize AI workload performance. You need to verify the effectiveness of this configuration and monitor its impact on network congestion. Which tool would be most appropriate for monitoring and analyzing the adaptive routing performance in your Spectrum-X environment?",
+      "choices": [
+        "NetQ",
+        "Ansible",
+        "CloudAI Benchmark",
+        "MLNXOS"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-028-you-are-tasked-with-configuring-multi-tenancy-us",
+      "category": "InfiniBand Networking",
+      "question": "You are tasked with configuring multi-tenancy using partition key (PKey) for a high performance storage fabric running on InfiniBand. Each tenant's GPU server is allowed to access the shared storage system but cannot communicate with another tenant's GPU server. Which of the following partition key membership configurations would you implement to set up multi- tenancy in this environment?",
+      "choices": [
+        "Assign full membership to both GPU servers and storage system.",
+        "Assign limited membership to both GPU servers and storage system.",
+        "Assign limited membership PKey to the shared storage system and full membership PKey to each tenant's GPU servers.",
+        "Assign full membership PKey to the shared storage system and limited membership PKey to each tenant's GPU servers."
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-029-how-does-the-nvidia-spectrum-ethernet-switch-sup",
+      "category": "Spectrum Networking",
+      "question": "How does the NVIDIA Spectrum Ethernet switch support AI networking?",
+      "choices": [
+        "By providing a fast interconnect for training data across multiple GPUs",
+        "By managing deep learning model deployment",
+        "By ensuring end-to-end encryption of AI data",
+        "By hosting machine learning frameworks"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-030-which-of-the-following-is-a-key-feature-of-nvidi",
+      "category": "Spectrum Networking",
+      "question": "Which of the following is a key feature of NVIDIA's AI networking solution?",
+      "choices": [
+        "Blockchain encryption",
+        "AI-powered traffic routing",
+        "GPU-accelerated networking",
+        "On-demand server provisioning"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-031-a-major-cloud-provider-is-designing-a-new-data-c",
+      "category": "AI Data Center Design",
+      "question": "A major cloud provider is designing a new data center to support large-scale AI workloads, particularly for training large language models. They want to optimize their network architecture for maximum performance and efficiency. Why is a rail-optimized topology considered a best practice for AI network architecture in this scenario?",
+      "choices": [
+        "It prioritizes north-south traffic over east-west traffic for better internet connectivity.",
+        "It simplifies network management by using a single large switch for all connections.",
+        "It provides optimal GPU-to-GPU communication and reduces network interference between flows.",
+        "It maximizes the number of network hops to increase data redundancy."
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-032-when-creating-a-simulation-in-nvidia-air-what-sy",
+      "category": "Spectrum Networking",
+      "question": "When creating a simulation in NVIDIA AIR, what syntax would you use to define a link between port 1 on spine-01 and port 41 on gpu-leaf-01?",
+      "choices": [
+        "\"spine-01\":\"swp01\" -- \"gpu-leaf-01\":\"swp41\"",
+        "\"spine-01\":\"swp1\" to \"gpu-leaf-01\":\"swp41\"",
+        "\"spine-01\":\"eth1\" to \"gpu-leaf-01\":\"eth41\"",
+        "\"spine-01\":\"eth1\" - \"gpu-leaf-01\":\"eth41\""
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-033-which-of-the-following-is-the-main-benefit-of-gp",
+      "category": "Spectrum Networking",
+      "question": "Which of the following is the main benefit of GPU-accelerated networking in AI workloads?",
+      "choices": [
+        "Reduced data center cooling requirements",
+        "Faster data movement and reduced latency",
+        "Lower power consumption",
+        "Increased storage capacity"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-034-as-the-network-administrator-for-a-large-scale-a",
+      "category": "InfiniBand Networking",
+      "question": "As the network administrator for a large-scale AI research cluster, you are responsible for ensuring seamless data flow across an InfiniBand east-west fabric that interconnects hundreds of compute nodes. Which tool would you use to trace and discover the network paths between nodes on this InfiniBand east-west fabric?",
+      "choices": [
+        "NetQ",
+        "ibpathverify",
+        "ibnetdiscover",
+        "tracert"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-035-what-is-a-key-advantage-of-using-nvidia-s-mellan",
+      "category": "InfiniBand Networking",
+      "question": "What is a key advantage of using NVIDIA's Mellanox InfiniBand in AI networking environments?",
+      "choices": [
+        "Lower power consumption",
+        "Faster inter-node communication with low-latency and high-throughput",
+        "Higher GPU utilization",
+        "Reduced data storage requirements"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-036-what-is-the-basic-functionality-of-an-ib-router",
+      "category": "InfiniBand Networking",
+      "question": "What is the basic functionality of an IB Router?",
+      "choices": [
+        "Connecting Ethernet switches to an InfiniBand fabric",
+        "Connecting SAN to an InfiniBand fabric",
+        "Connecting NVLink domains to an InfiniBand fabric",
+        "Connecting two (or more) InfiniBand fabrics"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-037-which-of-the-following-statements-are-true-about",
+      "category": "Spectrum Networking",
+      "question": "Which of the following statements are true about AI workloads and adaptive routing? Pick the 2 correct responses below.",
+      "choices": [
+        "AI workloads are made of a small number of volumetric flows called elephant flows.",
+        "AI workloads have very high entropy that helps spread traffic evenly without congestion.",
+        "Flow-based load balancing mechanisms increase congestion risk.",
+        "ECMP-based load balancing works best for AI workloads."
+      ],
+      "correctIndices": [
+        0,
+        2
+      ],
+      "answerKey": "AC",
+      "isMultiSelect": true,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-038-what-is-the-purpose-of-configuring-nvue-to-ignor",
+      "category": "Automation & Configuration",
+      "question": "What is the purpose of configuring NVUE to ignore Linux files?",
+      "choices": [
+        "Enable pushing of configuration through Ansible template files.",
+        "Enable the persistent manipulation of specific settings using both NVUE and flat-file approaches.",
+        "Reduce NVUE memory utilization to optimize performance.",
+        "Improve Cumulus security by reducing the attack surface."
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-039-you-are-implementing-a-multi-tenant-environment",
+      "category": "Spectrum Networking",
+      "question": "You are implementing a multi-tenant environment on your Spectrum-X switches for different departments in your organization. You need to ensure that each department's network traffic is isolated and secure. Which Spectrum-X security feature would be most effective in creating isolated network environments for each department?",
+      "choices": [
+        "Set UP Port Mirroring",
+        "Configure Virtual Routing and Forwarding (VRF)",
+        "Implement Access Control Lists (ACLs)",
+        "Enable Link Layer Discovery Protocol (LLDP)"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-040-what-are-the-two-general-user-account-types-in-m",
+      "category": "InfiniBand Networking",
+      "question": "What are the two general user account types in MLNX-OS? Pick the 2 correct responses below:",
+      "choices": [
+        "viewer",
+        "monitor",
+        "admin",
+        "enable"
+      ],
+      "correctIndices": [
+        1,
+        2
+      ],
+      "answerKey": "BC",
+      "isMultiSelect": true,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-041-you-are-concerned-about-potential-security-threa",
+      "category": "InfiniBand Networking",
+      "question": "You are concerned about potential security threats and unexpected downtime in your InfiniBand data center. Which UFM platform uses analytics to detect security threats, operational issues, and predict network failures in InfiniBand data centers?",
+      "choices": [
+        "Host Agent",
+        "Enterprise Platform",
+        "Cyber-AI Platform",
+        "Telemetry Platform"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-042-which-of-the-following-is-an-advantage-of-using",
+      "category": "AI Data Center Design",
+      "question": "Which of the following is an advantage of using NVIDIA's BlueField DPU in data center AI networking?",
+      "choices": [
+        "It accelerates AI model training",
+        "It manages network traffic routing across different devices",
+        "It offloads security and networking tasks from the CPU",
+        "It processes AI inference requests"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-043-your-organization-is-planning-to-utilize-etherne",
+      "category": "Spectrum Networking",
+      "question": "Your organization is planning to utilize Ethernet for an upcoming AI project. Spectrum-X is the selected platform for this deployment, and Adaptive Routing is a key feature. What are the requirements included in the Spectrum-X RA for adaptive routing?",
+      "choices": [
+        "SN4700, BlueField-3 SuperNIC, DDR, RoCE traffic",
+        "SN5600, BlueField-3 SuperNIC, DDR, RoCE traffic",
+        "SN5600, BlueField-3 SuperNIC, DDR, TCP traffic"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-044-what-does-nvidia-s-gpu-accelerated-networking-pr",
+      "category": "Spectrum Networking",
+      "question": "What does NVIDIA's GPU-accelerated networking primarily enable in AI/ML environments?",
+      "choices": [
+        "Faster model creation",
+        "Enhanced data security for AI applications",
+        "Efficient data movement and communication between GPUs for faster AI model training and inference",
+        "Reduced computational power for AI models"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-045-you-are-troubleshooting-connectivity-issues-in-y",
+      "category": "Troubleshooting Tools",
+      "question": "You are troubleshooting connectivity issues in your InfiniBand network and need to test basic connectivity between nodes. Which command should you use to test basic connectivity between InfiniBand nodes?",
+      "choices": [
+        "ibping",
+        "traceroute",
+        "ibnetdiscover",
+        "ping"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-046-you-are-using-nvidia-air-to-simulate-a-spectrum",
+      "category": "Spectrum Networking",
+      "question": "You are using NVIDIA Air to simulate a Spectrum-X network for AI workloads. You want to ensure that your network configurations are optimal before deployment. Which NVIDIA tool can be integrated with Air to validate network configurations in the digital twin environment?",
+      "choices": [
+        "Spectrum-X Manager",
+        "NetQ",
+        "DOCA",
+        "GPU Cloud"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-047-what-does-netq-leverage-in-addition-to-nvidia-wh",
+      "category": "Kubernetes Integration",
+      "question": "What does NetQ leverage (in addition to NVIDIA \"What Just Happened\" switch telemetry data and NVIDIA DOCA telemetry) to help network operators proactively identify server and application root cause issues?",
+      "choices": [
+        "Flow telemetry",
+        "Behavioral telemetry",
+        "Application telemetry",
+        "Packet capture telemetry"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-048-you-need-to-configure-a-bond-in-cumulus-linux-wh",
+      "category": "Automation & Configuration",
+      "question": "You need to configure a bond in Cumulus Linux. Which command should you use?",
+      "choices": [
+        "nv set interface bond1 bond member swp1-4",
+        "nv set interface bond1 bond mlag enable",
+        "nv set bondbond1 interface member swp1-4",
+        "nv set interface bond1 bond mode lacp"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-049-you-re-designing-a-multi-gpu-system-for-ai-train",
+      "category": "InfiniBand Networking",
+      "question": "You're designing a multi-GPU system for AI training using NVIDIA GPUs with NVLink connections. You need to maximize inter-GPU communication bandwidth. Which feature included in NCCL allows for improved communication between GPUs and NICs?",
+      "choices": [
+        "Adaptive Routing",
+        "PXN",
+        "Graph Search Optimization",
+        "SHARP v2"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-050-which-service-on-cumulus-switches-can-monitor-la",
+      "category": "Spectrum Networking",
+      "question": "Which service on Cumulus switches can monitor layer 1, layer 2, layer 3, tunnel, buffer, and ACL related issues?",
+      "choices": [
+        "WJH",
+        "ONIE",
+        "NCLU",
+        "BGP"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-051-which-of-the-following-nvidia-products-is-best-s",
+      "category": "Spectrum Networking",
+      "question": "Which of the following NVIDIA products is best suited for high-performance computing and AI workloads that require fast inter-node communication?",
+      "choices": [
+        "Tesla P100",
+        "GeForce RTX 3080",
+        "Mellanox InfiniBand",
+        "Quadro GV100"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-052-you-are-deploying-a-kubernetes-cluster-for-ai-wo",
+      "category": "Kubernetes Integration",
+      "question": "You are deploying a Kubernetes cluster for AI workloads using NVIDIA Spectrum-X switches. You need to automate the deployment and management of networking components in this environment. Which NVIDIA tool is specifically designed to automate the deployment and management of networking components in a Kubernetes cluster with Spectrum-X switches?",
+      "choices": [
+        "Mellanox OFED",
+        "Container Runtime",
+        "Network Operator",
+        "GPU Operator"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-053-you-are-troubleshooting-a-spectrum-x-network-and",
+      "category": "Troubleshooting Tools",
+      "question": "You are troubleshooting a Spectrum-X network and need to ensure that the network remains operational in case of a link failure. Which feature of Spectrum-X ensures that the fabric continues to deliver high performance even if there is a link failure?",
+      "choices": [
+        "RoCE Congestion Control",
+        "RoCE Adaptive Routing",
+        "NVIDIA NetQ",
+        "RoCE Performance Isolation"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-054-which-of-the-following-scenarios-would-the-netwo",
+      "category": "Troubleshooting Tools",
+      "question": "Which of the following scenarios would the Network Traffic Map in UFM be least useful for troubleshooting?",
+      "choices": [
+        "When investigating reports of network congestion or latency problems.",
+        "After making changes to network configuration.",
+        "When troubleshooting a single node's hardware failure.",
+        "When optimizing job placement and workload distribution across the cluster."
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-055-you-have-recently-implemented-nvidia-spectrum-x",
+      "category": "Spectrum Networking",
+      "question": "You have recently implemented NVIDIA Spectrum-X in your data center to optimize AI workloads. You need to verify the performance improvements and create a baseline for future comparisons. Which tool would be most appropriate for creating performance baseline results in this Spectrum- X environment?",
+      "choices": [
+        "NetQ",
+        "CloudAI Benchmark",
+        "MLNX-OS",
+        "Ansible"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-056-you-are-automating-the-deployment-of-a-spectrum",
+      "category": "Automation & Configuration",
+      "question": "You are automating the deployment of a Spectrum-X network using Ansible. You need to ensure that the playbooks can handle different switch models and configurations efficiently. Which feature of the NVIDIA NVUE Collection helps simplify the automation by providing pre-built roles for common network configurations?",
+      "choices": [
+        "Collection libraries",
+        "Collection modules",
+        "Collection roles",
+        "Collection plugins"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-057-which-nvidia-technology-is-specifically-designed",
+      "category": "Spectrum Networking",
+      "question": "Which NVIDIA technology is specifically designed to provide high-performance networking for AI workloads?",
+      "choices": [
+        "CUDA",
+        "Mellanox ConnectX",
+        "CUDA-X AI",
+        "TensorFlow"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-058-what-is-the-main-purpose-of-nvidia-s-ai-powered",
+      "category": "Spectrum Networking",
+      "question": "What is the main purpose of NVIDIA's AI-powered traffic routing?",
+      "choices": [
+        "To ensure secure data transmission",
+        "To optimize the flow of data across networks for AI applications",
+        "To manage the cloud infrastructure",
+        "To distribute power efficiently"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-059-what-is-the-role-of-nvidia-s-ai-driven-network-m",
+      "category": "Spectrum Networking",
+      "question": "What is the role of NVIDIA's AI-driven network monitoring in data centers?",
+      "choices": [
+        "To optimize traffic routing for deep learning models",
+        "To ensure secure data transmission",
+        "To monitor GPU performance and utilization",
+        "To dynamically adjust network parameters based on workload demands"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-060-a-fabric-administrator-added-new-servers-to-a-40",
+      "category": "Spectrum Networking",
+      "question": "A fabric administrator added new servers to a 40-port edge switch. The administrator now needs to gather and map the newly added ports' LIDs and LINK SPEED. Which of the following commands can be used for that purpose?",
+      "choices": [
+        "ib_check_routes",
+        "ibnetdiscover",
+        "ibhosts",
+        "ibswitches"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-061-which-nvidia-technology-enables-efficient-scalin",
+      "category": "Spectrum Networking",
+      "question": "Which NVIDIA technology enables efficient scaling of AI workloads across multiple nodes in a data center?",
+      "choices": [
+        "NVLink",
+        "NVIDIA A100 Tensor Core GPUs",
+        "InfiniBand",
+        "CUDA"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-062-what-does-rdma-remote-direct-memory-access-techn",
+      "category": "Spectrum Networking",
+      "question": "What does RDMA (Remote Direct Memory Access) technology in NVIDIA's network products help achieve?",
+      "choices": [
+        "Increases storage capacity",
+        "Reduces CPU load and improves data transfer speed",
+        "Encrypts data in transit",
+        "Improves graphical performance"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-063-a-high-performance-infiniband-fabric-requires-a",
+      "category": "InfiniBand Networking",
+      "question": "A high-performance InfiniBand fabric requires a routing engine that maximizes throughput and network utilization while reducing congestion. Which option below is the best routing engine for InfiniBand?",
+      "choices": [
+        "Adaptive Routing",
+        "Random Routing",
+        "Shortest Path Routing",
+        "Round Robin Routing"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-064-nvidia-s-ai-networking-solutions-are-most-common",
+      "category": "Spectrum Networking",
+      "question": "NVIDIA's AI networking solutions are most commonly used in which of the following environments?",
+      "choices": [
+        "Consumer gaming PCs",
+        "Large-scale data centers",
+        "Home routers",
+        "Mobile devices"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-065-what-command-sequence-is-used-to-identify-the-ex",
+      "category": "Spectrum Networking",
+      "question": "What command sequence is used to identify the exact name of the server that runs as the master SM in a multi-node fabric?",
+      "choices": [
+        "sminfo \n smpquery ND <LID>",
+        "sminfo \n smpquery Nl <LID>",
+        "ibstat \n sminfo <LID>",
+        "ibis \n ibsim <LID>"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-066-a-financial-services-company-is-planning-to-impl",
+      "category": "Spectrum Networking",
+      "question": "A financial services company is planning to implement an AI infrastructure to support realtime fraud detection and risk assessment. They need a solution that can handle both training and inference workloads while maintaining data privacy and security. Which NVIDIA reference architecture component would be most appropriate to address the data privacy and security concerns in this AI networking setup?",
+      "choices": [
+        "NVIDIA CUDA-X AI libraries",
+        "NVIDIA Magnum IO",
+        "NVIDIA BlueField DPUs",
+        "NVIDIA Spectrum switches"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-067-a-leading-ai-research-center-is-upgrading-its-in",
+      "category": "AI Data Center Design",
+      "question": "A leading AI research center is upgrading its infrastructure to support large language model projects. The team is debating whether to implement a dedicated storage fabric for their AI workloads. Which of the following best explains why a dedicated storage fabric is crucial for this AI network architecture? Pick the 2 correct responses below",
+      "choices": [
+        "To enable parallel data access and improve storage performance for distributed AI workloads.",
+        "To ensure data security and isolation from other network traffic.",
+        "To provide high-bandwidth, low-latency data access that prevents I/O bottlenecks during AI model training.",
+        "To reduce the overall cost of the storage infrastructure."
+      ],
+      "correctIndices": [
+        0,
+        2
+      ],
+      "answerKey": "AC",
+      "isMultiSelect": true,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-068-you-are-optimizing-a-multi-node-ai-training-clus",
+      "category": "InfiniBand Networking",
+      "question": "You are optimizing a multi-node AI training cluster using InfiniBand networking and NVIDIA GPUs. You need to implement efficient collective communication operations across the nodes. Which feature of NVIDIA Collective Communications Library (NCCL) allows for optimized performance in multi-subnet InfiniBand environments?",
+      "choices": [
+        "Lazy connection establishment",
+        "GPU Direct RDMA",
+        "Static plugin linking",
+        "Support for IB Router"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-069-you-are-setting-up-pkey-memberships-for-differen",
+      "category": "InfiniBand Networking",
+      "question": "You are setting up PKey memberships for different tenants in an InfiniBand network. You want to ensure that some tenants have limited communication capabilities. Which PKey membership type allows members to communicate with full members but not with other members of the same type?",
+      "choices": [
+        "Restricted membership",
+        "Isolated membership",
+        "Full membership",
+        "Limited/partial membership"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-070-which-of-the-following-is-a-feature-of-nvidia-s",
+      "category": "Spectrum Networking",
+      "question": "Which of the following is a feature of NVIDIA's Spectrum-3 Ethernet Switch for AI networking?",
+      "choices": [
+        "Supports GPU-to-GPU communication",
+        "Accelerates data encryption",
+        "Provides 400Gb/s networking for AI workloads",
+        "Acts as a cloud hosting platform"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-071-what-is-the-primary-purpose-of-nvidia-s-ai-netwo",
+      "category": "Spectrum Networking",
+      "question": "What is the primary purpose of NVIDIA's AI networking solutions?",
+      "choices": [
+        "To provide cloud storage solutions",
+        "To accelerate networking and data processing for AI/ML workloads",
+        "To improve internet connectivity speed",
+        "To provide graphics rendering for video games"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-072-in-an-ai-cluster-using-nvidia-gpus-which-configu",
+      "category": "Kubernetes Integration",
+      "question": "In an AI cluster using NVIDIA GPUs, which configuration parameter in the NicClusterPolicy custom resource is crucial for enabling high-speed GPU-to-GPU communication across nodes?",
+      "choices": [
+        "RDMA Shared Device Plugin",
+        "Secondary Network",
+        "OFED Driver",
+        "NV IPAM"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-073-in-order-to-configure-roce-on-a-cumulus-switch-w",
+      "category": "Spectrum Networking",
+      "question": "In order to configure RoCE on a Cumulus switch, which command should be used?",
+      "choices": [
+        "nv set qos roce enable on",
+        "nv set roce qos enable on",
+        "nv roce qos enable on",
+        "nv qos roce enable on"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-074-which-tool-would-you-use-to-gather-telemetry-dat",
+      "category": "Spectrum Networking",
+      "question": "Which tool would you use to gather telemetry data in a SpectrumX network?",
+      "choices": [
+        "NVIEW",
+        "UFM",
+        "NetQ",
+        "BCM"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-075-which-of-the-following-tools-in-cumulus-linux-is",
+      "category": "Troubleshooting Tools",
+      "question": "Which of the following tools in Cumulus Linux is specifically useful for detecting and differentiating microbursts from regular network congestion? Pick the 2 correct responses below",
+      "choices": [
+        "Monthly network utilization reports",
+        "ASIC monitoring with millisecond-level granularity",
+        "SNMP polling at 5-minute intervals",
+        "What Just Happened (WJH) feature for packet drop analysis"
+      ],
+      "correctIndices": [
+        1,
+        3
+      ],
+      "answerKey": "BD",
+      "isMultiSelect": true,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-076-what-is-the-role-of-the-nvidia-cuda-x-ai-platfor",
+      "category": "Spectrum Networking",
+      "question": "What is the role of the NVIDIA CUDA-X AI platform in AI networking?",
+      "choices": [
+        "To improve graphical rendering speed",
+        "To provide AI-optimized libraries and tools for networking and compute tasks",
+        "To encrypt AI data",
+        "To monitor network traffic"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-077-which-component-of-the-spectrum-x-platform-is-re",
+      "category": "Spectrum Networking",
+      "question": "Which component of the Spectrum-X platform is responsible for reordering out-of-order packets?",
+      "choices": [
+        "SuperNIC",
+        "Spectrum-4 switch",
+        "DOCA software",
+        "NetQ"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-078-how-does-nvidia-s-bluefield-dpu-data-processing",
+      "category": "Spectrum Networking",
+      "question": "How does NVIDIA's BlueField DPU (Data Processing Unit) support AI networking?",
+      "choices": [
+        "By accelerating CPU performance",
+        "By offloading networking and security tasks from the CPU to the DPU",
+        "By managing machine learning model training",
+        "By providing dedicated AI compute power"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-079-why-is-the-infiniband-lrh-called-a-local-header",
+      "category": "InfiniBand Networking",
+      "question": "Why is the InfiniBand LRH called a local header?",
+      "choices": [
+        "It is used for routing traffic between nodes in the local subnet.",
+        "It provides the LIDs from the local subnet manager.",
+        "It allows traffic on a local link only.",
+        "It provides the parameters for each local HCA."
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-080-you-are-troubleshooting-an-infiniband-network-is",
+      "category": "Troubleshooting Tools",
+      "question": "You are troubleshooting an InfiniBand network issue and need to check the status of the InfiniBand interfaces. Which command should you use to display the state, physical state, and link layer of InfiniBand interfaces?",
+      "choices": [
+        "ibv_devices -c mlx5_0",
+        "cat /proc/net/ib/device",
+        "sudo ibnodes -C mlx5_0",
+        "ibstat -d mlx5_X"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-081-you-are-configuring-an-infiniband-network-for-an",
+      "category": "InfiniBand Networking",
+      "question": "You are configuring an InfiniBand network for an AI cluster and need to install the appropriate software stack. Which NVIDIA software package provides the necessary drivers and tools for InfiniBand configuration in Linux environments?",
+      "choices": [
+        "NVIDIA GPU Cloud",
+        "NVIDIA Container Runtime",
+        "CUDA Toolkit",
+        "MLNX_OFED"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-082-a-cloud-service-provider-is-deploying-the-nvidia",
+      "category": "Spectrum Networking",
+      "question": "A cloud service provider is deploying the NVIDIA Spectrum-X Ethernet platform in a multitenant environment. To ensure the security and isolation of each tenant's AI workload, the provider wants to implement a feature that prevents unauthorized access to the network. Which of the following features of the Spectrum-X platform should the provider implement?",
+      "choices": [
+        "Streaming Telemetry",
+        "Adaptive Routing",
+        "Congestion Control",
+        "Traffic Isolation"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-083-which-of-the-following-commands-would-you-use-to",
+      "category": "Spectrum Networking",
+      "question": "Which of the following commands would you use to assign the IP address 20.11.12.13 to the management interface in SONiC?",
+      "choices": [
+        "nv set interface mgmt ip 20.11.12.13 20.11.12.254",
+        "interface mgmt0 vrf mgmt ip address 20.11.12.13 20.11.12.254",
+        "sudo config interface ip add eth0 20.11.12.13/24 20.11.12.254",
+        "config ip add etho 20.11.12.13/24 20.11.12.254"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-084-which-of-the-following-routing-protocols-is-not",
+      "category": "Spectrum Networking",
+      "question": "Which of the following routing protocols is not capable of avoiding credit loops?",
+      "choices": [
+        "UPDOWN",
+        "All routing protocols are capable of avoiding credit loops",
+        "MINHOP",
+        "FAT TREE"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-085-you-are-configuring-the-unified-fabric-manager-u",
+      "category": "InfiniBand Networking",
+      "question": "You are configuring the Unified Fabric Manager (UFM) for an InfiniBand fabric in a multitenant environment. You need to implement a solution that can detect potential security threats. Which UFM feature uses analytics to detect security threats and predict network failures in InfiniBand data centers?",
+      "choices": [
+        "Host Agent",
+        "Telemetry platform",
+        "Cyber-AI platform",
+        "Enterprise platform"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-086-what-are-two-methods-for-accessing-the-operating",
+      "category": "AI Data Center Design",
+      "question": "What are two methods for accessing the operating system on a BlueField DPU? Pick the 2 correct responses below",
+      "choices": [
+        "Via the networking interfaces (data ports) in NIC mode",
+        "Via the rshim interface over the PCIe bus",
+        "Via the Redfish API",
+        "Via rshim over a USB connection on the host"
+      ],
+      "correctIndices": [
+        1,
+        3
+      ],
+      "answerKey": "BD",
+      "isMultiSelect": true,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-087-what-are-the-necessary-steps-to-upgrade-the-mlnx",
+      "category": "InfiniBand Networking",
+      "question": "What are the necessary steps to upgrade the MLNX-OS on InfiniBand Switches?",
+      "choices": [
+        "Connect to the switches using SSH, fetch the MLNX-OS software image, and use the 'install' command to perform the upgrade.",
+        "Power off the switches, insert the installation media, and power on the switches to start the upgrade process.",
+        "Restart the switches, connect to the switches using Telnet, and use the 'update' command to perform the upgrade.",
+        "Remove the switches from the switch fabric, fetch the MLNX-OS software image, and use the 'upgrade' command to perform the upgrade."
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-088-you-are-optimizing-an-ai-workload-that-involves",
+      "category": "AI Data Center Design",
+      "question": "You are optimizing an AI workload that involves multiple GPUs across different nodes in a data center. The application requires both high-bandwidth GPU-to-GPU communication within nodes and efficient communication between nodes. Which combination of NVIDIA technologies would best support this multi-node, multi-GPU AI workload?",
+      "choices": [
+        "NVLink for both intra-node and inter-node GPU communication.",
+        "InfiniBand for both intra-node and inter-node GPU communication.",
+        "NVLink for intra-node GPU communication and InfiniBand for inter-node communication.",
+        "PCIe for intra-node GPU communication and RoCE for inter-node communication."
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-089-you-are-designing-a-new-ai-data-center-for-a-res",
+      "category": "AI Data Center Design",
+      "question": "You are designing a new AI data center for a research institution that requires high performance computing for large-scale deep learning models. The institution wants to leverage NVIDIA's reference architectures for optimal performance. Which NVIDIA reference architecture would be most suitable for this high-performance AI research environment?",
+      "choices": [
+        "NVIDIA Base Command Platform",
+        "NVIDIA DGX Cloud",
+        "NVIDIA LaunchPad",
+        "NVIDIA DGX SuperPOD"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-090-you-are-optimizing-an-infiniband-network-for-ai",
+      "category": "InfiniBand Networking",
+      "question": "You are optimizing an InfiniBand network for AI workloads that require low-latency and high- throughput data transfers. Which feature of InfiniBand networks minimizes CPU overhead during data transfers?",
+      "choices": [
+        "TCP/IP Offloading",
+        "SHARP",
+        "Direct Memory Access (DMA)",
+        "Pkey"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-001-in-a-large-scale-ai-training-cluster-using-rocev",
+      "category": "Spectrum Networking",
+      "question": "In a large-scale AI training cluster using RoCEv2, engineers observe that latency is significantly higher between certain GPU nodes, while other nodes communicate normally. There is no evidence of packet loss, and all links appear operational. What is the MOST likely root cause of this issue?",
+      "choices": [
+        "MTU mismatch causing fragmentation",
+        "ECMP hash imbalance leading to uneven path utilization",
+        "DNS resolution delay affecting routing",
+        "Lack of VLAN tagging on interfaces"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-003-an-ai-infrastructure-team-deploys-a-roce-based-n",
+      "category": "Spectrum Networking",
+      "question": "An AI infrastructure team deploys a RoCE-based network but notices frequent pause frames being generated across multiple switches. Over time, this leads to widespread congestion and reduced throughput. Which of the following is the BEST explanation for this behavior?",
+      "choices": [
+        "ECN is aggressively marking packets",
+        "PFC is being triggered excessively due to congestion",
+        "RDMA is incorrectly configured at the NIC level",
+        "TCP retransmissions are overwhelming the network"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-005-during-performance-testing-a-sudden-drop-in-thro",
+      "category": "Spectrum Networking",
+      "question": "During performance testing, a sudden drop in throughput occurs when multiple GPU nodes simultaneously send data to a single aggregation node. Switch buffer utilization spikes rapidly. What is this scenario commonly referred to as?",
+      "choices": [
+        "ECMP polarization",
+        "Microburst",
+        "Incast",
+        "Head-of-line blocking"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-007-a-network-engineer-is-designing-a-high-performan",
+      "category": "Spectrum Networking",
+      "question": "A network engineer is designing a high-performance AI fabric and wants to ensure minimal latency and consistent performance across all nodes. Which design choice BEST achieves this goal?",
+      "choices": [
+        "Implement a hub-and-spoke topology",
+        "Use a Leaf-Spine architecture with equal-cost paths",
+        "Deploy a single large Layer 2 domain",
+        "Use oversubscription ratio of 5:1"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-009-in-a-rocev2-network-packet-drops-are-observed-un",
+      "category": "Spectrum Networking",
+      "question": "In a RoCEv2 network, packet drops are observed under heavy load conditions, leading to severe degradation in application performance. Why does packet loss have such a significant impact in this environment?",
+      "choices": [
+        "TCP retransmissions are disabled",
+        "RDMA assumes a lossless network for optimal performance",
+        "UDP guarantees delivery",
+        "ECMP cannot handle packet drops"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-012-a-data-center-operator-notices-that-enabling-onl",
+      "category": "Spectrum Networking",
+      "question": "A data center operator notices that enabling only PFC in a RoCE network leads to intermittent traffic stalls and potential deadlocks. Which additional mechanism should be implemented to mitigate this issue?",
+      "choices": [
+        "NAT",
+        "ECN",
+        "DHCP",
+        "ARP"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-014-in-a-distributed-ai-training-job-flows-are-consi",
+      "category": "Spectrum Networking",
+      "question": "In a distributed AI training job, flows are consistently mapped to the same physical links, resulting in uneven utilization across the network fabric. What is the MOST likely cause?",
+      "choices": [
+        "VLAN misconfiguration",
+        "ECMP hashing algorithm limitations",
+        "DNS resolution issues",
+        "MTU mismatch"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-015-a-network-engineer-observes-that-packets-are-arr",
+      "category": "Spectrum Networking",
+      "question": "A network engineer observes that packets are arriving out of order at the destination, affecting RDMA performance. Which condition MOST likely caused this issue?",
+      "choices": [
+        "Single path routing",
+        "ECMP with inconsistent hashing across paths",
+        "VLAN tagging errors",
+        "ARP table overflow"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-017-an-ai-cluster-is-experiencing-frequent-congestio",
+      "category": "Spectrum Networking",
+      "question": "An AI cluster is experiencing frequent congestion events, and ECN marking is observed on many packets. What is the expected behavior of the sender upon receiving ECN signals?",
+      "choices": [
+        "Increase transmission rate",
+        "Decrease transmission rate",
+        "Drop packets immediately",
+        "Switch to TCP"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-019-a-system-architect-wants-to-reduce-cpu-overhead",
+      "category": "Spectrum Networking",
+      "question": "A system architect wants to reduce CPU overhead and improve data processing efficiency in a high-performance AI cluster. Which technology should be introduced to achieve this goal?",
+      "choices": [
+        "Traditional NIC",
+        "Software-based routing",
+        "Data Processing Unit (DPU)",
+        "NAT gateway"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-021-during-network-analysis-it-is-found-that-buffer",
+      "category": "Spectrum Networking",
+      "question": "During network analysis, it is found that buffer memory on switches is frequently exhausted during peak workloads, leading to packet drops. What is the BEST mitigation strategy?",
+      "choices": [
+        "Reduce MTU size",
+        "Increase buffer allocation and tune thresholds",
+        "Disable ECMP",
+        "Remove VLAN tagging"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-022-when-utilizing-the-ib-write-bw-tool-for-performa",
+      "category": "Troubleshooting Tools",
+      "question": "When utilizing the ib_write_bw tool for performance testing, what does the –S flag define?",
+      "choices": [
+        "The burst size",
+        "The number of QP's",
+        "The maximum rate of sent packages",
+        "Which service level to use"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-023-a-network-is-configured-with-rocev1-but-communic",
+      "category": "Spectrum Networking",
+      "question": "A network is configured with RoCEv1, but communication across Layer 3 boundaries is failing. What is the MOST likely reason?",
+      "choices": [
+        "RoCEv1 operates only at Layer 2",
+        "ECMP is not enabled",
+        "MTU is too large",
+        "TCP is required"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-027-in-a-high-performance-fabric-a-cut-through-switc",
+      "category": "Spectrum Networking",
+      "question": "In a high-performance fabric, a cut-through switching mechanism is used instead of store-and-forward. What is the PRIMARY advantage of this choice?",
+      "choices": [
+        "Improved packet filtering",
+        "Reduced latency",
+        "Increased buffer capacity",
+        "Enhanced encryption"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-029-however-what-is-a-potential-drawback-of-cut-thro",
+      "category": "Spectrum Networking",
+      "question": "However, what is a potential drawback of cut-through switching?",
+      "choices": [
+        "Increased latency",
+        "Higher CPU usage",
+        "Forwarding corrupted packets",
+        "Reduced throughput"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-031-a-cloud-service-provider-is-deploying-the-nvidia",
+      "category": "Spectrum Networking",
+      "question": "A cloud service provider is deploying the NVIDIA Spectrum-X Ethernet platform in a multi- tenant environment. To ensure the security and isolation of each tenant's AI workload, the provider wants to implement a feature that prevents unauthorized access to the network. Which of the following features of the Spectrum-X platform should the provider implement?",
+      "choices": [
+        "Congestion Control",
+        "Streaming Telemetry",
+        "Adaptive Routing",
+        "Traffic Isolation"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-032-a-network-engineer-observes-that-one-uplink-in-a",
+      "category": "AI Data Center Design",
+      "question": "A network engineer observes that one uplink in a Leaf-Spine topology is heavily utilized, while others remain underutilized. What is the MOST likely explanation?",
+      "choices": [
+        "ECMP hash imbalance",
+        "VLAN mismatch",
+        "MTU issue",
+        "DNS failure"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-033-you-have-recently-implemented-nvidia-spectrum-x",
+      "category": "Spectrum Networking",
+      "question": "You have recently implemented NVIDIA Spectrum-X in your data center to optimize AI workloads. You need to verify the performance improvements and create a baseline for future comparisons. Which tool would be most appropriate for creating performance baseline results in this Spectrum-X environment?",
+      "choices": [
+        "NetQ",
+        "CloudAI Benchmark",
+        "MLNX-OS",
+        "Ansible"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-045-a-large-ai-training-job-is-suffering-from-high-l",
+      "category": "Spectrum Networking",
+      "question": "A large AI training job is suffering from high latency spikes, particularly during synchronization phases. What is the MOST likely cause?",
+      "choices": [
+        "Incast traffic pattern",
+        "NAT traversal",
+        "DNS resolution",
+        "VLAN segmentation"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-046-in-a-roce-network-what-is-the-role-of-dcqcn",
+      "category": "Spectrum Networking",
+      "question": "In a RoCE network, what is the role of DCQCN?",
+      "choices": [
+        "Routing protocol",
+        "Congestion control mechanism",
+        "Encryption method",
+        "VLAN tagging"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-048-an-engineer-detects-frequent-microbursts-in-traf",
+      "category": "Troubleshooting Tools",
+      "question": "An engineer detects frequent microbursts in traffic patterns. What is a typical consequence of microbursts?",
+      "choices": [
+        "Stable throughput",
+        "Buffer overflow",
+        "Reduced latency",
+        "Improved routing"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-049-why-is-a-jumbo-frame-e-g-mtu-9000-typically-used",
+      "category": "Spectrum Networking",
+      "question": "Why is a jumbo frame (e.g., MTU 9000) typically used in RoCE networks?",
+      "choices": [
+        "To increase packet loss",
+        "To reduce overhead and improve efficiency",
+        "To enable NAT",
+        "To support DNS"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-051-which-of-the-following-represents-the-best-overa",
+      "category": "Spectrum Networking",
+      "question": "Which of the following represents the BEST overall design for a scalable AI network?",
+      "choices": [
+        "TCP-based network with high oversubscription",
+        "RoCEv2 with Leaf-Spine, ECMP, PFC, and ECN",
+        "Single Layer 2 network with STP",
+        "Hub-and-spoke architecture"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-052-a-large-scale-ai-training-environment-uses-a-lea",
+      "category": "Spectrum Networking",
+      "question": "A large-scale AI training environment uses a Leaf-Spine topology with RoCEv2. During distributed training, engineers observe that latency between certain GPU pairs is significantly higher than others. Monitoring shows no packet drops, link failures, or congestion alerts. However, traffic analysis reveals that specific flows consistently take the same physical path. What is the MOST likely cause of this issue?",
+      "choices": [
+        "MTU inconsistency between nodes causing hidden fragmentation",
+        "ECMP hash polarization leading to uneven path utilization",
+        "PFC configuration preventing packet transmission",
+        "Improper VLAN tagging causing broadcast flooding"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-054-in-a-data-center-running-ai-workloads-multiple-g",
+      "category": "Spectrum Networking",
+      "question": "In a data center running AI workloads, multiple GPU nodes simultaneously send gradient updates to a single parameter server. During this phase, switch buffer usage spikes rapidly, and packet drops begin to occur despite sufficient overall bandwidth. What is the BEST explanation for this behavior?",
+      "choices": [
+        "ECMP hashing imbalance",
+        "Incast traffic overwhelming buffers",
+        "VLAN trunk misconfiguration",
+        "DNS resolution delay"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-055-a-rocev2-based-fabric-experiences-intermittent-t",
+      "category": "Spectrum Networking",
+      "question": "A RoCEv2-based fabric experiences intermittent traffic stalls. Engineers observe a large number of PFC pause frames being generated across several switches, even though traffic levels are not consistently high. What is the MOST likely root cause?",
+      "choices": [
+        "ECN thresholds are set too low, causing early marking",
+        "Congestion is triggering excessive PFC pauses",
+        "MTU mismatch is causing packet fragmentation",
+        "RDMA is incorrectly configured at the application layer"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-059-a-network-architect-wants-to-improve-congestion",
+      "category": "Spectrum Networking",
+      "question": "A network architect wants to improve congestion handling in an AI fabric without introducing traffic stoppages or increasing the risk of deadlocks. Which solution BEST meets this requirement?",
+      "choices": [
+        "Increase PFC priority levels",
+        "Enable and properly tune ECN",
+        "Disable ECMP load balancing",
+        "Reduce link bandwidth"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-060-during-stress-testing-an-ai-cluster-shows-severe",
+      "category": "Spectrum Networking",
+      "question": "During stress testing, an AI cluster shows severe performance degradation whenever packet drops occur, even at very low drop rates. Why does this behavior occur in RDMA-based networks?",
+      "choices": [
+        "RDMA protocols rely on TCP retransmission mechanisms",
+        "RDMA assumes a lossless network and does not handle drops efficiently",
+        "UDP guarantees packet delivery",
+        "ECMP cannot recover from packet loss"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-061-a-leaf-spine-network-is-deployed-with-equal-cost",
+      "category": "AI Data Center Design",
+      "question": "A Leaf-Spine network is deployed with equal-cost paths, but one spine switch consistently shows higher utilization than others. Traffic patterns appear uneven despite symmetric topology design. What is the MOST likely explanation?",
+      "choices": [
+        "VLAN misconfiguration causing traffic flooding",
+        "ECMP hashing imbalance due to flow characteristics",
+        "DNS resolution delay affecting path selection",
+        "PFC blocking specific traffic classes"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-063-an-ai-workload-experiences-degraded-performance",
+      "category": "Spectrum Networking",
+      "question": "An AI workload experiences degraded performance due to packets arriving out of order. The network uses multiple equal-cost paths between endpoints. Which condition MOST likely caused this issue?",
+      "choices": [
+        "Static routing with single path",
+        "ECMP hashing distributing packets inconsistently",
+        "VLAN segmentation",
+        "ARP cache overflow"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-064-engineers-observe-that-ecn-markings-are-frequent",
+      "category": "Spectrum Networking",
+      "question": "Engineers observe that ECN markings are frequently set in packets during peak workloads. No packet drops are recorded. What should be the expected behavior from the sending hosts?",
+      "choices": [
+        "Increase transmission rate to compensate",
+        "Reduce transmission rate to alleviate congestion",
+        "Drop packets proactively",
+        "Switch communication to TCP"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-065-a-roce-network-is-experiencing-periodic-deadlock",
+      "category": "Spectrum Networking",
+      "question": "A RoCE network is experiencing periodic deadlocks, where traffic appears to halt across multiple switches simultaneously. What is the BEST approach to mitigate this issue?",
+      "choices": [
+        "Disable PFC entirely",
+        "Enable ECN to complement PFC",
+        "Reduce MTU size",
+        "Increase VLAN segmentation"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-066-you-are-configuring-the-unified-fabric-manager-u",
+      "category": "InfiniBand Networking",
+      "question": "You are configuring the Unified Fabric Manager (UFM) for an InfiniBand fabric in a multi- tenant environment. You need to implement a solution that can detect potential security threats. Which UFM feature uses analytics to detect security threats and predict network failures in InfiniBand data centers?",
+      "choices": [
+        "Host Agent",
+        "Telemetry platform",
+        "Cyber-AI platform",
+        "Enterprise platform"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-068-you-are-managing-a-large-infiniband-fabric-for-a",
+      "category": "InfiniBand Networking",
+      "question": "You are managing a large InfiniBand fabric for an AI research cluster. You need to implement a solution that can proactively detect potential network issues and optimize performance. Which feature of NVIDIA's Unified Fabric Manager (UFM) is specifically designed to use AI-powered analytics for detecting security threats and predicting network failures in InfiniBand data centers?",
+      "choices": [
+        "Cyber-AI platform",
+        "Host Agent",
+        "Enterprise platform",
+        "Telemetry platform"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-069-a-network-designer-is-evaluating-topologies-for",
+      "category": "Spectrum Networking",
+      "question": "A network designer is evaluating topologies for a new AI cluster requiring predictable latency and high bandwidth scalability. Which architecture BEST satisfies these requirements?",
+      "choices": [
+        "Hub-and-spoke topology with centralized routing",
+        "Leaf-Spine topology with ECMP",
+        "Single large Layer 2 domain",
+        "Ring topology with redundancy"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-070-a-switch-frequently-runs-out-of-buffer-space-dur",
+      "category": "Spectrum Networking",
+      "question": "A switch frequently runs out of buffer space during short bursts of high traffic, causing packet drops even though average utilization is low. What is the MOST appropriate solution?",
+      "choices": [
+        "Reduce MTU size",
+        "Increase buffer allocation and tune thresholds",
+        "Disable ECMP",
+        "Use TCP instead of RDMA"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-074-you-are-designing-a-new-ai-data-center-for-a-res",
+      "category": "AI Data Center Design",
+      "question": "You are designing a new AI data center for a research institution that requires high- performance computing for large-scale deep learning models. The institution wants to leverage NVIDIA's reference architectures for optimal performance. Which NVIDIA reference architecture would be most suitable for this high-performance AI research environment?",
+      "choices": [
+        "NVIDIA Base Command Platform",
+        "NVIDIA DGX Cloud",
+        "NVIDIA LaunchPad",
+        "NVIDIA DGX SuperPOD"
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-075-an-ai-cluster-uses-rocev1-but-communication-fail",
+      "category": "Spectrum Networking",
+      "question": "An AI cluster uses RoCEv1, but communication fails across different subnets despite correct IP routing. What is the MOST likely cause?",
+      "choices": [
+        "RoCEv1 operates only at Layer 2",
+        "ECMP is not enabled",
+        "MTU is too large",
+        "TCP is required for routing"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-076-a-network-engineer-selects-cut-through-switching",
+      "category": "Spectrum Networking",
+      "question": "A network engineer selects cut-through switching for an AI workload. What is the PRIMARY advantage of this approach?",
+      "choices": [
+        "Improved packet filtering",
+        "Reduced latency by forwarding packets early",
+        "Increased buffer capacity",
+        "Better error detection"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-081-however-what-is-a-potential-drawback-of-cut-thro",
+      "category": "Spectrum Networking",
+      "question": "However, what is a potential drawback of cut-through switching in this scenario?",
+      "choices": [
+        "Increased latency",
+        "Forwarding corrupted packets without full validation",
+        "Reduced throughput under load",
+        "Inability to support VLAN tagging"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-082-in-a-multi-path-network-one-link-becomes-congest",
+      "category": "Spectrum Networking",
+      "question": "In a multi-path network, one link becomes congested while others remain underutilized. What is the MOST likely explanation?",
+      "choices": [
+        "ECMP hash imbalance",
+        "MTU mismatch",
+        "VLAN misconfiguration",
+        "DNS resolution issue"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-085-during-distributed-ai-training-latency-spikes-oc",
+      "category": "Spectrum Networking",
+      "question": "During distributed AI training, latency spikes occur specifically during synchronization phases when all nodes communicate simultaneously. What is the MOST likely cause?",
+      "choices": [
+        "Incast traffic pattern overwhelming buffers",
+        "NAT traversal delay",
+        "DNS lookup overhead",
+        "VLAN segmentation"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-086-a-network-engineer-wants-to-reduce-cpu-overhead",
+      "category": "Spectrum Networking",
+      "question": "A network engineer wants to reduce CPU overhead on servers handling AI workloads. Which technology BEST addresses this requirement?",
+      "choices": [
+        "Standard NIC",
+        "Software-based routing",
+        "Data Processing Unit (DPU)",
+        "NAT gateway"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-089-traffic-analysis-reveals-frequent-microbursts-in",
+      "category": "Troubleshooting Tools",
+      "question": "Traffic analysis reveals frequent microbursts in the network. What is the MOST likely impact of this pattern?",
+      "choices": [
+        "Stable latency",
+        "Buffer overflow and packet loss",
+        "Improved throughput",
+        "Reduced congestion"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-090-a-roce-network-uses-standard-mtu-1500-bytes-resu",
+      "category": "Spectrum Networking",
+      "question": "A RoCE network uses standard MTU (1500 bytes), resulting in lower-than-expected performance. Why is this configuration suboptimal?",
+      "choices": [
+        "Smaller MTU increases packet loss",
+        "Smaller MTU increases overhead and reduces efficiency",
+        "MTU affects routing decisions",
+        "MTU impacts DNS resolution"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-093-you-are-tasked-with-configuring-multi-tenancy-us",
+      "category": "InfiniBand Networking",
+      "question": "You are tasked with configuring multi-tenancy using partition key (PKey) for a high- performance storage fabric running on InfiniBand. Each tenant's GPU server is allowed to access the shared storage system but cannot communicate with another tenant's GPU server. Which of the following partition key membership configurations would you implement to set up multi- tenancy in this environment?",
+      "choices": [
+        "Assign full membership to both GPU servers and storage system.",
+        "Assign limited membership to both GPU servers and storage system.",
+        "Assign limited membership PKey to the shared storage system and full membership PKey to each tenant's GPU servers.",
+        "Assign full membership PKey to the shared storage system and limited membership PKey to each tenant's GPU servers."
+      ],
+      "correctIndices": [
+        3
+      ],
+      "answerKey": "D",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-094-a-congestion-control-mechanism-is-required-to-ad",
+      "category": "Spectrum Networking",
+      "question": "A congestion control mechanism is required to adjust sending rates dynamically based on network conditions. Which mechanism fulfills this role in RoCE environments?",
+      "choices": [
+        "BGP",
+        "DCQCN",
+        "STP",
+        "ARP"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-095-a-network-experiences-intermittent-latency-spike",
+      "category": "Spectrum Networking",
+      "question": "A network experiences intermittent latency spikes with no packet loss. What is the MOST likely explanation?",
+      "choices": [
+        "Microburst traffic",
+        "VLAN mismatch",
+        "DNS delay",
+        "NAT overload"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-099-which-command-should-be-used-to-configure-roce-o",
+      "category": "Spectrum Networking",
+      "question": "Which command should be used to configure RoCE on a Cumulus switch?",
+      "choices": [
+        "nv set roce qos enable on",
+        "nv set qos roce enable on",
+        "nv qos roce enable on",
+        "nv roce qos enable on"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-100-engineers-observe-head-of-line-blocking-in-the-n",
+      "category": "Spectrum Networking",
+      "question": "Engineers observe head-of-line blocking in the network. Which mechanism is MOST likely responsible?",
+      "choices": [
+        "ECMP",
+        "PFC",
+        "DNS",
+        "NAT"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-101-a-new-ai-cluster-is-being-designed-with-minimal",
+      "category": "Spectrum Networking",
+      "question": "A new AI cluster is being designed with minimal congestion and maximum throughput in mind. What oversubscription ratio should be targeted?",
+      "choices": [
+        "5:1",
+        "3:1",
+        "1:1",
+        "10:1"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-102-a-network-shows-fragmentation-and-packet-drops-w",
+      "category": "Spectrum Networking",
+      "question": "A network shows fragmentation and packet drops when communicating between nodes. What is the MOST likely cause?",
+      "choices": [
+        "MTU mismatch",
+        "ECMP imbalance",
+        "VLAN issue",
+        "DNS delay"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-103-a-financial-services-company-is-planning-to-impl",
+      "category": "Spectrum Networking",
+      "question": "A financial services company is planning to implement an AI infrastructure to support real-time fraud detection and risk assessment. They need a solution that can handle both training and inference workloads while maintaining data privacy and security. Which NVIDIA reference architecture component would be most appropriate to address the data privacy and security concerns in this AI networking setup?",
+      "choices": [
+        "NVIDIA CUDA-X AI libraries",
+        "NVIDIA Magnum IO",
+        "NVIDIA BlueField DPUs",
+        "NVIDIA Spectrum switches"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-105-when-creating-a-simu-lation-in-nvidia-air-what-s",
+      "category": "Spectrum Networking",
+      "question": "When creating a simu-lation in NVIDIA AIR, what syntax would you use to define a link between port 1 on spine-01 and port 41 on gpu-leaf-01?",
+      "choices": [
+        "\"spine-01\":“swp01\" -- ”gpu-leaf-01\":\"swp41\"",
+        "\"spine-01\":\"swp1\" to \"gpu-leaf-01\":\"swp41\"",
+        "\"spine-01 'eth1\" to \"gpu-leaf-01\":\"eth41\"",
+        "\"spine-01\":\"eth1\" -- \"gpu-leaf-01\":\"eth41“"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-107-a-switch-buffer-is-designed-to-handle-bursts-of",
+      "category": "Spectrum Networking",
+      "question": "A switch buffer is designed to handle bursts of traffic. What is its PRIMARY purpose?",
+      "choices": [
+        "Encrypt traffic",
+        "Absorb temporary spikes in traffic",
+        "Route packets",
+        "Assign IP addresses"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-108-a-network-shows-congestion-signals-but-no-packet",
+      "category": "Spectrum Networking",
+      "question": "A network shows congestion signals but no packet drops. Which feature is MOST likely functioning correctly?",
+      "choices": [
+        "ECN",
+        "DNS",
+        "VLAN",
+        "NAT"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-109-an-ai-workload-requires-low-latency-and-minimal",
+      "category": "Spectrum Networking",
+      "question": "An AI workload requires low latency and minimal CPU overhead. Why is RDMA preferred over TCP?",
+      "choices": [
+        "It increases CPU usage",
+        "It bypasses CPU and reduces latency",
+        "It requires NAT",
+        "It uses DNS"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-111-traffic-flows-in-a-multi-path-network-are-consis",
+      "category": "Spectrum Networking",
+      "question": "Traffic flows in a multi-path network are consistently mapped to the same physical path, leading to uneven utilization. What is this phenomenon called?",
+      "choices": [
+        "Load balancing",
+        "Polarization",
+        "Fragmentation",
+        "Flooding"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-112-a-network-experiences-packet-drops-during-burst",
+      "category": "Spectrum Networking",
+      "question": "A network experiences packet drops during burst traffic conditions despite having sufficient average bandwidth. What is the MOST likely cause?",
+      "choices": [
+        "Insufficient buffer capacity",
+        "DNS delay",
+        "VLAN mismatch",
+        "NAT"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-113-a-network-architect-is-designing-congestion-cont",
+      "category": "Spectrum Networking",
+      "question": "A network architect is designing congestion control for a RoCE-based AI fabric. The goal is to minimize packet loss while avoiding traffic stalls. Which approach BEST achieves this objective?",
+      "choices": [
+        "TCP-based congestion control only",
+        "PFC only across all traffic classes",
+        "ECN combined with PFC, properly tuned",
+        "Disable congestion control mechanisms"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-116-traffic-flows-are-consistently-mapped-to-the-sam",
+      "category": "Spectrum Networking",
+      "question": "Traffic flows are consistently mapped to the same physical path in a multi-path network. What is this phenomenon called?",
+      "choices": [
+        "Load balancing",
+        "Polarization",
+        "Fragmentation",
+        "Flooding"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-117-a-network-experiences-packet-drops-during-bursts",
+      "category": "Spectrum Networking",
+      "question": "A network experiences packet drops during bursts. What is the MOST likely cause?",
+      "choices": [
+        "Insufficient buffer capacity",
+        "DNS delay",
+        "VLAN mismatch",
+        "NAT"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-118-in-a-leaf-spine-topology-what-is-the-primary-rol",
+      "category": "AI Data Center Design",
+      "question": "In a Leaf-Spine topology, what is the PRIMARY role of Spine switches?",
+      "choices": [
+        "Connect end hosts",
+        "Provide high-speed core connectivity",
+        "Assign IP addresses",
+        "Perform NAT"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-120-in-a-large-scale-ai-training-cluster-using-rocev",
+      "category": "Spectrum Networking",
+      "question": "In a large-scale AI training cluster using RoCEv2 over a Leaf-Spine topology, engineers observe that certain GPU nodes consistently achieve lower throughput compared to others, despite identical hardware and symmetric network design. Detailed traffic analysis shows that specific flows are repeatedly mapped to the same physical paths, leading to uneven utilization across available links. Which of the following is the MOST likely root cause of this behavior?",
+      "choices": [
+        "MTU mismatch between GPU nodes causing packet fragmentation",
+        "ECMP hash imbalance leading to flow polarization across limited paths",
+        "PFC misconfiguration causing selective packet drops",
+        "VLAN misconfiguration causing broadcast domain overlap"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-121-during-a-distributed-training-workload-a-network",
+      "category": "Spectrum Networking",
+      "question": "During a distributed training workload, a network engineer notices that throughput drops significantly during synchronization phases, where all GPU nodes send updates to a central aggregation node. Monitoring tools indicate that switch buffer occupancy increases rapidly, and packet drops occur even though average network utilization is below capacity. What is the MOST likely explanation for this issue?",
+      "choices": [
+        "ECMP imbalance causing uneven traffic distribution",
+        "Incast traffic pattern overwhelming switch buffers",
+        "DNS resolution delays affecting routing",
+        "MTU mismatch causing fragmentation"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-122-a-rocev2-based-data-center-network-is-experienci",
+      "category": "Spectrum Networking",
+      "question": "A RoCEv2-based data center network is experiencing periodic traffic stalls. Engineers observe that PFC pause frames are propagating across multiple switches, effectively halting traffic in certain parts of the fabric. Which condition MOST likely caused this behavior?",
+      "choices": [
+        "ECN thresholds are set too aggressively, causing excessive marking",
+        "Congestion is triggering cascading PFC pauses across the network",
+        "VLAN tagging is incorrectly configured",
+        "RDMA is falling back to TCP"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-124-a-network-architect-is-designing-congestion-mana",
+      "category": "Spectrum Networking",
+      "question": "A network architect is designing congestion management strategies for an AI fabric. The goal is to prevent packet loss while avoiding complete traffic stoppages that could lead to deadlocks. Which combination of technologies BEST achieves this goal?",
+      "choices": [
+        "PFC only, configured on all priorities",
+        "ECN only, without any flow control",
+        "PFC combined with ECN, properly tuned",
+        "TCP-based congestion control"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-125-a-switch-buffer-is-designed-to-handle-bursts-of",
+      "category": "Spectrum Networking",
+      "question": "A switch buffer is designed to handle bursts of traffic in an AI network. What is its PRIMARY purpose?",
+      "choices": [
+        "Encrypt traffic",
+        "Absorb temporary traffic spikes",
+        "Route packets",
+        "Assign IP addresses"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-126-a-network-shows-congestion-signals-but-no-packet",
+      "category": "Spectrum Networking",
+      "question": "A network shows congestion signals but no packet drops. Performance is stable but slightly reduced. Which feature is MOST likely functioning correctly?",
+      "choices": [
+        "ECN",
+        "DNS",
+        "VLAN",
+        "NAT"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-127-an-ai-workload-requires-minimal-latency-and-cpu",
+      "category": "Spectrum Networking",
+      "question": "An AI workload requires minimal latency and CPU overhead for communication between nodes. Why is RDMA preferred over TCP in this scenario?",
+      "choices": [
+        "It increases CPU utilization",
+        "It bypasses CPU and reduces latency",
+        "It requires NAT",
+        "It depends on DNS"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-128-an-ai-cluster-using-rdma-over-rocev2-experiences",
+      "category": "Spectrum Networking",
+      "question": "An AI cluster using RDMA over RoCEv2 experiences significant performance degradation whenever even a small percentage of packet loss occurs. Why is RDMA particularly sensitive to packet loss in this environment?",
+      "choices": [
+        "RDMA relies on TCP retransmissions for recovery",
+        "RDMA assumes a lossless fabric and lacks efficient retransmission mechanisms",
+        "UDP guarantees delivery in RDMA",
+        "ECMP does not support retransmission"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-129-in-a-leaf-spine-topology-one-spine-switch-consis",
+      "category": "AI Data Center Design",
+      "question": "In a Leaf-Spine topology, one spine switch consistently experiences higher traffic load than others, even though all links are operational and evenly provisioned. Engineers suspect that traffic distribution is not optimal. What is the MOST likely cause?",
+      "choices": [
+        "MTU mismatch causing selective packet drops",
+        "ECMP hashing behavior leading to uneven flow distribution",
+        "VLAN misconfiguration creating asymmetric paths",
+        "PFC preventing traffic on certain links"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-131-an-ai-workload-suffers-from-degraded-performance",
+      "category": "Spectrum Networking",
+      "question": "An AI workload suffers from degraded performance due to out-of-order packet delivery. The network uses ECMP across multiple equal-cost paths. What is the MOST likely explanation for this issue?",
+      "choices": [
+        "Static routing forcing single-path forwarding",
+        "ECMP hashing inconsistencies causing packets of the same flow to take different paths",
+        "VLAN segmentation causing traffic isolation",
+        "ARP table overflow"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-132-during-peak-workloads-network-monitoring-shows-a",
+      "category": "Spectrum Networking",
+      "question": "During peak workloads, network monitoring shows a high number of ECN-marked packets, but no packet drops are observed. Application performance remains stable but slightly reduced. What is the expected behavior of the sending hosts in this situation?",
+      "choices": [
+        "Increase sending rate to compensate for marking",
+        "Reduce sending rate in response to congestion signals",
+        "Drop packets proactively",
+        "Switch to TCP-based communication"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-133-a-roce-network-experiences-intermittent-deadlock",
+      "category": "Spectrum Networking",
+      "question": "A RoCE network experiences intermittent deadlocks where traffic stops across multiple switches. Investigation reveals that PFC is heavily utilized, but ECN is not configured. What is the BEST solution to prevent this issue?",
+      "choices": [
+        "Disable PFC entirely",
+        "Enable ECN to complement PFC and reduce pause events",
+        "Reduce MTU size",
+        "Increase VLAN segmentation"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-135-engineers-observe-head-of-line-blocking-in-a-roc",
+      "category": "Spectrum Networking",
+      "question": "Engineers observe head-of-line blocking in a RoCE network, where one blocked queue prevents others from progressing. Which mechanism is MOST likely responsible?",
+      "choices": [
+        "ECMP",
+        "PFC",
+        "DNS",
+        "NAT"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-136-a-new-ai-cluster-is-being-designed-with-the-goal",
+      "category": "Spectrum Networking",
+      "question": "A new AI cluster is being designed with the goal of minimizing congestion and maximizing throughput across all nodes. What oversubscription ratio is MOST appropriate?",
+      "choices": [
+        "5:1",
+        "3:1",
+        "1:1",
+        "10:1"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-137-a-network-shows-packet-fragmentation-and-drops-w",
+      "category": "Spectrum Networking",
+      "question": "A network shows packet fragmentation and drops when traffic flows between nodes with different configurations. What is the MOST likely cause?",
+      "choices": [
+        "MTU mismatch",
+        "ECMP imbalance",
+        "VLAN issue",
+        "DNS delay"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-138-a-data-center-architect-is-selecting-a-network-t",
+      "category": "AI Data Center Design",
+      "question": "A data center architect is selecting a network topology for a large AI cluster requiring consistent latency and high scalability. The design must support thousands of GPU nodes with minimal congestion. Which architecture BEST meets these requirements?",
+      "choices": [
+        "Hub-and-spoke with centralized core switches",
+        "Leaf-Spine with ECMP-based load balancing",
+        "Single Layer 2 domain using STP",
+        "Ring topology with redundancy"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-139-a-switch-in-an-ai-network-frequently-experiences",
+      "category": "Spectrum Networking",
+      "question": "A switch in an AI network frequently experiences buffer exhaustion during short bursts of high traffic. These bursts are not sustained, but they cause packet drops and temporary performance degradation. What is the MOST effective mitigation strategy?",
+      "choices": [
+        "Reduce MTU size",
+        "Increase buffer allocation and tune thresholds",
+        "Disable ECMP",
+        "Switch to TCP"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-140-an-ai-cluster-is-configured-with-rocev1-but-comm",
+      "category": "Spectrum Networking",
+      "question": "An AI cluster is configured with RoCEv1, but communication fails when traffic needs to traverse Layer 3 boundaries between subnets. What is the MOST likely reason for this behavior?",
+      "choices": [
+        "RoCEv1 operates only at Layer 2 and does not support routing",
+        "ECMP is not enabled",
+        "MTU is too large",
+        "TCP is required for inter-subnet communication"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-141-a-roce-network-is-configured-with-a-standard-mtu",
+      "category": "Spectrum Networking",
+      "question": "A RoCE network is configured with a standard MTU of 1500 bytes. Performance testing shows higher CPU overhead and lower throughput than expected. Why is this configuration suboptimal?",
+      "choices": [
+        "Smaller MTU increases packet loss",
+        "Smaller MTU increases overhead due to more packets",
+        "MTU affects routing decisions",
+        "MTU impacts DNS resolution"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-142-a-congestion-control-mechanism-is-required-to-dy",
+      "category": "Spectrum Networking",
+      "question": "A congestion control mechanism is required to dynamically adjust transmission rates based on network conditions in a RoCE environment. Which mechanism fulfills this role?",
+      "choices": [
+        "BGP",
+        "DCQCN",
+        "STP",
+        "ARP"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-143-a-network-experiences-intermittent-latency-spike",
+      "category": "Spectrum Networking",
+      "question": "A network experiences intermittent latency spikes without packet loss. Traffic patterns show sudden bursts followed by idle periods. What is the MOST likely explanation?",
+      "choices": [
+        "Microburst traffic",
+        "VLAN mismatch",
+        "DNS delay",
+        "NAT overload"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-145-a-network-engineer-chooses-cut-through-switching",
+      "category": "Spectrum Networking",
+      "question": "A network engineer chooses cut-through switching for an AI workload to minimize latency. What is the PRIMARY advantage of this switching method?",
+      "choices": [
+        "Full packet inspection before forwarding",
+        "Reduced latency by forwarding packets before full reception",
+        "Increased buffer capacity",
+        "Improved encryption"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-146-however-in-the-same-environment-what-is-a-potent",
+      "category": "Spectrum Networking",
+      "question": "However, in the same environment, what is a potential drawback of cut-through switching?",
+      "choices": [
+        "Increased latency due to buffering",
+        "Forwarding of corrupted packets without full validation",
+        "Reduced throughput under heavy load",
+        "Incompatibility with VLANs"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-147-in-a-multi-path-ai-network-one-uplink-consistent",
+      "category": "AI Data Center Design",
+      "question": "In a multi-path AI network, one uplink consistently becomes congested while others remain underutilized. The topology and link capacities are identical. What is the MOST likely explanation?",
+      "choices": [
+        "ECMP hash imbalance",
+        "MTU mismatch",
+        "VLAN misconfiguration",
+        "DNS resolution issue"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-149-during-distributed-training-latency-spikes-occur",
+      "category": "Spectrum Networking",
+      "question": "During distributed training, latency spikes occur specifically when all nodes simultaneously send synchronization data. Packet drops are observed, and buffer utilization peaks. What is the MOST likely cause?",
+      "choices": [
+        "Incast traffic overwhelming buffers",
+        "NAT traversal delays",
+        "DNS resolution overhead",
+        "VLAN segmentation"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-150-a-data-center-operator-wants-to-reduce-cpu-overh",
+      "category": "Spectrum Networking",
+      "question": "A data center operator wants to reduce CPU overhead on servers handling high-performance AI workloads and offload networking tasks. Which technology BEST achieves this objective?",
+      "choices": [
+        "Standard NIC",
+        "Software-based switching",
+        "Data Processing Unit (DPU)",
+        "NAT gateway"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "dump-hwp-151-traffic-monitoring-reveals-frequent-microbursts",
+      "category": "Troubleshooting Tools",
+      "question": "Traffic monitoring reveals frequent microbursts in the network, characterized by sudden spikes in traffic over very short durations. What is the MOST likely consequence of this pattern?",
+      "choices": [
+        "Stable latency",
+        "Buffer overflow leading to packet drops",
+        "Reduced congestion",
+        "Improved throughput"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Dump"
+    },
+    {
+      "id": "nv-official-001",
+      "category": "AI Data Center Design",
+      "question": "According to NVIDIA official specifications, what is the NVLink bandwidth per GPU on the Hopper (4th generation NVLink) architecture?",
+      "choices": [
+        "900 GB/s",
+        "1,800 GB/s",
+        "3,600 GB/s",
+        "400 GB/s"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-002",
+      "category": "AI Data Center Design",
+      "question": "What NVLink bandwidth per GPU does NVIDIA specify for the Blackwell architecture (5th generation NVLink)?",
+      "choices": [
+        "900 GB/s",
+        "1,800 GB/s",
+        "3,600 GB/s",
+        "51.2 TB/s"
+      ],
+      "correctIndices": [
+        1
+      ],
+      "answerKey": "B",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-003",
+      "category": "AI Data Center Design",
+      "question": "NVIDIA NVLink 6th generation on the Rubin platform provides what bandwidth per GPU?",
+      "choices": [
+        "900 GB/s",
+        "1,800 GB/s",
+        "3,600 GB/s",
+        "260 TB/s"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-004",
+      "category": "AI Data Center Design",
+      "question": "How many GPUs can be connected in a single NVLink domain in the NVIDIA GB200 NVL72 rack-scale design?",
+      "choices": [
+        "8",
+        "36",
+        "72",
+        "144"
+      ],
+      "correctIndices": [
+        2
+      ],
+      "answerKey": "C",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-005",
+      "category": "AI Data Center Design",
+      "question": "What is the primary purpose of NVIDIA NVLink compared to PCIe for GPU communication?",
+      "choices": [
+        "Higher GPU-to-GPU bandwidth and lower latency than PCIe",
+        "Lower cost per port than PCIe",
+        "Built-in encryption for GPU memory",
+        "Replacement for InfiniBand inter-node fabric"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-006",
+      "category": "Troubleshooting Tools",
+      "question": "Which command verifies NVLink interface status and per-link bandwidth on NVIDIA compute nodes?",
+      "choices": [
+        "nvidia-smi nvlink --status",
+        "ibstat -d mlx5_0",
+        "netq show agents",
+        "nv config show"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-007",
+      "category": "AI Data Center Design",
+      "question": "In NVIDIA Multi-Node NVLink (MNNVL) systems, what does NVIDIA Fabric Manager (FM) configure?",
+      "choices": [
+        "NVSwitch memory fabric and NVLink port mapping/routing",
+        "Kubernetes Pod scheduling policies",
+        "BGP EVPN route reflectors",
+        "InfiniBand Subnet Manager election only"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-008",
+      "category": "AI Data Center Design",
+      "question": "NVLink Subnet Manager (NVLSM) in MNNVL systems is based on which technology?",
+      "choices": [
+        "InfiniBand Subnet Manager",
+        "Ethernet STP",
+        "DNS zone transfers",
+        "LDAP directory services"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-009",
+      "category": "AI Data Center Design",
+      "question": "Which NVIDIA communication libraries officially support multiple interconnect technologies including NVLink, InfiniBand, and RoCE?",
+      "choices": [
+        "NCCL, NVSHMEM, and UCX",
+        "TensorFlow and PyTorch only",
+        "SNMP and NetFlow agents",
+        "Docker and containerd"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-010",
+      "category": "Spectrum Networking",
+      "question": "According to NVIDIA, the Spectrum-X Ethernet platform is designed to improve AI networking performance by approximately how much compared to traditional Ethernet?",
+      "choices": [
+        "1.6x",
+        "3x",
+        "10x",
+        "0.5x"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-011",
+      "category": "Spectrum Networking",
+      "question": "NVIDIA SuperNIC is built on which networking platform?",
+      "choices": [
+        "BlueField-3 networking platform",
+        "ConnectX-5 only",
+        "Spectrum-2 ASIC only",
+        "Tesla GPU architecture"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-012",
+      "category": "Spectrum Networking",
+      "question": "Which three features does NVIDIA document as key SuperNIC capabilities when integrated with Spectrum-4 switches?",
+      "choices": [
+        "Adaptive routing, out-of-order packet handling, and optimized congestion control",
+        "STP, VRRP, and RIP",
+        "IPsec, MACsec, and TLS termination",
+        "DHCP relay, NAT, and DNS caching"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-013",
+      "category": "Kubernetes Integration",
+      "question": "What is the PCIe device ID for BlueField-3 SuperNIC in NVIDIA Spectrum-X Kubernetes NIC configuration?",
+      "choices": [
+        "a2dc",
+        "1023",
+        "mlx5_0",
+        "0x1e36"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-014",
+      "category": "Kubernetes Integration",
+      "question": "What is the PCIe device ID for ConnectX-8 SuperNIC in NVIDIA official Spectrum-X documentation?",
+      "choices": [
+        "1023",
+        "a2dc",
+        "15b3",
+        "connectx7"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-015",
+      "category": "Kubernetes Integration",
+      "question": "When enabling spectrumXOptimized in the NIC Configuration Operator, which setting must NOT be enabled simultaneously?",
+      "choices": [
+        "roceOptimized (RoCE settings are included in Spectrum-X config)",
+        "linkType Ethernet",
+        "numVfs = 1",
+        "nodeSelector for SR-IOV"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-016",
+      "category": "Kubernetes Integration",
+      "question": "Which Spectrum-X multiplane mode (hwplb) is supported only on ConnectX-8 and NOT on BlueField-3 SuperNIC?",
+      "choices": [
+        "Hardware Packet Load Balancing (hwplb)",
+        "Single plane (none)",
+        "Software Packet Load Balancing (swplb)",
+        "Uniplane mode"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-017",
+      "category": "InfiniBand Networking",
+      "question": "What does NVIDIA SHARP (Scalable Hierarchical Aggregation and Reduction Protocol) offload to InfiniBand switches?",
+      "choices": [
+        "Collective operations such as AllReduce",
+        "GPU CUDA kernel execution",
+        "DNS and DHCP services",
+        "Disk RAID reconstruction"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-018",
+      "category": "InfiniBand Networking",
+      "question": "According to NVIDIA UFM documentation, enabling SHARP Aggregation Manager (SHARP AM) in UFM requires setting which parameter to true in gv.cfg?",
+      "choices": [
+        "sharp_enabled",
+        "pkey_enabled",
+        "bgp_enabled",
+        "roce_enabled"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-019",
+      "category": "InfiniBand Networking",
+      "question": "NVIDIA SHARP on InfiniBand switches uses a dedicated logical port for SHARP packet transmission. Which port number is documented?",
+      "choices": [
+        "Port #37",
+        "Port #1",
+        "Port #80",
+        "Port #443"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-official-020",
+      "category": "AI Data Center Design",
+      "question": "In GB200 NVL72, the Grace Blackwell Superchip connects two Blackwell GPUs to a Grace CPU using which interconnect?",
+      "choices": [
+        "NVLink-C2C at 900 GB/s",
+        "PCIe Gen3 x1",
+        "10 GbE",
+        "USB 3.0"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "nv-practice-001",
+      "category": "AI Data Center Design",
+      "question": "Before GB200 NVL72, what was the maximum number of GPUs in a single NVLink domain on an HGX H200 baseboard?",
+      "choices": [
+        "8 GPUs at 900 GB/s per GPU",
+        "72 GPUs at 1,800 GB/s per GPU",
+        "2 GPUs at 3,600 GB/s per GPU",
+        "16 GPUs at 400 Gb/s per GPU"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-002",
+      "category": "Spectrum Networking",
+      "question": "NVIDIA documents that Spectrum-X combines which components for AI-optimized Ethernet?",
+      "choices": [
+        "Spectrum switches, SuperNICs/NICs, cables, and networking software",
+        "GPU drivers and CUDA toolkit only",
+        "InfiniBand HCAs and UFM only",
+        "Windows Server and Active Directory"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-003",
+      "category": "Spectrum Networking",
+      "question": "BlueField-3 SuperNIC achieves GPU server connectivity speeds up to what rate using RoCE, per NVIDIA?",
+      "choices": [
+        "400 Gb/s (up to 1.6 Tb/s in multi-port configurations)",
+        "10 Gb/s",
+        "1 Gb/s",
+        "100 Mb/s"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-004",
+      "category": "AI Data Center Design",
+      "question": "What is the total aggregate NVLink bandwidth documented for the Rubin NVL72 rack (NVLink 6 Switch)?",
+      "choices": [
+        "260 TB/s",
+        "51.2 TB/s",
+        "7.2 TB/s",
+        "900 GB/s"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-005",
+      "category": "InfiniBand Networking",
+      "question": "When UFM runs SHARP Aggregation Manager, what happens when UFM is stopped?",
+      "choices": [
+        "SHARP AM stops along with UFM",
+        "SHARP AM continues independently",
+        "All InfiniBand links go down",
+        "Subnet Manager is automatically deleted"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-006",
+      "category": "Kubernetes Integration",
+      "question": "Which Kubernetes operator provides Spectrum-X NIC discovery, rail configuration, and schedulable RDMA resources?",
+      "choices": [
+        "NVIDIA Network Operator",
+        "GPU Operator only",
+        "Metrics Server",
+        "Ingress NGINX Controller"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-007",
+      "category": "Spectrum Networking",
+      "question": "For Spectrum-X Reference Architecture 2.1 single-plane deployment on HGX H100/H200/B200, which NIC is typically used?",
+      "choices": [
+        "BlueField-3 SuperNIC",
+        "ConnectX-3 only",
+        "Intel E810 only",
+        "Onboard 1 GbE"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-008",
+      "category": "AI Data Center Design",
+      "question": "An MNNVL rack-scale system includes compute trays. How many Blackwell GPUs are in each compute tray per NVIDIA MNNVL documentation?",
+      "choices": [
+        "4 Blackwell GPUs",
+        "1 Blackwell GPU",
+        "72 Blackwell GPUs",
+        "8 Blackwell GPUs"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-009",
+      "category": "InfiniBand Networking",
+      "question": "To enable SHARP in OpenSM configuration per UFM documentation, which command or setting is used?",
+      "choices": [
+        "ib sm sharp enable or sharp_enabled = 2 in opensm.conf",
+        "nv set qos roce enable on",
+        "kubectl apply -f network-operator.yaml",
+        "systemctl restart docker"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-010",
+      "category": "Spectrum Networking",
+      "question": "NVIDIA positions RoCE on Spectrum Ethernet for which primary use case?",
+      "choices": [
+        "High-throughput, low-latency RDMA for scale-out distributed AI applications",
+        "Legacy mainframe terminal emulation",
+        "Consumer Wi-Fi roaming",
+        "Optical WAN/MPLS only"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-011",
+      "category": "AI Data Center Design",
+      "question": "NVLink Switch chips in rack-scale designs primarily enable which topology benefit?",
+      "choices": [
+        "All-to-all GPU communication at full NVLink speed across the rack",
+        "Single-root STP for Ethernet VLANs",
+        "One-to-one GPU-to-CPU pinning only",
+        "Isolated point-to-point links without switching"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-012",
+      "category": "Troubleshooting Tools",
+      "question": "If nvidia-smi nvlink --status shows inactive or down links in an MNNVL system, which is a documented possible cause?",
+      "choices": [
+        "NVLink switch tray offline or high BER on the physical link",
+        "Incorrect DNS suffix on the host",
+        "Missing Python pip packages",
+        "Expired TLS certificate on a web UI"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-013",
+      "category": "Spectrum Networking",
+      "question": "Dual-plane and quad-plane Spectrum-X deployments documented for ConnectX-8 SuperNIC target which GPU platforms?",
+      "choices": [
+        "B300 and GB300 class platforms",
+        "GTX 1080 workstations",
+        "Jetson Nano only",
+        "CPU-only servers without GPUs"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-014",
+      "category": "AI Data Center Design",
+      "question": "Magnum IO and GPUDirect technologies primarily optimize which aspect of AI infrastructure?",
+      "choices": [
+        "Data movement and I/O across GPUs, storage, and network",
+        "GPU fan curve management",
+        "Monitor display refresh rates",
+        "Keyboard and mouse latency"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "nv-practice-015",
+      "category": "InfiniBand Networking",
+      "question": "SHARP reduces distributed training bottlenecks primarily by doing what?",
+      "choices": [
+        "Performing in-network aggregation to reduce data movement during collectives",
+        "Compressing model weights with INT4 only",
+        "Replacing GPUs with switch ASICs",
+        "Disabling AllReduce operations"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "official-001",
+      "category": "Spectrum Networking",
+      "question": "Cumulus Linux에서 RoCE를 활성화하는 NVUE 명령은?",
+      "choices": [
+        "nv set qos roce enable on",
+        "nv set roce qos enable on",
+        "nv roce qos enable on",
+        "nv qos roce enable on"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-002",
+      "category": "InfiniBand Networking",
+      "question": "InfiniBand fabric에서 Subnet Manager(SM)의 역할은?",
+      "choices": [
+        "토폴로지 탐색, LID 할당, 라우팅 테이블 관리",
+        "GPU 드라이버 로드",
+        "NFS 마운트",
+        "LDAP 인증"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-003",
+      "category": "InfiniBand Networking",
+      "question": "InfiniBand 멀티테넌시 격리에 사용하는 키는?",
+      "choices": [
+        "Partition Key (PKey)",
+        "SSH host key",
+        "TLS session key",
+        "WPA passphrase"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-004",
+      "category": "Troubleshooting Tools",
+      "question": "ibstat 명령의 용도는?",
+      "choices": [
+        "HCA 포트 상태 및 링크 정보 확인",
+        "BGP 라우팅 테이블 출력",
+        "디스크 SMART 정보",
+        "CPU 온도 측정"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-005",
+      "category": "Troubleshooting Tools",
+      "question": "ibdiagnet이 수행하는 작업은?",
+      "choices": [
+        "Fabric 전체 진단 및 오류 보고",
+        "컨테이너 이미지 pull",
+        "LDAP 그룹 동기화",
+        "GPU ECC 메모리 클리어"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-006",
+      "category": "AI Data Center Design",
+      "question": "Rail-optimized topology의 주요 설계 목적은?",
+      "choices": [
+        "GPU-to-GPU 통신 경로 최소화 및 대역폭 극대화",
+        "스토리지 트래픽만 분리",
+        "인터넷 게이트웨이 이중화",
+        "DNS 쿼리 지연 감소"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-007",
+      "category": "Spectrum Networking",
+      "question": "NVIDIA What Just Happened (WJH) 서비스의 주요 용도는?",
+      "choices": [
+        "실시간 패킷 드롭/혼잡 이벤트 분석",
+        "펌웨어 자동 업그레이드",
+        "DNS 캐시 관리",
+        "NTP 동기화"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-008",
+      "category": "Kubernetes Integration",
+      "question": "NVIDIA Network Operator의 주요 역할은?",
+      "choices": [
+        "Kubernetes에서 RDMA/InfiniBand 인터페이스 관리",
+        "Helm 차트 저장소 미러링만",
+        "etcd 백업",
+        "Ingress TLS 종료만"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-009",
+      "category": "Automation & Configuration",
+      "question": "Ansible로 자동화하기 좋은 Spectrum-X 작업은?",
+      "choices": [
+        "VLAN 생성 및 RoCE QoS 설정",
+        "물리 케이블 체결",
+        "랙 전원 배선",
+        "BIOS 패스워드 설정"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "official-010",
+      "category": "Spectrum Networking",
+      "question": "RoCE 환경에서 패킷 드롭 없이 혼잡을 알리기 위해 사용하는 메커니즘은?",
+      "choices": [
+        "ECN (Explicit Congestion Notification)",
+        "STP (Spanning Tree Protocol)",
+        "DHCP Snooping",
+        "ARP Proxy"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Official Topic"
+    },
+    {
+      "id": "practice-001",
+      "category": "Spectrum Networking",
+      "question": "RoCEv2 무손실 네트워크에서 ECN과 PFC의 역할 관계로 가장 올바른 설명은?",
+      "choices": [
+        "ECN은 예방적 혼잡 알림, PFC는 버퍼 임계 초과 시 최후의 Pause 제어",
+        "PFC가 먼저 동작하고 ECN은 백업용",
+        "ECN과 PFC는 동일한 계층에서 중복 동작",
+        "PFC는 L3에서, ECN은 L2에서만 동작"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-002",
+      "category": "Troubleshooting Tools",
+      "question": "ib_write_bw 테스트에서 RDMA 장치를 지정하는 옵션은?",
+      "choices": [
+        "-d",
+        "-s",
+        "-q",
+        "-x"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-003",
+      "category": "Troubleshooting Tools",
+      "question": "RoCEv2 환경에서 ib_write_bw 실행 시 GID 인덱스를 지정하는 필수 옵션은?",
+      "choices": [
+        "-x",
+        "-d",
+        "-S",
+        "-q"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-004",
+      "category": "AI Data Center Design",
+      "question": "NCCL의 PXN(Peer eXchange Network)이 해결하는 문제는?",
+      "choices": [
+        "서로 다른 PCIe 트리에 연결된 GPU 간 통신 효율 저하",
+        "InfiniBand SM 장애 조치",
+        "VLAN 간 라우팅",
+        "DNS 쿼리 지연"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-005",
+      "category": "AI Data Center Design",
+      "question": "GPUDirect RDMA의 핵심 이점은?",
+      "choices": [
+        "GPU와 NIC가 CPU/시스템 메모리를 거치지 않고 직접 메모리 접근",
+        "GPU 클럭 속도 향상",
+        "디스크 IOPS 증가",
+        "TLS 암호화 자동 적용"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-006",
+      "category": "InfiniBand Networking",
+      "question": "UFM Cyber-AI 플랫폼이 수행하는 핵심 기능은?",
+      "choices": [
+        "트래픽 패턴 학습 후 이상 탐지 및 장애 예측",
+        "BGP 라우팅 테이블 관리",
+        "Kubernetes Pod 스케줄링",
+        "GPU 드라이버 설치"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-007",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X에서 Adaptive Routing을 활성화하는 NVUE 명령은?",
+      "choices": [
+        "nv set router adaptive-routing state enabled",
+        "nv set qos roce enable on",
+        "nv set bridge domain br_default vlan 1",
+        "nv set router bgp enable on"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-008",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X RoCE lossless 모드를 설정하는 NVUE 명령은?",
+      "choices": [
+        "nv set qos roce mode lossless",
+        "nv set roce qos mode on",
+        "nv set interface swp1 roce enable",
+        "nv set qos pfc enable all"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-009",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X 패브릭에서 RoCE 구성을 검증할 때 NetQ에서 확인하는 명령은?",
+      "choices": [
+        "netq show roce-config",
+        "netq show bgp",
+        "netq show kubernetes",
+        "netq show sminfo"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-010",
+      "category": "Spectrum Networking",
+      "question": "호스트 SuperNIC에서 RoCEv2 모드를 설정할 때 사용하는 명령은?",
+      "choices": [
+        "cma_roce_mode -d mlx5_0 -p 1 -m 2",
+        "ibstat -d mlx5_0",
+        "nv set qos roce enable on",
+        "mlnx_qos -i ens1f0 --pfc all"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-011",
+      "category": "AI Data Center Design",
+      "question": "AI 클러스터에서 노드 내(intra-node) GPU 통신과 노드 간(inter-node) 통신에 가장 적합한 NVIDIA 기술 조합은?",
+      "choices": [
+        "NVLink(노드 내) + InfiniBand(노드 간)",
+        "InfiniBand만 사용",
+        "NVLink만 사용",
+        "PCIe(노드 내) + TCP(노드 간)"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-012",
+      "category": "AI Data Center Design",
+      "question": "BlueField DPU가 AI 데이터센터에서 담당하는 주요 역할은?",
+      "choices": [
+        "네트워킹·보안·스토리지 인프라 오프로드",
+        "GPU CUDA 코어 연산",
+        "LLM 추론 엔진 실행",
+        "BIOS 펌웨어 관리"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-013",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X 아키텍처에서 Adaptive Routing 사용 시 out-of-order 패킷 재정렬을 담당하는 컴포넌트는?",
+      "choices": [
+        "BlueField-3 SuperNIC",
+        "Spectrum-4 switch",
+        "NetQ",
+        "UFM"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-014",
+      "category": "Spectrum Networking",
+      "question": "Spectrum-X 혼잡 제어 알고리즘을 실행하는 주요 컴포넌트는?",
+      "choices": [
+        "BlueField-3 SuperNIC",
+        "Spectrum-4 switch only",
+        "NetQ only",
+        "Kubernetes Network Operator"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-015",
+      "category": "InfiniBand Networking",
+      "question": "InfiniBand 멀티테넌시에서 Full membership과 Limited membership의 차이로 올바른 것은?",
+      "choices": [
+        "Limited는 Full과 통신 가능하지만 동일 Limited 멤버 간 통신 불가",
+        "Limited는 모든 노드와 자유롭게 통신",
+        "Full은 SM 전용",
+        "Limited는 SM이 될 수 없음"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-016",
+      "category": "Automation & Configuration",
+      "question": "NVUE 구성을 스위치에 적용하는 명령은?",
+      "choices": [
+        "nv config apply",
+        "nv config save",
+        "nv set apply",
+        "nv commit"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-017",
+      "category": "Automation & Configuration",
+      "question": "적용 전후 NVUE 구성 차이를 확인하는 명령은?",
+      "choices": [
+        "nv config diff",
+        "nv config show",
+        "nv diff apply",
+        "ibdiagnet"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-018",
+      "category": "Kubernetes Integration",
+      "question": "Kubernetes에서 RDMA 디바이스를 Pod에 노출하기 위해 NicClusterPolicy에서 설정하는 항목은?",
+      "choices": [
+        "RDMA Shared Device Plugin",
+        "GPU Operator",
+        "Calico IPAM",
+        "Ingress Controller"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-019",
+      "category": "Troubleshooting Tools",
+      "question": "InfiniBand fabric에서 마스터 Subnet Manager 호스트 이름을 확인하는 명령 순서는?",
+      "choices": [
+        "sminfo → smpquery ND <LID>",
+        "ibstat → ibping",
+        "ibnetdiscover → ibnodes",
+        "netq show agents"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    },
+    {
+      "id": "practice-020",
+      "category": "AI Data Center Design",
+      "question": "NVIDIA DGX SuperPOD 레퍼런스 아키텍처가 적합한 사용 사례는?",
+      "choices": [
+        "대규모 딥러닝 학습용 턴키 AI 인프라",
+        "홈 라우터 구성",
+        "단일 GPU 워크스테이션",
+        "모바일 추론 전용"
+      ],
+      "correctIndices": [
+        0
+      ],
+      "answerKey": "A",
+      "isMultiSelect": false,
+      "source": "Practice"
+    }
+  ]
+}
