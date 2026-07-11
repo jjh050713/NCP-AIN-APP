@@ -178,7 +178,7 @@ final class MockExamStore: ObservableObject {
     }
 
     private nonisolated static func loadFromBundle() -> [Question] {
-        guard let url = Bundle.main.url(forResource: "exam120", withExtension: "json"),
+        guard let url = Bundle.main.url(forResource: "exam180", withExtension: "json"),
               let data = try? Data(contentsOf: url),
               let bank = try? JSONDecoder().decode(QuestionBank.self, from: data) else {
             return []

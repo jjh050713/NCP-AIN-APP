@@ -20,7 +20,7 @@
 		A10000010000000000000011 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000012 /* HapticManager.swift */; };
 		A10000010000000000000013 /* MockExamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000013 /* MockExamStore.swift */; };
 		A10000010000000000000014 /* MockExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000014 /* MockExamView.swift */; };
-		A10000010000000000000015 /* exam120.json in Resources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000015 /* exam120.json */; };
+		A10000010000000000000015 /* exam180.json in Resources */ = {isa = PBXBuildFile; fileRef = A10000020000000000000015 /* exam180.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +38,7 @@
 		A10000020000000000000012 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		A10000020000000000000013 /* MockExamStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExamStore.swift; sourceTree = "<group>"; };
 		A10000020000000000000014 /* MockExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExamView.swift; sourceTree = "<group>"; };
-		A10000020000000000000015 /* exam120.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exam120.json; sourceTree = "<group>"; };
+		A10000020000000000000015 /* exam180.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exam180.json; sourceTree = "<group>"; };
 		A10000030000000000000001 /* NCPAINApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NCPAINApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				A10000020000000000000009 /* questions.json */,
-				A10000020000000000000015 /* exam120.json */,
+				A10000020000000000000015 /* exam180.json */,
 				A10000020000000000000010 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -191,7 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10000010000000000000009 /* questions.json in Resources */,
-				A10000010000000000000015 /* exam120.json in Resources */,
+				A10000010000000000000015 /* exam180.json in Resources */,
 				A10000010000000000000010 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

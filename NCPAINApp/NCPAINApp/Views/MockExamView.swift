@@ -69,9 +69,9 @@ private struct ExamIntroView: View {
                     Label("실전 모의고사", systemImage: "doc.text.fill")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
-                    Text("기출 120제")
+                    Text("기출 180제")
                         .font(.title2.bold())
-                    Text("실제 시험처럼 오답 보기도 함께 표시됩니다. 120문제를 모두 풀면 몇 개 맞았는지 채점 결과를 확인할 수 있습니다.")
+                    Text("실제 시험처럼 오답 보기도 함께 표시됩니다. 180문제를 모두 풀면 몇 개 맞았는지 채점 결과를 확인할 수 있습니다.")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                 }
@@ -94,7 +94,7 @@ private struct ExamIntroView: View {
                     VStack(alignment: .leading, spacing: 2) {
                         Text("🔀 문제 순서 셔플")
                             .font(.subheadline.weight(.semibold))
-                        Text("켜면 매번 새로운 순서로 120문제가 출제됩니다.")
+                        Text("켜면 매번 새로운 순서로 180문제가 출제됩니다.")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
